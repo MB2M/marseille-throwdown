@@ -23,7 +23,7 @@ const Tournament = () => {
     }, []);
 
     return (
-        <Container>
+        <Container  sx={{minHeight:"100vh"}}>
             <Typography fontSize="40px" textAlign="center">
                 Marseille Throwdown wod1
             </Typography>
