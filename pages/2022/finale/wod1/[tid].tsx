@@ -68,7 +68,7 @@ const Tournament = () => {
                                                         id="panel1a-header"
                                                     >
                                                         <Typography>
-                                                            {heat.name}
+                                                            {heat.name} - {heat.date.toString()}
                                                         </Typography>
                                                     </AccordionSummary>
                                                     <AccordionDetails>

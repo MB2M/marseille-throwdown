@@ -19,6 +19,7 @@ type Round = {
 type Heat = {
     name: string;
     results: { [k: string]: Result };
+    date: Date;
 };
 
 type Result = {
