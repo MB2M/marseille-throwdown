@@ -68,7 +68,7 @@ const Tournament = () => {
                                                         id="panel1a-header"
                                                     >
                                                         <Typography>
-                                                            {heat.name} - {heat.date.toString()}
+                                                            {heat.name} - {new  Date(heat.date).toLocaleTimeString()}
                                                         </Typography>
                                                     </AccordionSummary>
                                                     <AccordionDetails>
