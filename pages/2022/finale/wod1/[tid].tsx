@@ -7,6 +7,7 @@ import {
     Table,
     TableRow,
     TableCell,
+    Box,
 } from "@mui/material";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
@@ -15,6 +16,8 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import HeatTable from "../../../../components/HeatTable";
 import RankedRound from "../../../../components/RankedRound";
 import RankedTournament from "../../../../components/RankedTournament";
+import mtLogo from "../../../../public/img/logo.png";
+import Image from 'next/image'
 
 const Tournament = () => {
     const router = useRouter();
@@ -28,13 +31,19 @@ const Tournament = () => {
     }, [tournamentId]);
 
     return (
-        <Container>
-            <Typography fontSize="40px" textAlign="center">
-                Marseille Throwdown wod1
-            </Typography>
+        <Container sx={{ minHeight: "100vh" }}>
+            <Box alignItems={"center"} display={"flex"} flexDirection="column">
+                <Box width={"100px"} ml={3}>
+                    <Image src={mtLogo} layout={"responsive"} alt={""}></Image>
+                </Box>
+
+                <Typography fontSize="40px" textAlign="center">
+                    Marseille Throwdown wod1
+                </Typography>
+            </Box>
             {tournament && (
                 <>
-                    <h4>Category {tournament?.name} :</h4>
+                    <Typography textAlign="center" variant={"h5"} my={2}>Category {tournament?.name} :</Typography>
                     <div>
                         {Object.entries(tournament.rounds)
                             .sort((a: any, b: any) => {
@@ -43,7 +52,10 @@ const Tournament = () => {
                                 );
                             })
                             .map(([key, round]: any) => (
-                                <Accordion key={key}>
+                                <Accordion
+                                    key={key}
+                                    sx={{ backgroundColor: "#c1f7ff" }}
+                                >
                                     <AccordionSummary
                                         expandIcon={<ExpandMoreIcon />}
                                         aria-controls="panel1a-content"
@@ -59,7 +71,13 @@ const Tournament = () => {
                                                 );
                                             })
                                             .map(([key, heat]: any) => (
-                                                <Accordion key={key}>
+                                                <Accordion
+                                                    key={key}
+                                                    sx={{
+                                                        backgroundColor:
+                                                            "#fdb5d8",
+                                                    }}
+                                                >
                                                     <AccordionSummary
                                                         expandIcon={
                                                             <ExpandMoreIcon />
@@ -68,7 +86,10 @@ const Tournament = () => {
                                                         id="panel1a-header"
                                                     >
                                                         <Typography>
-                                                            {heat.name} - {new  Date(heat.date).toLocaleTimeString()}
+                                                            {heat.name} -{" "}
+                                                            {new Date(
+                                                                heat.date
+                                                            ).toLocaleTimeString()}
                                                         </Typography>
                                                     </AccordionSummary>
                                                     <AccordionDetails>
