@@ -26,12 +26,22 @@ const RankedTournament = ({ tournament }: { tournament: Tournament }) => {
         );
 
         roundsWithRanking.forEach((r) => {
-            const results = Object.values(r.heats).flatMap((h) => Object.values(h.results));
+            const results = Object.values(r.heats).flatMap((h) =>
+                Object.values(h.results)
+            );
             results.sort(sortTournament);
             for (let i = 0; i <= r.ranking.end - r.ranking.start; i++) {
                 if (results[results.length - i - 1].state === "E") {
                     ranking[results[results.length - i - 1].participant] =
-                        r.ranking.end - i;
+                        r.ranking.end -
+                        (results.length -
+                            1 -
+                            results.findIndex((result) => {
+                                return (
+                                    result.result ===
+                                    results[results.length - i - 1].result
+                                );
+                            }));
                 }
             }
         });

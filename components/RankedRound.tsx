@@ -41,7 +41,7 @@ const RankedRound = ({
                 Object.values(heat.results).map((result) => result)
             )
             .sort(newResults);
-        console.log(results)
+        console.log(results);
         if (byPoints) {
             results = [...new Set(results.map((r) => r.participant))].map(
                 (p) => {
@@ -50,9 +50,9 @@ const RankedRound = ({
                         .filter((r) => r.participant === p)
                         .reduce((p, c) => p + (c.points || 0), 0);
                     return {
-                        participant: results.find(
-                            (r) => r.participant === p
-                        )?.participant || "",
+                        participant:
+                            results.find((r) => r.participant === p)
+                                ?.participant || "",
                         // station:
                         //     results.find((r) => r.participant === p)
                         //         ?.station || 1,
@@ -62,7 +62,7 @@ const RankedRound = ({
                 }
             );
         }
-        console.log(results)
+        console.log(results);
         return results;
     }, [byPoints, heats]);
 
@@ -70,12 +70,21 @@ const RankedRound = ({
         <TableContainer>
             <Table size="small" aria-label="a dense table">
                 <TableBody>
-                    {sortedHeat.map((r, i) => (
+                    {sortedHeat.map((r, i, array) => (
                         <TableRow
                             key={`${i}`}
                             sx={{ backgroundColor: STATE_COLOR_GRID[r.state] }}
                         >
-                            <TableCell>{i + 1}</TableCell>
+                            <TableCell>
+                                {1 +
+                                    array.findIndex(
+                                        (result) =>
+                                            Number(
+                                                result.result.replace(":", "")
+                                            ) ===
+                                            Number(r.result.replace(":", ""))
+                                    )}
+                            </TableCell>
                             <TableCell>{r.participant}</TableCell>
                             <TableCell>{r.result}</TableCell>
                             {/* <TableCell>{r.state}</TableCell> */}
