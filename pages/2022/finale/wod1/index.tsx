@@ -23,14 +23,14 @@ const Tournament = () => {
     }, []);
 
     return (
-        <Container  sx={{minHeight:"100vh"}}>
+        <Container sx={{ minHeight: "100vh" }}>
             <Typography fontSize="40px" textAlign="center">
                 Marseille Throwdown wod1
             </Typography>
             <h4>Select a category :</h4>
             <Box display="flex" flexDirection="column" gap={2}>
                 {tournaments.map((tournament) => (
-                    <Button key={tournament.id} variant="outlined">
+                    <Button key={tournament.id} variant="contained">
                         <Link href={`./wod1/${tournament.id}`}>
                             {tournament.name}
                         </Link>
