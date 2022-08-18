@@ -121,7 +121,7 @@ const Tournament = () => {
                                                         heats={round.heats}
                                                         byPoints={
                                                             tournament?.name.includes(
-                                                                "TEAM"
+                                                                "Team"
                                                             )
                                                                 ? true
                                                                 : false

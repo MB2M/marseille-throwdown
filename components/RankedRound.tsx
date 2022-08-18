@@ -41,7 +41,6 @@ const RankedRound = ({
                 Object.values(heat.results).map((result) => result)
             )
             .sort(newResults);
-        console.log(results);
         if (byPoints) {
             results = [...new Set(results.map((r) => r.participant))].map(
                 (p) => {
@@ -62,7 +61,6 @@ const RankedRound = ({
                 }
             );
         }
-        console.log(results);
         return results;
     }, [byPoints, heats]);
 
