@@ -83,7 +83,7 @@ const RankedRound = ({
                                             Number(r.result.replace(":", ""))
                                     )}
                             </TableCell>
-                            <TableCell>{r.participant}</TableCell>
+                            <TableCell>{r.participant.toUpperCase()}</TableCell>
                             <TableCell>{r.result}</TableCell>
                             {/* <TableCell>{r.state}</TableCell> */}
                         </TableRow>

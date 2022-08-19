@@ -58,7 +58,7 @@ const RankedTournament = ({ tournament }: { tournament: Tournament }) => {
                         .map(([k, v]: any) => (
                             <TableRow key={`${k}`}>
                                 <TableCell>{v}</TableCell>
-                                <TableCell>{k}</TableCell>
+                                <TableCell>{k.toUpperCase()}</TableCell>
                             </TableRow>
                         ))}
                 </TableBody>

@@ -1,4 +1,10 @@
-import { Table, TableRow, TableCell, TableContainer } from "@mui/material";
+import {
+    Table,
+    TableRow,
+    TableCell,
+    TableContainer,
+    TableBody,
+} from "@mui/material";
 import { useMemo } from "react";
 
 const STATE_COLOR_GRID = {
@@ -28,20 +34,25 @@ const HeatTable = ({ heat }: { heat: Heat }) => {
     return (
         <TableContainer>
             <Table>
-                {Object.entries(heat.results)
-                    .sort(sortResult)
-                    .map(([key, result], index) => (
-                        <TableRow
-                            key={key}
-                            sx={{
-                                backgroundColor: STATE_COLOR_GRID[result.state],
-                            }}
-                        >
-                            <TableCell>{index + 1}</TableCell>
-                            <TableCell>{result.participant}</TableCell>
-                            <TableCell>{result.result}</TableCell>
-                        </TableRow>
-                    ))}
+                <TableBody>
+                    {Object.entries(heat.results)
+                        .sort(sortResult)
+                        .map(([key, result], index) => (
+                            <TableRow
+                                key={key}
+                                sx={{
+                                    backgroundColor:
+                                        STATE_COLOR_GRID[result.state],
+                                }}
+                            >
+                                <TableCell>{index + 1}</TableCell>
+                                <TableCell>
+                                    {result.participant.toUpperCase()}
+                                </TableCell>
+                                <TableCell>{result.result}</TableCell>
+                            </TableRow>
+                        ))}
+                </TableBody>
             </Table>
         </TableContainer>
     );

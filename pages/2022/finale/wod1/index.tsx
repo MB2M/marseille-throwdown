@@ -30,11 +30,9 @@ const Tournament = () => {
             <h4>Select a category :</h4>
             <Box display="flex" flexDirection="column" gap={2}>
                 {tournaments.map((tournament) => (
-                    <Button key={tournament.id} variant="contained">
-                        <Link href={`./wod1/${tournament.id}`}>
-                            {tournament.name}
-                        </Link>
-                    </Button>
+                    <Link key={tournament.id} href={`./wod1/${tournament.id}`}>
+                        <Button variant="contained">{tournament.name}</Button>
+                    </Link>
                 ))}
             </Box>
             {/* <FormControl fullWidth>
