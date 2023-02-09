@@ -14,10 +14,10 @@ export const theme = createTheme({
         },
     },
     typography: {
-        h3:undefined,
-        bigTitle: {
-            fontSize: 40,
-        },
+        h3: undefined,
+        // bigTitle: {
+        //     fontSize: 40,
+        // },
     },
     // components: {
     //     MuiCssBaseline: {

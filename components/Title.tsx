@@ -5,8 +5,8 @@ import { useState } from "react";
 const text = "WHO WILL BE THE FITTEST ON MARS ?";
 
 const Title = () => {
-    const [visible, setVisible] = useState(true);
-    const [ref, inView, entry] = useInView();
+    // const [visible, setVisible] = useState(true);
+    const [ref, inView] = useInView();
 
     const trail = useTrail(text.length, {
         config: { mass: 5, tension: 3000, friction: 200 },
