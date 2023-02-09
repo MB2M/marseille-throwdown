@@ -1,0 +1,16 @@
+@keyframes leftRotation {
+    from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(-5deg);
+      }
+  }
+  
+  /* The element to apply the animation to */
+  .card-left {
+    animation: leftRotation 3s linear ;
+    /* animation: leftRotation 3s linear  slidein; */
+    /* animation-name: left;
+    animation-duration: 4s; */
+  }

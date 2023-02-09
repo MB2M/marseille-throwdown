@@ -1,3 +1,20 @@
+@font-face {
+  font-family: "MichromaRegular";
+  src: url(/fonts/Michroma-Regular.ttf);
+}
+
+@font-face {
+  font-family: "NunitoBlack";
+  src: url(/fonts/Nunito/Nunito-Black.ttf);
+}
+
+@font-face {
+  font-family: "NunitoRegular";
+  src: url(/fonts/Nunito/Nunito-Regular.ttf);
+}
+
+
+
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
