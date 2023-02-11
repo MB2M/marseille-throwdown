@@ -45,7 +45,7 @@ const Wods = () => {
                     <Typography
                         fontFamily={"MichromaRegular"}
                         fontSize={20}
-                        color={"white"}
+                        color={"#A5C3FA"}
                         my={2}
                     >
                         wods de qualifications

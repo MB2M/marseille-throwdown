@@ -74,12 +74,14 @@ const Teams = () => {
                 container
                 spacing={8}
                 justifyContent={"center"}
-                alignItems={"center"}
+                alignItems={"flex-start"}
             >
                 {list.map((category) => (
                     <Grid2
                         key={category.label}
                         xs={12}
+                        md={6}
+                        xl={4}
                         textAlign={"center"}
                         display={"flex"}
                         alignItems={"center"}
@@ -176,16 +178,16 @@ const Teams = () => {
                                 <Typography
                                     color="secondary"
                                     fontFamily={"MichromaRegular"}
-                                    fontSize={"2rem"}
+                                    variant="h4"
                                 >
                                     {category.label}
                                 </Typography>
                                 {category.text.map((field, index) => (
                                     <Typography
                                         key={index}
-                                        sx={{ color: "white" }}
+                                        sx={{ color: "#A5C3FA" }}
                                         fontFamily={"MichromaRegular"}
-                                        fontSize={"1.3rem"}
+                                        variant="h5"
                                     >
                                         {field}
                                     </Typography>
@@ -195,11 +197,15 @@ const Teams = () => {
                     </Grid2>
                 ))}
             </Grid2>
-            <Box my={4}>
-                <Typography sx={{ color: "white" }} textAlign={"center"}>
+            <Stack my={6} alignItems={"center"} spacing={2}>
+                <Typography
+                    variant="h5"
+                    sx={{ color: "#A5C3FA" }}
+                    textAlign={"center"}
+                >
                     Nombre de qualifiés
                 </Typography>
-                <TableContainer>
+                <TableContainer sx={{ maxWidth: "600px" }}>
                     <Table size="small">
                         <TableHead>
                             <TableRow>
@@ -209,11 +215,11 @@ const Teams = () => {
                                 <CustomTableCell>Mixte</CustomTableCell>
                             </TableRow>
                         </TableHead>
-                        <TableBody sx={{ color: "white" }}>
+                        <TableBody sx={{ color: "#A5C3FA" }}>
                             {qualified.map((category) => (
                                 <TableRow
                                     key={category.name}
-                                    sx={{ color: "white" }}
+                                    sx={{ color: "#A5C3FA" }}
                                 >
                                     <CustomTableCell>
                                         {category.name}
@@ -232,7 +238,7 @@ const Teams = () => {
                         </TableBody>
                     </Table>
                 </TableContainer>
-            </Box>
+            </Stack>
         </>
     );
 };

@@ -2,7 +2,7 @@ import { Box, Stack, Typography } from "@mui/material";
 import AnimatedInView from "../AnimatedInView";
 import Image from "next/image";
 
-const Individual = () => {
+const CompetitorsMobile = () => {
     return (
         <Box
             display={"flex"}
@@ -34,17 +34,16 @@ const Individual = () => {
                     height={215}
                     sx={{
                         borderRadius: "21px",
-                        boxShadow: "3px 3px 5px black",
                     }}
                     overflow={"hidden"}
                 >
                     <Image
                         alt="dome"
-                        src="/img/men_women.png"
-                        width={220}
-                        height={220}
+                        src="/img/horde.png"
+                        width={340}
+                        height={340}
                         style={{
-                            transform: "translate(-40px, 0px)",
+                            transform: "translate(-104px, -60px)",
                         }}
                         objectFit="cover"
                     />
@@ -55,21 +54,20 @@ const Individual = () => {
                 threshold={1}
                 triggerOnce
             >
-                <Stack gap={2} pl={2}>
+                <Stack gap={3} pl={2}>
                     <Typography
                         fontFamily={"MichromaRegular"}
                         fontSize={20}
-                        color={"primary"}
+                        color={"secondary"}
                     >
-                        Individuels
+                        480 athlètes
                     </Typography>
                     <Typography
-                        variant="h6"
                         fontFamily={"NunitoRegular"}
-                        // fontSize={16}
+                        fontSize={16}
                         sx={{ color: "#A5C3FA" }}
                     >
-                        8 Mai - 25 Mai
+                        Pour un maximum de spectacle et de competiton
                     </Typography>
                 </Stack>
             </AnimatedInView>
@@ -77,4 +75,4 @@ const Individual = () => {
     );
 };
 
-export default Individual;
+export default CompetitorsMobile;

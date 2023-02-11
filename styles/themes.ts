@@ -1,7 +1,6 @@
-import { createTheme } from "@mui/material";
-// import MichromaRegular from "public/fonts/Michroma-Regular.ttf";
+import { createTheme, responsiveFontSizes } from "@mui/material";
 
-export const theme = createTheme({
+export let theme = createTheme({
     // typography: {
     //     fontFamily: "MichromaRegular, Arial",
     // },
@@ -14,10 +13,9 @@ export const theme = createTheme({
         },
     },
     typography: {
-        h3: undefined,
-        // bigTitle: {
-        //     fontSize: 40,
-        // },
+        bigTitle: {
+            fontSize: "6rem",
+        },
     },
     // components: {
     //     MuiCssBaseline: {
@@ -34,3 +32,24 @@ export const theme = createTheme({
     //     },
     // },
 });
+
+theme.typography.bigTitle = {
+    [theme.breakpoints.up("xl")]: {
+        fontSize: "6rem",
+        maxWidth: "90%",
+        fontWeigt: "800",
+    },
+    [theme.breakpoints.down("xl")]: {
+        fontSize: "3.4rem",
+        maxWidth: "65%",
+    },
+    [theme.breakpoints.down("lg")]: {
+        maxWidth: "85%",
+    },
+    [theme.breakpoints.down("sm")]: {
+        fontSize: "1.8rem",
+        maxWidth: "100%",
+    },
+};
+
+theme = responsiveFontSizes(theme);

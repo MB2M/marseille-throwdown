@@ -2,14 +2,14 @@ import { Box, Stack, Typography } from "@mui/material";
 import AnimatedInView from "../AnimatedInView";
 import Image from "next/image";
 
-const Floors = () => {
+const CategoriesMobile = () => {
     return (
         <Box
             display={"flex"}
             justifyContent={"center"}
             alignItems={"center"}
             mt={6}
-            gap={2}
+            gap={0}
         >
             <Box display="flex">
                 <AnimatedInView
@@ -19,13 +19,14 @@ const Floors = () => {
                         {
                             keyName: "transform",
                             initial: "rotate(0deg)",
-                            end: "rotate(5deg)",
+                            end: "rotate(11deg)",
                         },
                         {
                             keyName: "x",
                             initial: -20,
-                            end: 0,
-                        },{ keyName: "opacity", initial: 0, end: 1 }
+                            end: 10,
+                        },
+                        { keyName: "opacity", initial: 0, end: 1 },
                     ]}
                 >
                     <Box
@@ -40,11 +41,11 @@ const Floors = () => {
                     >
                         <Image
                             alt="dome"
-                            src="/img/beach.png"
-                            width={340}
-                            height={340}
+                            src="/img/men_women.png"
+                            width={220}
+                            height={220}
                             style={{
-                                transform: "translate(-120px, -60px)",
+                                transform: "translate(-60px, 0px)",
                             }}
                             objectFit="cover"
                         />
@@ -57,14 +58,14 @@ const Floors = () => {
                         {
                             keyName: "transform",
                             initial: "rotate(0deg)",
-                            end: "rotate(-5deg)",
+                            end: "rotate(-7deg)",
                         },
                         {
                             keyName: "x",
                             initial: 20,
-                            end: 0,
+                            end: -10,
                         },
-                        { keyName: "opacity", initial: 0, end: 1 }
+                        { keyName: "opacity", initial: 0, end: 1 },
                     ]}
                 >
                     <Box
@@ -80,11 +81,11 @@ const Floors = () => {
                     >
                         <Image
                             alt="dome"
-                            src="/img/dome.png"
-                            width={340}
-                            height={340}
+                            src="/img/2_womens.png"
+                            width={220}
+                            height={220}
                             style={{
-                                transform: "translate(-120px, -60px)",
+                                transform: "translate(-60px, 0px)",
                             }}
                             objectFit="cover"
                         />
@@ -99,24 +100,17 @@ const Floors = () => {
                 <Stack gap={3}>
                     <Typography
                         fontFamily={"MichromaRegular"}
-                        fontSize={20}
+                        fontSize={"1.25rem"}
                         color={"secondary"}
                     >
-                        2 lieux d&apos;épreuve
+                        20 catégories
                     </Typography>
                     <Typography
                         fontFamily={"NunitoRegular"}
-                        fontSize={16}
-                        sx={{ color: "white" }}
+                        fontSize={"1rem"}
+                        sx={{ color: "#A5C3FA" }}
                     >
-                        Dôme de Marseille
-                    </Typography>
-                    <Typography
-                        fontFamily={"NunitoRegular"}
-                        fontSize={16}
-                        sx={{ color: "white" }}
-                    >
-                        Plage de Marseille
+                        Pour que chacun puisse participer
                     </Typography>
                 </Stack>
             </AnimatedInView>
@@ -124,4 +118,4 @@ const Floors = () => {
     );
 };
 
-export default Floors;
+export default CategoriesMobile;

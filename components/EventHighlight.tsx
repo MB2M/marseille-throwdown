@@ -1,20 +1,28 @@
-import { Box, Stack, Typography } from "@mui/material";
-import { useSpring, animated, SpringRef } from "@react-spring/web";
-import Image from "next/image";
-import { InView, useInView } from "react-intersection-observer";
-import AnimatedInView from "./AnimatedInView";
-import Floors from "./EventHighlight/Floors";
-import CompetitonDays from "./EventHighlight/CompetitonDays";
+import Grid2 from "@mui/material/Unstable_Grid2";
+import CategoriesMobile from "./EventHighlight/CategoriesMobile";
+import CompetitionDaysMobile from "./EventHighlight/CompetitionDaysMobile";
+import CompetitorsMobile from "./EventHighlight/CompetitorsMobile";
+import FloorsMobile from "./EventHighlight/FloorsMobile";
+import VolunteersMobile from "./EventHighlight/VolunteersMobile";
+import { useMediaQuery } from "@mui/material";
+import { theme } from "@/styles/themes";
+import Floors from "./EventHighlight/Floors ";
+import CompetitionDays from "./EventHighlight/CompetitionDays";
 import Competitors from "./EventHighlight/Competitors";
 import Volunteers from "./EventHighlight/Volunteers";
 import Categories from "./EventHighlight/Categories";
 
-const AnimatedBox = animated(Box);
-const AnimatedStack = animated(Stack);
-
 const EventHighlight = () => {
+    const isMD = useMediaQuery(theme.breakpoints.up("md"));
+
     return (
-        <Stack alignItems="center" textAlign={"center"}>
+        <Grid2
+            container
+            alignItems="center"
+            textAlign={"center"}
+            justifyContent={"space-around"}
+            spacing={6}
+        >
             {/* <Box
                 sx={{
                     maxWidth: {
@@ -22,13 +30,23 @@ const EventHighlight = () => {
                     },
                 }}
             > */}
-            <Floors />
-            <CompetitonDays />
-            <Competitors />
-            <Volunteers />
-            <Categories />
+            <Grid2 xs={12} md={6} xl={4}>
+                {isMD ? <Floors /> : <FloorsMobile />}
+            </Grid2>
+            <Grid2 xs={12} md={6} xl={4}>
+                {isMD ? <CompetitionDays /> : <CompetitionDaysMobile />}
+            </Grid2>
+            <Grid2 xs={12} md={6} xl={4}>
+                {isMD ? <Competitors /> : <CompetitorsMobile />}
+            </Grid2>
+            <Grid2 xs={12} md={6} xl={4}>
+                {isMD ? <Volunteers /> : <VolunteersMobile />}
+            </Grid2>
+            <Grid2 xs={12} md={6} xl={4}>
+                {isMD ? <Categories /> : <CategoriesMobile />}
+            </Grid2>
             {/* </Box> */}
-        </Stack>
+        </Grid2>
     );
 };
 

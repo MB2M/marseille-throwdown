@@ -31,7 +31,7 @@ const Partners = () => {
     return (
         <Box px={4} pt={4} pb={8} sx={{ backgroundColor: "#242424" }}>
             <Typography
-                sx={{ color: "white" }}
+                sx={{ color: "A5C3FA" }}
                 fontSize={"32px"}
                 fontFamily={"NunitoBlack"}
                 textAlign={"center"}

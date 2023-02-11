@@ -31,13 +31,20 @@ const Appbar = () => {
         setAnchorElNav(null);
     };
     return (
-        <AppBar position="absolute" sx={{ zIndex: "100" }} color="transparent">
+        <AppBar
+            position="absolute"
+            sx={{ zIndex: "100", boxShadow: "none" }}
+            color="transparent"
+        >
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     <Box
                         position="relative"
-                        sx={{ width: { xs: "100px" } }}
-                        height={80}
+                        sx={{
+                            width: { xs: "100px", md: "150px" },
+                            height: { xs: "80px", md: "120px" },
+                        }}
+                        // height={80}
                     >
                         <Image alt={"logo"} src={"/img/MT.png"} fill />
                     </Box>
@@ -97,15 +104,30 @@ const Appbar = () => {
                             // flexGrow: 1,
                             display: { xs: "none", md: "flex" },
                         }}
+                        gap={4}
+                        mx={8}
                     >
                         {buttonText.map((button) => (
-                            <Button
+                            <Link
+                                href={`#${button
+                                    .replace("é", "e")
+                                    .toLowerCase()}`}
                                 key={button}
-                                onClick={handleCloseNavMenu}
-                                sx={{ my: 2, color: "white", display: "block" }}
                             >
-                                {button}
-                            </Button>
+                                <Button
+                                    key={button}
+                                    onClick={handleCloseNavMenu}
+                                    sx={{
+                                        my: 2,
+                                        color: "#A5C3FA",
+                                        display: "block",
+                                    }}
+                                >
+                                    <Typography variant="h6">
+                                        {button}
+                                    </Typography>
+                                </Button>{" "}
+                            </Link>
                         ))}
                     </Box>
                 </Toolbar>

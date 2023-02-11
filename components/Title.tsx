@@ -18,11 +18,16 @@ const Title = () => {
 
     return (
         <Typography
+            variant="bigTitle"
+            
             color={"primary"}
             fontFamily={"MichromaRegular"}
-            fontSize={32}
+            // fontSize={"calc(3vw + 3vh + .5vmin)"}
             textAlign={"end"}
             ref={ref}
+            // maxWidth={0.8}
+            // display="flex"
+            ml={"auto"}
         >
             {trail.map(({ height, ...style }, index) => (
                 <a.span key={index} style={{ height, ...style }}>

@@ -2,7 +2,7 @@ import { Box, Stack, Typography } from "@mui/material";
 import AnimatedInView from "../AnimatedInView";
 import Image from "next/image";
 
-const Individual = () => {
+const VolunteersMobile = () => {
     return (
         <Box
             display={"flex"}
@@ -12,17 +12,39 @@ const Individual = () => {
             gap={2}
         >
             <AnimatedInView
+                changes={[{ keyName: "opacity", initial: 0, end: 1 }]}
+                threshold={1}
+                triggerOnce
+            >
+                <Stack gap={3} pl={2}>
+                    <Typography
+                        fontFamily={"MichromaRegular"}
+                        fontSize={20}
+                        color={"primary"}
+                    >
+                        Près de 150 volontaires
+                    </Typography>
+                    <Typography
+                        fontFamily={"NunitoRegular"}
+                        fontSize={16}
+                        sx={{ color: "#A5C3FA" }}
+                    >
+                        Prêt à tout donner
+                    </Typography>
+                </Stack>
+            </AnimatedInView>
+            <AnimatedInView
                 triggerOnce
                 threshold={0.9}
                 changes={[
                     {
                         keyName: "transform",
                         initial: "rotate(0deg)",
-                        end: "rotate(-5deg)",
+                        end: "rotate(5deg)",
                     },
                     {
                         keyName: "x",
-                        initial: 20,
+                        initial: -20,
                         end: 0,
                     },
                     { keyName: "opacity", initial: 0, end: 1 },
@@ -34,47 +56,23 @@ const Individual = () => {
                     height={215}
                     sx={{
                         borderRadius: "21px",
-                        boxShadow: "3px 3px 5px black",
                     }}
                     overflow={"hidden"}
                 >
                     <Image
-                        alt="dome"
-                        src="/img/men_women.png"
+                        alt="volunteers"
+                        src="/img/volunteers.png"
                         width={220}
                         height={220}
                         style={{
-                            transform: "translate(-40px, 0px)",
+                            transform: "translate(-60px, 0px)",
                         }}
-                        objectFit="cover"
+                        objectFit="contain"
                     />
                 </Box>
-            </AnimatedInView>
-            <AnimatedInView
-                changes={[{ keyName: "opacity", initial: 0, end: 1 }]}
-                threshold={1}
-                triggerOnce
-            >
-                <Stack gap={2} pl={2}>
-                    <Typography
-                        fontFamily={"MichromaRegular"}
-                        fontSize={20}
-                        color={"primary"}
-                    >
-                        Individuels
-                    </Typography>
-                    <Typography
-                        variant="h6"
-                        fontFamily={"NunitoRegular"}
-                        // fontSize={16}
-                        sx={{ color: "#A5C3FA" }}
-                    >
-                        8 Mai - 25 Mai
-                    </Typography>
-                </Stack>
             </AnimatedInView>
         </Box>
     );
 };
 
-export default Individual;
+export default VolunteersMobile;

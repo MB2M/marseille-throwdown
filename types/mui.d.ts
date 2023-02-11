@@ -1,3 +1,5 @@
+import { TypographyStyleOptions } from "@mui/material/styles/createTypography";
+
 declare module "@mui/material/styles" {
     export interface TypographyVariants {
         bigTitle: React.CSSProperties;
@@ -5,10 +7,6 @@ declare module "@mui/material/styles" {
 
     // allow configuration using `createTheme`
     export interface TypographyVariantsOptions {
-        bigTitle?: React.CSSProperties;
-    }
-
-    export interface TypographyStyleOptions {
         bigTitle?: React.CSSProperties;
     }
 }

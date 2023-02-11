@@ -5,7 +5,7 @@ const RegisterButton = () => {
         <Button
             variant="contained"
             color="secondary"
-            sx={{ color: "white" }}
+            sx={{ color: "#A5C3FA" }}
             // sx={{ fontFamily: "NunitoBlack" }}
         >
             S&apos;inscire

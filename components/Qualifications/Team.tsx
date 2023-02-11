@@ -25,9 +25,9 @@ const Team = () => {
                         Equipes
                     </Typography>
                     <Typography
+                        variant="h6"
                         fontFamily={"NunitoRegular"}
-                        fontSize={16}
-                        sx={{ color: "white" }}
+                        sx={{ color: "#A5C3FA" }}
                     >
                         21 Mai - 11 Juin
                     </Typography>
@@ -56,7 +56,7 @@ const Team = () => {
                     height={215}
                     sx={{
                         borderRadius: "21px",
-                        boxShadow:"3px 3px 5px black"
+                        boxShadow: "3px 3px 5px black",
                     }}
                     overflow={"hidden"}
                 >

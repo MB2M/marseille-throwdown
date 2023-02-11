@@ -54,7 +54,6 @@ const list = [
     },
 ];
 
-
 const Individuals = () => {
     return (
         <>
@@ -68,6 +67,8 @@ const Individuals = () => {
                     <Grid2
                         key={category.label}
                         xs={12}
+                        md={6}
+                        xl={4}
                         textAlign={"center"}
                         display={"flex"}
                         alignItems={"center"}
@@ -102,14 +103,14 @@ const Individuals = () => {
                                 <Typography
                                     color="secondary"
                                     fontFamily={"MichromaRegular"}
-                                    fontSize={"2rem"}
+                                    variant="h4"
                                 >
                                     {category.label}
                                 </Typography>
                                 <Typography
-                                    sx={{ color: "white" }}
+                                    sx={{ color: "#A5C3FA" }}
                                     fontFamily={"MichromaRegular"}
-                                    fontSize={"1.3rem"}
+                                    variant="h5"
                                 >
                                     {category.text}
                                 </Typography>
@@ -118,9 +119,15 @@ const Individuals = () => {
                     </Grid2>
                 ))}
             </Grid2>
-            <Box my={4}>
-                <Typography sx={{ color: "white" }} textAlign={"center"}>Nombre de qualifiés</Typography>
-                <TableContainer>
+            <Stack my={4} alignItems={"center"}>
+                <Typography
+                    variant="h5"
+                    sx={{ color: "#A5C3FA" }}
+                    textAlign={"center"}
+                >
+                    Nombre de qualifiés
+                </Typography>
+                <TableContainer sx={{ maxWidth: 600, width: "1hw" }}>
                     <Table size="small">
                         <TableHead>
                             <TableRow>
@@ -129,11 +136,11 @@ const Individuals = () => {
                                 <CustomTableCell>Femme</CustomTableCell>
                             </TableRow>
                         </TableHead>
-                        <TableBody sx={{ color: "white" }}>
+                        <TableBody sx={{ color: "#A5C3FA" }}>
                             {list.map((category) => (
                                 <TableRow
                                     key={category.label}
-                                    sx={{ color: "white" }}
+                                    sx={{ color: "#A5C3FA" }}
                                 >
                                     <CustomTableCell>
                                         {category.label}
@@ -148,12 +155,19 @@ const Individuals = () => {
                             ))}
                             <TableRow>
                                 <CustomTableCell>Adaptive</CustomTableCell>
-                                <CustomTableCell colSpan={2} sx={{textAlign:"center"}}>16<br/>(Pas de qualification)</CustomTableCell>
+                                <CustomTableCell
+                                    colSpan={2}
+                                    sx={{ textAlign: "center" }}
+                                >
+                                    16
+                                    <br />
+                                    (Pas de qualification)
+                                </CustomTableCell>
                             </TableRow>
                         </TableBody>
                     </Table>
                 </TableContainer>
-            </Box>
+            </Stack>
         </>
     );
 };

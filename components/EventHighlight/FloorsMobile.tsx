@@ -2,17 +2,16 @@ import { Box, Stack, Typography } from "@mui/material";
 import AnimatedInView from "../AnimatedInView";
 import Image from "next/image";
 
-const Categories = () => {
+const FloorsMobile = () => {
     return (
-        <Stack>
-            <Box
-                display={"flex"}
-                justifyContent={"center"}
-                alignItems={"center"}
-                mt={6}
-                
-            >
-                {/* <Box display="flex"> */}
+        <Box
+            display={"flex"}
+            justifyContent={"center"}
+            alignItems={"center"}
+            mt={6}
+            gap={2}
+        >
+            <Box display="flex">
                 <AnimatedInView
                     triggerOnce
                     threshold={0.9}
@@ -20,20 +19,59 @@ const Categories = () => {
                         {
                             keyName: "transform",
                             initial: "rotate(0deg)",
-                            end: "rotate(-7deg)",
+                            end: "rotate(5deg)",
                         },
                         {
                             keyName: "x",
-                            initial: 20,
-                            end: -10,
+                            initial: -20,
+                            end: 0,
                         },
                         { keyName: "opacity", initial: 0, end: 1 },
                     ]}
                 >
                     <Box
                         position={"relative"}
-                        width={226}
-                        height={147}
+                        left={80}
+                        width={102}
+                        height={215}
+                        sx={{
+                            borderRadius: "21px",
+                        }}
+                        overflow={"hidden"}
+                    >
+                        <Image
+                            alt="dome"
+                            src="/img/beach.png"
+                            width={340}
+                            height={340}
+                            style={{
+                                transform: "translate(-120px, -60px)",
+                            }}
+                            objectFit="cover"
+                        />
+                    </Box>
+                </AnimatedInView>
+                <AnimatedInView
+                    triggerOnce
+                    threshold={0.9}
+                    changes={[
+                        {
+                            keyName: "transform",
+                            initial: "rotate(0deg)",
+                            end: "rotate(-5deg)",
+                        },
+                        {
+                            keyName: "x",
+                            initial: 20,
+                            end: 0,
+                        },
+                        { keyName: "opacity", initial: 0, end: 1 },
+                    ]}
+                >
+                    <Box
+                        position={"relative"}
+                        width={102}
+                        height={215}
                         left={-80}
                         sx={{
                             borderRadius: "21px",
@@ -43,66 +81,16 @@ const Categories = () => {
                     >
                         <Image
                             alt="dome"
-                            src="/img/2_womens.png"
-                            width={226}
-                            height={226}
-                            // style={{
-                            //     transform: "translate(-60px, 0px)",
-                            // }}
+                            src="/img/dome.png"
+                            width={340}
+                            height={340}
+                            style={{
+                                transform: "translate(-120px, -60px)",
+                            }}
                             objectFit="cover"
                         />
                     </Box>
                 </AnimatedInView>
-
-                <Typography
-                    variant="h4"
-                    fontFamily={"MichromaRegular"}
-                    color={"secondary"}
-                    mx={-4}
-                >
-                    20 catégories
-                </Typography>
-                <AnimatedInView
-                    triggerOnce
-                    threshold={0.9}
-                    changes={[
-                        {
-                            keyName: "transform",
-                            initial: "rotate(0deg)",
-                            end: "rotate(11deg)",
-                        },
-                        {
-                            keyName: "x",
-                            initial: -20,
-                            end: 10,
-                        },
-                        { keyName: "opacity", initial: 0, end: 1 },
-                    ]}
-                >
-                    <Box
-                        position={"relative"}
-                        left={80}
-                        width={226}
-                        height={147}
-                        sx={{
-                            borderRadius: "21px",
-                        }}
-                        overflow={"hidden"}
-                    >
-                        <Image
-                            alt="dome"
-                            src="/img/men_women.png"
-                            width={226}
-                            height={226}
-                            // style={{
-                            //     transform: "translate(-60px, 0px)",
-                            // }}
-                            objectFit="cover"
-                        />
-                    </Box>
-                </AnimatedInView>
-
-                {/* </Box> */}
             </Box>
             <AnimatedInView
                 changes={[{ keyName: "opacity", initial: 0, end: 1 }]}
@@ -111,16 +99,30 @@ const Categories = () => {
             >
                 <Stack gap={3}>
                     <Typography
-                    variant="h6"
+                        fontFamily={"MichromaRegular"}
+                        fontSize={20}
+                        color={"secondary"}
+                    >
+                        2 lieux d&apos;épreuve
+                    </Typography>
+                    <Typography
                         fontFamily={"NunitoRegular"}
+                        fontSize={16}
                         sx={{ color: "#A5C3FA" }}
                     >
-                        Pour que chacun puisse participer
+                        Dôme de Marseille
+                    </Typography>
+                    <Typography
+                        fontFamily={"NunitoRegular"}
+                        fontSize={16}
+                        sx={{ color: "#A5C3FA" }}
+                    >
+                        Plage de Marseille
                     </Typography>
                 </Stack>
             </AnimatedInView>
-        </Stack>
+        </Box>
     );
 };
 
-export default Categories;
+export default FloorsMobile;
