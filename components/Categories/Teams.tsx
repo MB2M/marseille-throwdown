@@ -42,7 +42,7 @@ const qualified = [
 
 const list = [
     {
-        image: ["elite.png", "elite.png"],
+        image: ["elite_2.jpg", "elite_2.jpg"],
         label: "Femme / Femme",
         text: ["Elite", "Rx", "Scaled", "Master 85"],
         Men: 15,
@@ -50,7 +50,7 @@ const list = [
         Miste: "-",
     },
     {
-        image: ["elite_men.png", "elite_men.png"],
+        image: ["elite_men_2.jpg", "elite_men_2.jpg"],
         label: "Homme / Homme",
         text: ["Elite", "Rx", "Scaled", "Master 85"],
         Men: 15,
@@ -58,7 +58,7 @@ const list = [
         Miste: "-",
     },
     {
-        image: ["elite_men.png", "elite.png"],
+        image: ["elite_men_2.jpg", "elite_2.jpg"],
         label: "Homme / Femme",
         text: ["Master 85"],
         Men: 15,
@@ -112,25 +112,16 @@ const Teams = () => {
                                             width={185}
                                             zIndex={index % 2 ? 0 : 1}
                                             boxShadow={"4px 4px 4px #000000bb"}
+                                            border={"2px solid gray"}
                                         >
-                                            {image.includes("men") ? (
-                                                <Image
-                                                    src={`/img/${image}`}
-                                                    alt={image}
-                                                    width={500}
-                                                    height={500}
-                                                    style={{
-                                                        transform:
-                                                            "translate(-170px, 0px)",
-                                                    }}
-                                                />
-                                            ) : (
-                                                <Image
-                                                    src={`/img/${image}`}
-                                                    alt={image}
-                                                    fill
-                                                />
-                                            )}
+                                            (
+                                            <Image
+                                                src={`/img/${image}`}
+                                                alt={image}
+                                                fill
+                                                objectFit="cover"
+                                            />
+                                            )
                                         </Box>
                                     ))}
                                     {/* // <Box
@@ -177,8 +168,7 @@ const Teams = () => {
                                 </Box>
                                 <Typography
                                     color="secondary"
-                                    fontFamily={"MichromaRegular"}
-                                    variant="h4"
+                                    variant="h4Strasua"
                                 >
                                     {category.label}
                                 </Typography>
@@ -186,7 +176,7 @@ const Teams = () => {
                                     <Typography
                                         key={index}
                                         sx={{ color: "#A5C3FA" }}
-                                        fontFamily={"MichromaRegular"}
+                                        fontFamily={"NunitoBlack"}
                                         variant="h5"
                                     >
                                         {field}
@@ -200,7 +190,8 @@ const Teams = () => {
             <Stack my={6} alignItems={"center"} spacing={2}>
                 <Typography
                     variant="h5"
-                    sx={{ color: "#A5C3FA" }}
+                    color={"primary"}
+                    // sx={{ color: "#A5C3FA" }}
                     textAlign={"center"}
                 >
                     Nombre de qualifiés

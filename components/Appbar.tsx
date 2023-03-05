@@ -33,20 +33,20 @@ const Appbar = () => {
     return (
         <AppBar
             position="absolute"
-            sx={{ zIndex: "100", boxShadow: "none" }}
-            color="transparent"
+            sx={{ zIndex: "100", boxShadow: "none", bgcolor:"#000d2d" }}
         >
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     <Box
+                        p={1}
                         position="relative"
                         sx={{
-                            width: { xs: "100px", md: "150px" },
-                            height: { xs: "80px", md: "120px" },
+                            width: { xs: "80px", md: "80px" },
+                            height: { xs: "80px", md: "80px" },
                         }}
                         // height={80}
                     >
-                        <Image alt={"logo"} src={"/img/MT.png"} fill />
+                        <Image alt={"logo"} src={"/img/MT.jpeg"} fill objectFit="contain"/>
                     </Box>
                     <Box
                         sx={{
@@ -123,7 +123,7 @@ const Appbar = () => {
                                         display: "block",
                                     }}
                                 >
-                                    <Typography variant="h6">
+                                    <Typography variant="h6" fontFamily={"strasua"}>
                                         {button}
                                     </Typography>
                                 </Button>{" "}

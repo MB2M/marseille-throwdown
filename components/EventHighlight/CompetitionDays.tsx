@@ -5,32 +5,25 @@ import Image from "next/image";
 const CompetitionDays = () => {
     return (
         <Box>
-            <Box
+            <Stack
                 position="relative"
                 top={70}
                 right={-60}
-                zIndex={1}
+                zIndex={0}
                 textAlign={"center"}
             >
-                <Typography
-                    variant="h4"
-                    fontFamily={"MichromaRegular"}
-                    fontSize={20}
-                    color={"primary"}
-                >
+                <Typography variant="h4Strasua" color={"primary"}>
                     3 jours de
                 </Typography>
                 <Typography
                     position={"relative"}
                     left={50}
-                    variant="h4"
-                    fontFamily={"MichromaRegular"}
-                    fontSize={20}
+                    variant="h4Strasua"
                     color={"primary"}
                 >
                     compétition
                 </Typography>
-            </Box>
+            </Stack>
             <Box
                 display={"flex"}
                 justifyContent={"center"}
@@ -60,18 +53,20 @@ const CompetitionDays = () => {
                         position={"relative"}
                         width={226}
                         height={147}
+                        border={"2px solid gray"}
                         sx={{
+                            boxShadow: "4px 4px 4px rgba(0, 0, 0, 0.75)",
                             borderRadius: "21px",
                         }}
                         overflow={"hidden"}
                     >
                         <Image
                             alt="dome"
-                            src="/img/calendar.png"
-                            width={226}
-                            height={226}
+                            src="/img/calendar2.jpeg"
+                            width={1638 / 6}
+                            height={2048 / 6}
                             style={{
-                                transform: "translate(0,0px)",
+                                transform: "translate(-20px,-140px)",
                             }}
                             objectFit="cover"
                         />

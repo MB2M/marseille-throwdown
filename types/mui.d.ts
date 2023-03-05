@@ -3,11 +3,13 @@ import { TypographyStyleOptions } from "@mui/material/styles/createTypography";
 declare module "@mui/material/styles" {
     export interface TypographyVariants {
         bigTitle: React.CSSProperties;
+        h4Strasua: React.CSSProperties;
     }
 
     // allow configuration using `createTheme`
     export interface TypographyVariantsOptions {
         bigTitle?: React.CSSProperties;
+        h4Strasua: React.CSSProperties;
     }
 }
 
@@ -15,5 +17,6 @@ declare module "@mui/material/styles" {
 declare module "@mui/material/Typography" {
     export interface TypographyPropsVariantOverrides {
         bigTitle: true;
+        h4Strasua: true;
     }
 }

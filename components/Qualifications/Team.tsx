@@ -18,7 +18,7 @@ const Team = () => {
             >
                 <Stack gap={3} pl={2}>
                     <Typography
-                        fontFamily={"MichromaRegular"}
+                        fontFamily={"Strasua"}
                         fontSize={20}
                         color={"secondary"}
                     >
@@ -54,6 +54,7 @@ const Team = () => {
                     position={"relative"}
                     width={131}
                     height={215}
+                    border={"2px solid gray"}
                     sx={{
                         borderRadius: "21px",
                         boxShadow: "3px 3px 5px black",
@@ -62,11 +63,11 @@ const Team = () => {
                 >
                     <Image
                         alt="dome"
-                        src="/img/2_womens.png"
-                        width={220}
-                        height={220}
+                        src="/img/team2.jpeg"
+                        width={982 / 5}
+                        height={2048 / 5}
                         style={{
-                            transform: "translate(-60px, 0px)",
+                            transform: "translate(-0px, -30px)",
                         }}
                         objectFit="contain"
                     />

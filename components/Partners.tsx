@@ -29,14 +29,15 @@ const Partners = () => {
     });
 
     return (
-        <Box px={4} pt={4} pb={8} sx={{ backgroundColor: "#242424" }}>
+        <Box px={4} pt={4} pb={8} sx={{ backgroundColor: "#111e3e" }}>
             <Typography
-                sx={{ color: "A5C3FA" }}
+                sx={{ color: "#A5C3FA" }}
                 fontSize={"32px"}
                 fontFamily={"NunitoBlack"}
                 textAlign={"center"}
                 p={2}
-            >
+                textTransform={"uppercase"}
+            >   
                 Nos partenaires
             </Typography>
             <AnimatedBox

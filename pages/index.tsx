@@ -13,7 +13,7 @@ import Image from "next/image";
 
 export default function Home() {
     return (
-        <Box sx={{ backgroundColor: "#0D0A07" }}>
+        <Box sx={{ backgroundColor: "#000d2d" }}>
             <Appbar />
             <Box position={"relative"} top={0} width={1} height={"100vh"}>
                 <Image
@@ -57,20 +57,24 @@ export default function Home() {
                     sx={{ color: "#A5C3FA" }}
                     fontFamily={"NunitoBlack"}
                     textAlign={"center"}
+                    textTransform={"uppercase"}
+                    // fontSize={"1.9rem"}
                     p={2}
                 >
                     Venez participer à l&apos;une des plus belles compétitions
                     de France cet été.
                 </Typography>
                 <Typography
+                    color={"secondary"}
                     variant="body1"
-                    sx={{ color: "#A5C3FA" }}
+                    // sx={{ color: "#A5C3FA" }}
                     textAlign={"center"}
                     fontFamily={"NunitoRegular"}
                     my={1}
                     px={2}
+                    fontSize={"1.3rem"}
                 >
-                    C’est l’occasion idéale de mettre vos compétences à
+                    C’est l’occasion idéale de mettre votre fitness à
                     l&apos;épreuve et de vous mesurer aux autres passionnés.
                     <br />
                     Des exercices de force, de cardio et de gymnastique vous
@@ -92,7 +96,7 @@ export default function Home() {
                     </Button>
                 </Box>
             </Box>
-            <Box p={4} sx={{ backgroundColor: "#242424" }}>
+            <Box p={4} sx={{ backgroundColor: "#111e3e" }}>
                 <Typography
                     sx={{ color: "#A5C3FA" }}
                     fontSize={"32px"}
@@ -100,6 +104,7 @@ export default function Home() {
                     textAlign={"center"}
                     p={2}
                     id="qualifications"
+                    textTransform={"uppercase"}
                 >
                     Les qualifications
                 </Typography>
@@ -108,10 +113,10 @@ export default function Home() {
                         <Individual />
                     </Grid2>
                     <Grid2 xs={12} md={4}>
-                        <Team />
+                        <Wods />
                     </Grid2>
                     <Grid2 xs={12} md={4}>
-                        <Wods />
+                        <Team />
                     </Grid2>
                 </Grid2>
                 <Box textAlign={"center"} my={8}>
@@ -134,6 +139,7 @@ export default function Home() {
                     textAlign={"center"}
                     p={2}
                     id="categories"
+                    textTransform={"uppercase"}
                 >
                     Les catégories
                 </Typography>
@@ -160,9 +166,7 @@ export default function Home() {
                 </Typography>
                 <Teams />
             </Box>
-            <Box id="partenaires">
-                <Partners />
-            </Box>
+
             <Box p={4}>
                 <Typography
                     sx={{ color: "#A5C3FA" }}
@@ -171,6 +175,7 @@ export default function Home() {
                     textAlign={"center"}
                     p={2}
                     id="volontaires"
+                    textTransform={"uppercase"}
                 >
                     Volontaires ? Les Marseille Throwdown ont besoin de vous !
                 </Typography>
@@ -184,12 +189,15 @@ export default function Home() {
                         Contactez-nous
                     </Button>
                 </Box>
-                <Divider sx={{ mt: 6, mb: 2, backgroundColor: "#A5C3FA" }} />
-
-                <Typography sx={{ color: "#A5C3FA" }} textAlign={"center"}>
-                    Marseille Throwdown 2023. Tous droits réservés.
-                </Typography>
             </Box>
+                <Box id="partenaires">
+                    <Partners />
+                </Box>
+            <Divider sx={{ mt: 6, mb: 2, backgroundColor: "#A5C3FA" }} />
+
+            <Typography sx={{ color: "#A5C3FA" }} textAlign={"center"}>
+                Marseille Throwdown 2023. Tous droits réservés.
+            </Typography>
         </Box>
     );
 }

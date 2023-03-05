@@ -5,22 +5,25 @@ import Image from "next/image";
 const Competitors = () => {
     return (
         <Box>
-            <Box
-                position="relative"
-                top={50}
-                right={-60}
-                zIndex={1}
-                textAlign={"center"}
-            >
+            <Stack position="relative" top={60} right={-60} zIndex={1}>
                 <Typography
-                    variant="h4"
-                    fontFamily={"MichromaRegular"}
-                    fontSize={20}
+                    variant="h4Strasua"
                     color={"secondary"}
+                    right={65}
+                    top={20}
+                    position={"relative"}
                 >
-                    480 athlètes
+                    496
                 </Typography>
-            </Box>
+                <Typography
+                    left={50}
+                    variant="h4Strasua"
+                    color={"secondary"}
+                    position={"relative"}
+                >
+                    athlètes
+                </Typography>
+            </Stack>
             <Box
                 display={"flex"}
                 justifyContent={"center"}
@@ -51,15 +54,20 @@ const Competitors = () => {
                         width={226}
                         height={147}
                         sx={{
+                            boxShadow: "4px 4px 4px rgba(0, 0, 0, 0.75)",
                             borderRadius: "21px",
                         }}
+                        border={"2px solid gray"}
                         overflow={"hidden"}
                     >
                         <Image
                             alt="horde"
-                            src="/img/horde.png"
-                            fill
-                            objectFit="cover"
+                            src="/img/horde2.jpeg"
+                            width={1638 / 6.5}
+                            height={2048 / 6.5}
+                            style={{
+                                transform: "translate(-25px,-110px)",
+                            }}
                         />
                     </Box>
                 </AnimatedInView>
@@ -78,7 +86,6 @@ const Competitors = () => {
                         >
                             pour un maximum de spectacle et de compétition
                         </Typography>
-                     
                     </Stack>
                 </AnimatedInView>
                 {/* </Box> */}

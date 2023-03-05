@@ -12,11 +12,7 @@ export let theme = createTheme({
             main: "#FC54FF",
         },
     },
-    typography: {
-        bigTitle: {
-            fontSize: "6rem",
-        },
-    },
+
     // components: {
     //     MuiCssBaseline: {
     //         styleOverrides: `
@@ -34,22 +30,32 @@ export let theme = createTheme({
 });
 
 theme.typography.bigTitle = {
+    fontFamily: "Strasua",
+    
     [theme.breakpoints.up("xl")]: {
-        fontSize: "6rem",
-        maxWidth: "90%",
+        lineHeight:"8rem",
+        fontSize: "8rem",
+        maxWidth: "1500px",
         fontWeigt: "800",
     },
     [theme.breakpoints.down("xl")]: {
-        fontSize: "3.4rem",
-        maxWidth: "65%",
+        fontSize: "3.8rem",
+        maxWidth: "700px",
     },
     [theme.breakpoints.down("lg")]: {
-        maxWidth: "85%",
+        // maxWidth: "85%",
+    },
+    [theme.breakpoints.down("md")]: {
+        fontSize: "2.8rem",
+        maxWidth: "500px",
     },
     [theme.breakpoints.down("sm")]: {
         fontSize: "1.8rem",
-        maxWidth: "100%",
+        maxWidth: "350px",
     },
 };
+
+
+theme.typography.h4Strasua = {...theme.typography.h4, fontFamily: "strasua"}
 
 theme = responsiveFontSizes(theme);

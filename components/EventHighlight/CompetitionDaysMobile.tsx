@@ -18,7 +18,7 @@ const CompetitionDaysMobile = () => {
             >
                 <Stack gap={3}>
                     <Typography
-                        fontFamily={"MichromaRegular"}
+                        fontFamily={"strasua"}
                         fontSize={20}
                         color={"primary"}
                     >
@@ -55,18 +55,20 @@ const CompetitionDaysMobile = () => {
                     position={"relative"}
                     width={131}
                     height={215}
+                    border={"2px solid gray"}
                     sx={{
                         borderRadius: "21px",
+                        boxShadow: "4px 4px 4px rgba(0, 0, 0, 0.75)",
                     }}
                     overflow={"hidden"}
                 >
                     <Image
                         alt="dome"
-                        src="/img/calendar.png"
-                        width={240}
-                        height={240}
+                        src="/img/calendar2.jpeg"
+                        width={1638/6.8}
+                        height={2048/6.8}
                         style={{
-                            transform: "translate(-54px)",
+                            transform: "translate(-54px, -40px)",
                         }}
                         objectFit="cover"
                     />

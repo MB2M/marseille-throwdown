@@ -23,19 +23,19 @@ const Wods = () => {
                     { keyName: "opacity", initial: 0, end: 1 },
                 ]}
             >
-                <Box
+                <Stack
                     display={"flex"}
-                    alignItems={"flex-end"}
+                    alignItems={"center"}
                     justifyContent={"center"}
-                    gap={2}
+                    // gap={2}
                     py={4}
                 >
                     <Typography
                         color={"primary"}
-                        fontSize={150}
+                        fontSize={140}
                         fontWeight={900}
                         textAlign={"center"}
-                        fontFamily={"NunitoRegular"}
+                        fontFamily={"Strasua"}
                         lineHeight={1}
                         px={2}
                         sx={{ textShadow: "7px 7px 0px black" }}
@@ -47,10 +47,22 @@ const Wods = () => {
                         fontSize={20}
                         color={"#A5C3FA"}
                         my={2}
+                        lineHeight={"0.6rem"}
                     >
-                        wods de qualifications
+                        wods de
                     </Typography>
-                </Box>
+                    <Typography
+                        fontFamily={"MichromaRegular"}
+                        fontSize={20}
+                        color={"#A5C3FA"}
+                        my={2}
+                        lineHeight={"0.6rem"}
+
+
+                    >
+                        qualifications
+                    </Typography>
+                </Stack>
             </AnimatedInView>
         </Box>
     );

@@ -34,6 +34,7 @@ const FloorsMobile = () => {
                         left={80}
                         width={102}
                         height={215}
+                        border={"2px solid gray"}
                         sx={{
                             borderRadius: "21px",
                         }}
@@ -41,11 +42,12 @@ const FloorsMobile = () => {
                     >
                         <Image
                             alt="dome"
-                            src="/img/beach.png"
-                            width={340}
-                            height={340}
+                            src="/img/beach2.jpeg"
+                            width={2048/5}
+                            height={1365/5}
                             style={{
-                                transform: "translate(-120px, -60px)",
+                                transform: "translate(-60px, -60px)",
+                                boxShadow: "4px 4px 4px rgba(0, 0, 0, 0.75)",
                             }}
                             objectFit="cover"
                         />
@@ -81,11 +83,11 @@ const FloorsMobile = () => {
                     >
                         <Image
                             alt="dome"
-                            src="/img/dome.png"
-                            width={340}
-                            height={340}
+                            src="/img/dome2.jpeg"
+                            width={1900 /4}
+                            height={950/4}
                             style={{
-                                transform: "translate(-120px, -60px)",
+                                transform: "translate(-160px, -0px)",
                             }}
                             objectFit="cover"
                         />
@@ -99,7 +101,7 @@ const FloorsMobile = () => {
             >
                 <Stack gap={3}>
                     <Typography
-                        fontFamily={"MichromaRegular"}
+                        fontFamily={"strasua"}
                         fontSize={20}
                         color={"secondary"}
                     >
