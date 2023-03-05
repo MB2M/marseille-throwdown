@@ -34,20 +34,22 @@ const CategoriesMobile = () => {
                         left={80}
                         width={102}
                         height={215}
+                        border={"2px solid gray"}
                         sx={{
                             borderRadius: "21px",
+                            boxShadow: "4px 4px 4px rgba(0, 0, 0, 0.75)",
                         }}
                         overflow={"hidden"}
                     >
                         <Image
                             alt="dome"
-                            src="/img/men_women.png"
-                            width={220}
-                            height={220}
+                            src="/img/team.jpg"
+                            width={960 / 3}
+                            height={640 / 3}
                             style={{
-                                transform: "translate(-60px, 0px)",
+                                transform: "translate(-130px, 0px)",
+                                objectFit:"cover"
                             }}
-                            objectFit="cover"
                         />
                     </Box>
                 </AnimatedInView>
@@ -73,6 +75,7 @@ const CategoriesMobile = () => {
                         width={102}
                         height={215}
                         left={-80}
+                        border={"2px solid gray"}
                         sx={{
                             borderRadius: "21px",
                             boxShadow: "4px 4px 4px rgba(0, 0, 0, 0.75)",
@@ -81,13 +84,13 @@ const CategoriesMobile = () => {
                     >
                         <Image
                             alt="dome"
-                            src="/img/2_womens.png"
-                            width={220}
-                            height={220}
+                            src="/img/indiv3.jpg"
+                            width={1365 / 6}
+                            height={2048 / 6}
                             style={{
-                                transform: "translate(-60px, 0px)",
+                                transform: "translate(-60px, -70px)",
+                                objectFit:"cover"
                             }}
-                            objectFit="cover"
                         />
                     </Box>
                 </AnimatedInView>
@@ -99,7 +102,7 @@ const CategoriesMobile = () => {
             >
                 <Stack gap={3}>
                     <Typography
-                        fontFamily={"MichromaRegular"}
+                        fontFamily={"strasua"}
                         fontSize={"1.25rem"}
                         color={"secondary"}
                     >

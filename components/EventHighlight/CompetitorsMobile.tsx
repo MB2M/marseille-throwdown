@@ -32,20 +32,21 @@ const CompetitorsMobile = () => {
                     position={"relative"}
                     width={131}
                     height={215}
+                    border={"2px solid gray"}
                     sx={{
                         borderRadius: "21px",
+                        boxShadow: "4px 4px 4px rgba(0, 0, 0, 0.75)",
                     }}
                     overflow={"hidden"}
                 >
                     <Image
                         alt="dome"
-                        src="/img/horde.png"
-                        width={340}
-                        height={340}
+                        src="/img/horde2.jpeg"
+                        width={1638 /6.6}
+                        height={2048/6.6}
                         style={{
-                            transform: "translate(-104px, -60px)",
+                            transform: "translate(-90px, -60px)",objectFit:"cover"
                         }}
-                        objectFit="cover"
                     />
                 </Box>
             </AnimatedInView>
@@ -56,7 +57,7 @@ const CompetitorsMobile = () => {
             >
                 <Stack gap={3} pl={2}>
                     <Typography
-                        fontFamily={"MichromaRegular"}
+                        fontFamily={"strasua"}
                         fontSize={20}
                         color={"secondary"}
                     >

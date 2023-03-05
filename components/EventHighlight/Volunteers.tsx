@@ -5,32 +5,26 @@ import Image from "next/image";
 const Volunteers = () => {
     return (
         <Box>
-            <Box
+            <Stack
                 position="relative"
                 top={85}
-                right={-125}
-                zIndex={1}
+                right={-110}
+                zIndex={0}
                 textAlign={"center"}
             >
-                <Typography
-                    variant="h4"
-                    fontFamily={"MichromaRegular"}
-                    fontSize={20}
-                    color={"primary"}
-                >
+                <Typography variant="h4Strasua" color={"primary"}>
                     Près de 150
                 </Typography>
                 <Typography
                     position={"relative"}
-                    left={50}
-                    variant="h4"
-                    fontFamily={"MichromaRegular"}
-                    fontSize={20}
+                    top={-10}
+                    left={60}
+                    variant="h4Strasua"
                     color={"primary"}
                 >
-                    bénévoles
+                    volontaires
                 </Typography>
-            </Box>
+            </Stack>
             <Box
                 display={"flex"}
                 justifyContent={"center"}
@@ -60,20 +54,22 @@ const Volunteers = () => {
                         position={"relative"}
                         width={226}
                         height={147}
+                        border={"2px solid gray"}
                         sx={{
+                            boxShadow: "4px 4px 4px rgba(0, 0, 0, 0.75)",
                             borderRadius: "21px",
                         }}
                         overflow={"hidden"}
                     >
                         <Image
                             alt="volunteers"
-                            src="/img/volunteers.png"
-                            width={226}
-                            height={226}
+                            src="/img/volunteers2.jpeg"
+                            width={2028 /2.5}
+                            height={1152 /2.5}
                             style={{
-                                transform: "translate(0,-10px)",
+                                transform: "translate(-50px,-200px)",objectFit:"cover"
                             }}
-                            objectFit="cover"
+       
                         />
                     </Box>
                 </AnimatedInView>

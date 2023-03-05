@@ -18,7 +18,7 @@ const VolunteersMobile = () => {
             >
                 <Stack gap={3} pl={2}>
                     <Typography
-                        fontFamily={"MichromaRegular"}
+                        fontFamily={"strasua"}
                         fontSize={20}
                         color={"primary"}
                     >
@@ -54,20 +54,22 @@ const VolunteersMobile = () => {
                     position={"relative"}
                     width={131}
                     height={215}
+                    border={"2px solid gray"}
                     sx={{
                         borderRadius: "21px",
+                        boxShadow: "4px 4px 4px rgba(0, 0, 0, 0.75)",
                     }}
                     overflow={"hidden"}
                 >
                     <Image
                         alt="volunteers"
-                        src="/img/volunteers.png"
-                        width={220}
-                        height={220}
+                        src="/img/volunteers_mobile.jpeg"
+                        width={1366 / 7}
+                        height={2048 / 7}
                         style={{
-                            transform: "translate(-60px, 0px)",
+                            transform: "translate(-30px, -20px)",
+                            objectFit: "contain",
                         }}
-                        objectFit="contain"
                     />
                 </Box>
             </AnimatedInView>

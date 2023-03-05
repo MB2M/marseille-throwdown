@@ -10,7 +10,6 @@ const Categories = () => {
                 justifyContent={"center"}
                 alignItems={"center"}
                 mt={6}
-                
             >
                 {/* <Box display="flex"> */}
                 <AnimatedInView
@@ -35,6 +34,7 @@ const Categories = () => {
                         width={226}
                         height={147}
                         left={-80}
+                        border={"2px solid gray"}
                         sx={{
                             borderRadius: "21px",
                             boxShadow: "4px 4px 4px rgba(0, 0, 0, 0.75)",
@@ -43,23 +43,17 @@ const Categories = () => {
                     >
                         <Image
                             alt="dome"
-                            src="/img/2_womens.png"
-                            width={226}
-                            height={226}
-                            // style={{
-                            //     transform: "translate(-60px, 0px)",
-                            // }}
-                            objectFit="cover"
+                            src="/img/indiv4.jpg"
+                            width={1365 / 4}
+                            height={2048 / 4}
+                            style={{
+                                transform: "translate(-80px, -75px)",objectFit:"cover"
+                            }}
                         />
                     </Box>
                 </AnimatedInView>
 
-                <Typography
-                    variant="h4"
-                    fontFamily={"MichromaRegular"}
-                    color={"secondary"}
-                    mx={-4}
-                >
+                <Typography variant="h4Strasua" color={"secondary"} mx={-4}>
                     20 catégories
                 </Typography>
                 <AnimatedInView
@@ -84,20 +78,21 @@ const Categories = () => {
                         left={80}
                         width={226}
                         height={147}
+                        border={"2px solid gray"}
                         sx={{
+                            boxShadow: "4px 4px 4px rgba(0, 0, 0, 0.75)",
                             borderRadius: "21px",
                         }}
                         overflow={"hidden"}
                     >
                         <Image
                             alt="dome"
-                            src="/img/men_women.png"
-                            width={226}
-                            height={226}
-                            // style={{
-                            //     transform: "translate(-60px, 0px)",
-                            // }}
-                            objectFit="cover"
+                            src="/img/team.jpg"
+                            width={960 / 1.8}
+                            height={640 / 1.8}
+                            style={{
+                                transform: "translate(-200px, -50px)",objectFit:"cover"
+                            }}
                         />
                     </Box>
                 </AnimatedInView>
@@ -111,7 +106,7 @@ const Categories = () => {
             >
                 <Stack gap={3}>
                     <Typography
-                    variant="h6"
+                        variant="h6"
                         fontFamily={"NunitoRegular"}
                         sx={{ color: "#A5C3FA" }}
                     >

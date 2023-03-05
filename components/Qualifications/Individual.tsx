@@ -32,6 +32,7 @@ const Individual = () => {
                     position={"relative"}
                     width={131}
                     height={215}
+                    border={"2px solid gray"}
                     sx={{
                         borderRadius: "21px",
                         boxShadow: "3px 3px 5px black",
@@ -40,11 +41,11 @@ const Individual = () => {
                 >
                     <Image
                         alt="dome"
-                        src="/img/men_women.png"
-                        width={220}
-                        height={220}
+                        src="/img/indiv2.jpeg"
+                        width={1367/6}
+                        height={2048/6}
                         style={{
-                            transform: "translate(-40px, 0px)",
+                            transform: "translate(-47px, -80px)", objectFit:"cover"
                         }}
                         objectFit="cover"
                     />
@@ -57,7 +58,7 @@ const Individual = () => {
             >
                 <Stack gap={2} pl={2}>
                     <Typography
-                        fontFamily={"MichromaRegular"}
+                        fontFamily={"Strasua"}
                         fontSize={20}
                         color={"primary"}
                     >

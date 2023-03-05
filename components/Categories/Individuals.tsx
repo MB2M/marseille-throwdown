@@ -18,39 +18,44 @@ import { CustomTableCell } from "./StyledCustomTable";
 
 const list = [
     {
-        image: "elite.png",
+        image: "elite_2.jpg",
         label: "Elite",
         text: "Homme & Femme",
         men: 31,
         women: 15,
     },
     {
-        image: "master40.png",
+        image: "master35_2.jpeg",
+        label: "Master 35",
+        text: "Homme & Femme",
+        men: 16,
+        women: 8,
+    },
+    {
+        image: "master40_2.jpeg",
         label: "Master 40",
         text: "Homme & Femme",
         men: 16,
         women: 8,
     },
     {
-        image: "master45.png",
-        label: "Master45",
-        text: "Homme & Femme",
-        men: 16,
-        women: 8,
-    },
-    {
-        image: "espoir.png",
+        image: "espoir_2.jpeg",
         label: "Espoir",
         text: "Homme & Femme",
-        men: 31,
+        men: 8,
         women: 8,
     },
     {
-        image: "teen.png",
+        image: "teen_2.jpeg",
         label: "Teen",
         text: "Garçon & Fille",
-        men: 31,
+        men: 8,
         women: 8,
+    },
+    {
+        image: "adaptive.jpeg",
+        label: "Adaptive",
+        text: "Mixte",
     },
 ];
 
@@ -86,30 +91,39 @@ const Individuals = () => {
                             threshold={0.7}
                             triggerOnce
                         >
-                            <Stack alignItems={"center"}>
+                            <Stack alignItems={"center"} spacing={2}>
                                 <Box
                                     borderRadius={"100%"}
                                     overflow={"hidden"}
                                     position={"relative"}
                                     height={265}
                                     width={265}
+                                    border={"2px solid gray"}
+                                    sx={{
+                                        boxShadow:
+                                            "4px 4px 4px rgba(0, 0, 0, 0.75)",
+                                    }}
                                 >
                                     <Image
                                         src={`/img/${category.image}`}
                                         alt={category.image}
+                                        style={{
+                                            transform: "translate(-0px, 0px)",
+                                            objectFit: "cover",
+                                        }}
                                         fill
                                     />
                                 </Box>
                                 <Typography
                                     color="secondary"
-                                    fontFamily={"MichromaRegular"}
-                                    variant="h4"
+                                    // fontFamily={"MichromaRegular"}
+                                    variant="h4Strasua"
                                 >
                                     {category.label}
                                 </Typography>
                                 <Typography
                                     sx={{ color: "#A5C3FA" }}
-                                    fontFamily={"MichromaRegular"}
+                                    fontFamily={"NunitoBlack"}
                                     variant="h5"
                                 >
                                     {category.text}
@@ -122,7 +136,8 @@ const Individuals = () => {
             <Stack my={4} alignItems={"center"}>
                 <Typography
                     variant="h5"
-                    sx={{ color: "#A5C3FA" }}
+                    color={"primary"}
+                    // sx={{ color: "#A5C3FA" }}
                     textAlign={"center"}
                 >
                     Nombre de qualifiés
@@ -137,7 +152,7 @@ const Individuals = () => {
                             </TableRow>
                         </TableHead>
                         <TableBody sx={{ color: "#A5C3FA" }}>
-                            {list.map((category) => (
+                            {list.slice(0, -1).map((category) => (
                                 <TableRow
                                     key={category.label}
                                     sx={{ color: "#A5C3FA" }}
