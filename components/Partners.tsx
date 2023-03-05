@@ -74,7 +74,12 @@ const Partners = () => {
                             maxWidth={230}
                             height={230}
                         >
-                            <Image alt="" src={`/img/${partner}`} fill />
+                            <Image
+                                alt=""
+                                src={`/img/${partner}`}
+                                fill
+                                style={{ objectFit: "contain" }}
+                            />
                         </Box>
                     ))}
                 </AnimatedBox>
