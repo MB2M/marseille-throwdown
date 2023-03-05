@@ -45,9 +45,8 @@ const CompetitorsMobile = () => {
                         width={1638 /6.6}
                         height={2048/6.6}
                         style={{
-                            transform: "translate(-90px, -60px)",
+                            transform: "translate(-90px, -60px)",objectFit:"cover"
                         }}
-                        objectFit="cover"
                     />
                 </Box>
             </AnimatedInView>

@@ -69,8 +69,8 @@ const CompetitionDaysMobile = () => {
                         height={2048/6.8}
                         style={{
                             transform: "translate(-54px, -40px)",
+                            objectFit:"cover"
                         }}
-                        objectFit="cover"
                     />
                 </Box>
             </AnimatedInView>

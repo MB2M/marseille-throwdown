@@ -9,7 +9,7 @@ const Competitors = () => {
                 <Typography
                     variant="h4Strasua"
                     color={"secondary"}
-                    right={65}
+                    right={50}
                     top={20}
                     position={"relative"}
                 >

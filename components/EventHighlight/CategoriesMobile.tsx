@@ -48,8 +48,8 @@ const CategoriesMobile = () => {
                             height={640 / 3}
                             style={{
                                 transform: "translate(-130px, 0px)",
+                                objectFit:"cover"
                             }}
-                            objectFit="cover"
                         />
                     </Box>
                 </AnimatedInView>
@@ -89,8 +89,8 @@ const CategoriesMobile = () => {
                             height={2048 / 6}
                             style={{
                                 transform: "translate(-60px, -70px)",
+                                objectFit:"cover"
                             }}
-                            objectFit="cover"
                         />
                     </Box>
                 </AnimatedInView>

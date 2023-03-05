@@ -64,12 +64,12 @@ const VolunteersMobile = () => {
                     <Image
                         alt="volunteers"
                         src="/img/volunteers_mobile.jpeg"
-                        width={1366/7}
-                        height={2048/7}
+                        width={1366 / 7}
+                        height={2048 / 7}
                         style={{
                             transform: "translate(-30px, -20px)",
+                            objectFit: "contain",
                         }}
-                        objectFit="contain"
                     />
                 </Box>
             </AnimatedInView>

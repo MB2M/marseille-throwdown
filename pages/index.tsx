@@ -6,8 +6,10 @@ import Partners from "@/components/Partners";
 import Individual from "@/components/Qualifications/Individual";
 import Team from "@/components/Qualifications/Team";
 import Wods from "@/components/Qualifications/Wods";
+import RegisterButton from "@/components/RegisterButton";
 import Title from "@/components/Title";
-import { Box, Button, Divider, Stack, Typography } from "@mui/material";
+import Volunteers from "@/components/Volunteers";
+import { Box, Divider, Stack, Typography } from "@mui/material";
 import Grid2 from "@mui/material/Unstable_Grid2";
 import Image from "next/image";
 
@@ -31,14 +33,6 @@ export default function Home() {
                     pb={0.8}
                     px={2}
                 >
-                    {/* <Typography
-                        color={"primary"}
-                        fontFamily={"MichromaRegular"}
-                        fontSize={32}
-                        textAlign={"end"}
-                    >
-                        WHO WILL BE THE FITTEST ON MARS ?
-                    </Typography> */}
                     <Title />
                     <Typography
                         variant="h4"
@@ -58,7 +52,6 @@ export default function Home() {
                     fontFamily={"NunitoBlack"}
                     textAlign={"center"}
                     textTransform={"uppercase"}
-                    // fontSize={"1.9rem"}
                     p={2}
                 >
                     Venez participer à l&apos;une des plus belles compétitions
@@ -85,15 +78,7 @@ export default function Home() {
                 </Typography>
                 <EventHighLight />
                 <Box textAlign={"center"} my={8}>
-                    <Button
-                        size="large"
-                        variant="contained"
-                        color="secondary"
-                        sx={{ color: "black" }}
-                        // sx={{ fontFamily: "NunitoBlack" }}
-                    >
-                        S&apos;inscire
-                    </Button>
+                    <RegisterButton />
                 </Box>
             </Box>
             <Box p={4} sx={{ backgroundColor: "#111e3e" }}>
@@ -120,15 +105,7 @@ export default function Home() {
                     </Grid2>
                 </Grid2>
                 <Box textAlign={"center"} my={8}>
-                    <Button
-                        size="large"
-                        variant="contained"
-                        color="secondary"
-                        // sx={{ color: "#A5C3FA" }}
-                        // sx={{ fontFamily: "NunitoBlack" }}
-                    >
-                        S&apos;inscire
-                    </Button>
+                    <RegisterButton />
                 </Box>
             </Box>
             <Box p={4}>
@@ -153,7 +130,9 @@ export default function Home() {
                     INDIVIDUEL
                 </Typography>
                 <Individuals />
-
+                <Box textAlign={"center"} my={8}>
+                    <RegisterButton />
+                </Box>
                 <Typography
                     color={"primary"}
                     fontSize={"32px"}
@@ -165,6 +144,9 @@ export default function Home() {
                     EQUIPE
                 </Typography>
                 <Teams />
+                <Box textAlign={"center"} my={8}>
+                    <RegisterButton />
+                </Box>
             </Box>
 
             <Box p={4}>
@@ -180,19 +162,12 @@ export default function Home() {
                     Volontaires ? Les Marseille Throwdown ont besoin de vous !
                 </Typography>
                 <Box textAlign={"center"} my={2}>
-                    <Button
-                        variant="contained"
-                        color="primary"
-                        sx={{ color: "black" }}
-                        // sx={{ fontFamily: "NunitoBlack" }}
-                    >
-                        Contactez-nous
-                    </Button>
+                    <Volunteers />
                 </Box>
             </Box>
-                <Box id="partenaires">
-                    <Partners />
-                </Box>
+            <Box id="partenaires">
+                <Partners />
+            </Box>
             <Divider sx={{ mt: 6, mb: 2, backgroundColor: "#A5C3FA" }} />
 
             <Typography sx={{ color: "#A5C3FA" }} textAlign={"center"}>

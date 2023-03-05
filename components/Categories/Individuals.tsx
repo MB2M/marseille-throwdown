@@ -109,9 +109,9 @@ const Individuals = () => {
                                         alt={category.image}
                                         style={{
                                             transform: "translate(-0px, 0px)",
+                                            objectFit: "cover",
                                         }}
                                         fill
-                                        objectFit="cover"
                                     />
                                 </Box>
                                 <Typography

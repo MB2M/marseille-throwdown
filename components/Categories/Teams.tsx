@@ -16,13 +16,13 @@ import { CustomTableCell } from "./StyledCustomTable";
 const qualified = [
     {
         name: "Elite",
-        men: 15,
+        men: 31,
         women: 15,
         mixte: "-",
     },
     {
         name: "Rx",
-        men: 15,
+        men: 31,
         women: 15,
         mixte: "-",
     },
@@ -118,8 +118,8 @@ const Teams = () => {
                                             <Image
                                                 src={`/img/${image}`}
                                                 alt={image}
+                                                style={{ objectFit: "cover" }}
                                                 fill
-                                                objectFit="cover"
                                             />
                                             )
                                         </Box>

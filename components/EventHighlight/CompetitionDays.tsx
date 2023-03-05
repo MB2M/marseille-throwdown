@@ -17,7 +17,8 @@ const CompetitionDays = () => {
                 </Typography>
                 <Typography
                     position={"relative"}
-                    left={50}
+                    top={-10}
+                    left={70}
                     variant="h4Strasua"
                     color={"primary"}
                 >
@@ -67,8 +68,8 @@ const CompetitionDays = () => {
                             height={2048 / 6}
                             style={{
                                 transform: "translate(-20px,-140px)",
+                                objectFit: "cover",
                             }}
-                            objectFit="cover"
                         />
                     </Box>
                 </AnimatedInView>

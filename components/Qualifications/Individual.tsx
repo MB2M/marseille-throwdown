@@ -45,7 +45,7 @@ const Individual = () => {
                         width={1367/6}
                         height={2048/6}
                         style={{
-                            transform: "translate(-47px, -80px)",
+                            transform: "translate(-47px, -80px)", objectFit:"cover"
                         }}
                         objectFit="cover"
                     />

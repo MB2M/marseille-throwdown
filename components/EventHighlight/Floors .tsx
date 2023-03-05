@@ -63,10 +63,10 @@ const Floors = () => {
                             // width={200}
                             // height={200}
                             fill
-                            // style={{
-                            //     transform: "translate(-120px, -60px)",
-                            // }}
-                            objectFit="cover"
+                            style={{
+                                objectFit: "cover",
+                                //     transform: "translate(-120px, -60px)",
+                            }}
                         />
                     </Box>
                 </AnimatedInView>
@@ -122,8 +122,8 @@ const Floors = () => {
                                 height={250}
                                 style={{
                                     transform: "translate(-110px, -80px)",
+                                    objectFit: "cover",
                                 }}
-                                objectFit="cover"
                             />
                         </Box>
                     </Box>
@@ -138,15 +138,21 @@ const Floors = () => {
                         changes={[{ keyName: "opacity", initial: 0, end: 1 }]}
                         threshold={1}
                         triggerOnce
-                    ><Stack>
-
-                        <Typography variant="h4Strasua" color={"secondary"}>
-                            2 lieux
-                        </Typography>
-                        <Typography variant="h4Strasua" color={"secondary"} pl={4}>
-                            d&apos;épreuve
-                        </Typography>
-                    </Stack>
+                    >
+                        <Stack>
+                            <Typography variant="h4Strasua" color={"secondary"}>
+                                2 lieux
+                            </Typography>
+                            <Typography
+                                variant="h4Strasua"
+                                color={"secondary"}
+                                pl={4}
+                                top={-10}
+                                position={"relative"}
+                            >
+                                d&apos;épreuve
+                            </Typography>
+                        </Stack>
                     </AnimatedInView>
                 </Box>
             </Box>

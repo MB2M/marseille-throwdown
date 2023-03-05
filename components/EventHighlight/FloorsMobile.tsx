@@ -43,13 +43,13 @@ const FloorsMobile = () => {
                         <Image
                             alt="dome"
                             src="/img/beach2.jpeg"
-                            width={2048/5}
-                            height={1365/5}
+                            width={2048 / 5}
+                            height={1365 / 5}
                             style={{
+                                objectFit: "cover",
                                 transform: "translate(-60px, -60px)",
                                 boxShadow: "4px 4px 4px rgba(0, 0, 0, 0.75)",
                             }}
-                            objectFit="cover"
                         />
                     </Box>
                 </AnimatedInView>
@@ -84,12 +84,12 @@ const FloorsMobile = () => {
                         <Image
                             alt="dome"
                             src="/img/dome2.jpeg"
-                            width={1900 /4}
-                            height={950/4}
+                            width={1900 / 4}
+                            height={950 / 4}
                             style={{
                                 transform: "translate(-160px, -0px)",
+                                objectFit: "cover",
                             }}
-                            objectFit="cover"
                         />
                     </Box>
                 </AnimatedInView>

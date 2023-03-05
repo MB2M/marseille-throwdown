@@ -17,7 +17,8 @@ const Volunteers = () => {
                 </Typography>
                 <Typography
                     position={"relative"}
-                    left={50}
+                    top={-10}
+                    left={60}
                     variant="h4Strasua"
                     color={"primary"}
                 >
@@ -66,9 +67,9 @@ const Volunteers = () => {
                             width={2028 /2.5}
                             height={1152 /2.5}
                             style={{
-                                transform: "translate(-50px,-200px)",
+                                transform: "translate(-50px,-200px)",objectFit:"cover"
                             }}
-                            objectFit="cover"
+       
                         />
                     </Box>
                 </AnimatedInView>

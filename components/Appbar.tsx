@@ -33,7 +33,7 @@ const Appbar = () => {
     return (
         <AppBar
             position="absolute"
-            sx={{ zIndex: "100", boxShadow: "none", bgcolor:"#000d2d" }}
+            sx={{ zIndex: "100", boxShadow: "none", bgcolor: "#000d2d" }}
         >
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
@@ -46,7 +46,12 @@ const Appbar = () => {
                         }}
                         // height={80}
                     >
-                        <Image alt={"logo"} src={"/img/MT.jpeg"} fill objectFit="contain"/>
+                        <Image
+                            alt={"logo"}
+                            src={"/img/MT.jpeg"}
+                            style={{ objectFit: "contain" }}
+                            fill
+                        />
                     </Box>
                     <Box
                         sx={{
@@ -91,7 +96,10 @@ const Appbar = () => {
                                     key={button}
                                 >
                                     <MenuItem onClick={handleCloseNavMenu}>
-                                        <Typography textAlign="center">
+                                        <Typography
+                                            textAlign="center"
+                                            fontFamily={"strasua"}
+                                        >
                                             {button}
                                         </Typography>
                                     </MenuItem>
@@ -123,7 +131,10 @@ const Appbar = () => {
                                         display: "block",
                                     }}
                                 >
-                                    <Typography variant="h6" fontFamily={"strasua"}>
+                                    <Typography
+                                        variant="h6"
+                                        fontFamily={"strasua"}
+                                    >
                                         {button}
                                     </Typography>
                                 </Button>{" "}

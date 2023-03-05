@@ -43,13 +43,12 @@ const Categories = () => {
                     >
                         <Image
                             alt="dome"
-                            src="/img/indiv.jpeg"
-                            width={1365 / 6}
-                            height={2048 / 6}
+                            src="/img/indiv4.jpg"
+                            width={1365 / 4}
+                            height={2048 / 4}
                             style={{
-                                transform: "translate(0px, -115px)",
+                                transform: "translate(-80px, -75px)",objectFit:"cover"
                             }}
-                            objectFit="cover"
                         />
                     </Box>
                 </AnimatedInView>
@@ -92,9 +91,8 @@ const Categories = () => {
                             width={960 / 1.8}
                             height={640 / 1.8}
                             style={{
-                                transform: "translate(-200px, -50px)",
+                                transform: "translate(-200px, -50px)",objectFit:"cover"
                             }}
-                            objectFit="cover"
                         />
                     </Box>
                 </AnimatedInView>

@@ -67,9 +67,8 @@ const Team = () => {
                         width={982 / 5}
                         height={2048 / 5}
                         style={{
-                            transform: "translate(-0px, -30px)",
+                            transform: "translate(-0px, -30px)",objectFit:"contain"
                         }}
-                        objectFit="contain"
                     />
                 </Box>
             </AnimatedInView>
