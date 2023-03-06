@@ -40,7 +40,7 @@ const CompetitorsMobile = () => {
                     overflow={"hidden"}
                 >
                     <Image
-                        alt="dome"
+                        alt="horde"
                         src="/img/horde2.jpeg"
                         width={1638 /6.6}
                         height={2048/6.6}

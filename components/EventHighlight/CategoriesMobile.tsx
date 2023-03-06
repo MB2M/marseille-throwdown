@@ -42,13 +42,13 @@ const CategoriesMobile = () => {
                         overflow={"hidden"}
                     >
                         <Image
-                            alt="dome"
+                            alt="team"
                             src="/img/team.jpg"
                             width={960 / 3}
                             height={640 / 3}
                             style={{
                                 transform: "translate(-130px, 0px)",
-                                objectFit:"cover"
+                                objectFit: "cover",
                             }}
                         />
                     </Box>
@@ -83,13 +83,13 @@ const CategoriesMobile = () => {
                         overflow={"hidden"}
                     >
                         <Image
-                            alt="dome"
+                            alt="indiv"
                             src="/img/indiv3.jpg"
                             width={1365 / 6}
                             height={2048 / 6}
                             style={{
                                 transform: "translate(-60px, -70px)",
-                                objectFit:"cover"
+                                objectFit: "cover",
                             }}
                         />
                     </Box>

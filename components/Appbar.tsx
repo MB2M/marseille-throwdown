@@ -51,6 +51,8 @@ const Appbar = () => {
                             src={"/img/MT.jpeg"}
                             style={{ objectFit: "contain" }}
                             fill
+                            sizes={"80px"}
+
                         />
                     </Box>
                     <Box

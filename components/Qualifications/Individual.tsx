@@ -47,7 +47,6 @@ const Individual = () => {
                         style={{
                             transform: "translate(-47px, -80px)", objectFit:"cover"
                         }}
-                        objectFit="cover"
                     />
                 </Box>
             </AnimatedInView>

@@ -120,6 +120,7 @@ const Teams = () => {
                                                 alt={image}
                                                 style={{ objectFit: "cover" }}
                                                 fill
+                                                sizes={"265px"}
                                             />
                                             )
                                         </Box>

@@ -42,12 +42,13 @@ const Categories = () => {
                         overflow={"hidden"}
                     >
                         <Image
-                            alt="dome"
+                            alt="indiv"
                             src="/img/indiv4.jpg"
                             width={1365 / 4}
                             height={2048 / 4}
                             style={{
-                                transform: "translate(-80px, -75px)",objectFit:"cover"
+                                transform: "translate(-80px, -75px)",
+                                objectFit: "cover",
                             }}
                         />
                     </Box>
@@ -80,18 +81,19 @@ const Categories = () => {
                         height={147}
                         border={"2px solid gray"}
                         sx={{
-                            boxShadow: "4px 4px 4px rgba(0, 0, 0, 0.75)",
                             borderRadius: "21px",
+                            boxShadow: "4px 4px 4px rgba(0, 0, 0, 0.75)",
                         }}
                         overflow={"hidden"}
                     >
                         <Image
-                            alt="dome"
+                            alt="team"
                             src="/img/team.jpg"
                             width={960 / 1.8}
                             height={640 / 1.8}
                             style={{
-                                transform: "translate(-200px, -50px)",objectFit:"cover"
+                                transform: "translate(-200px, -50px)",
+                                objectFit: "cover",
                             }}
                         />
                     </Box>

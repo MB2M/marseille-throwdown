@@ -41,7 +41,7 @@ const FloorsMobile = () => {
                         overflow={"hidden"}
                     >
                         <Image
-                            alt="dome"
+                            alt="beach"
                             src="/img/beach2.jpeg"
                             width={2048 / 5}
                             height={1365 / 5}

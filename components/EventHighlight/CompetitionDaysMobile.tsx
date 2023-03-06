@@ -63,7 +63,7 @@ const CompetitionDaysMobile = () => {
                     overflow={"hidden"}
                 >
                     <Image
-                        alt="dome"
+                        alt="calendar"
                         src="/img/calendar2.jpeg"
                         width={1638/6.8}
                         height={2048/6.8}

@@ -58,7 +58,7 @@ const Floors = () => {
                         overflow={"hidden"}
                     >
                         <Image
-                            alt="dome"
+                            alt="beach"
                             src="/img/beach2.jpeg"
                             // width={200}
                             // height={200}
@@ -67,6 +67,8 @@ const Floors = () => {
                                 objectFit: "cover",
                                 //     transform: "translate(-120px, -60px)",
                             }}
+                            sizes={"226px"}
+
                         />
                     </Box>
                 </AnimatedInView>

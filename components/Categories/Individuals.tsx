@@ -112,6 +112,7 @@ const Individuals = () => {
                                             objectFit: "cover",
                                         }}
                                         fill
+                                        sizes={"265px"}
                                     />
                                 </Box>
                                 <Typography

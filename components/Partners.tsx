@@ -63,6 +63,7 @@ const Partners = () => {
                                 src={`/img/${partner}`}
                                 fill
                                 style={{ objectFit: "contain" }}
+                                sizes={"230px"}
                             />
                         </Box>
                     ))}
@@ -79,6 +80,7 @@ const Partners = () => {
                                 src={`/img/${partner}`}
                                 fill
                                 style={{ objectFit: "contain" }}
+                                sizes={"230px"}
                             />
                         </Box>
                     ))}
