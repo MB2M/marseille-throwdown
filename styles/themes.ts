@@ -31,12 +31,12 @@ export let theme = createTheme({
 
 theme.typography.bigTitle = {
     fontFamily: "Strasua",
-    
+
     [theme.breakpoints.up("xl")]: {
-        lineHeight:"8rem",
+        lineHeight: "8rem",
         fontSize: "8rem",
         maxWidth: "1500px",
-        fontWeigt: "800",
+        fontWeight: "800",
     },
     [theme.breakpoints.down("xl")]: {
         fontSize: "3.8rem",
@@ -55,7 +55,6 @@ theme.typography.bigTitle = {
     },
 };
 
-
-theme.typography.h4Strasua = {...theme.typography.h4, fontFamily: "strasua"}
+theme.typography.h4Strasua = { ...theme.typography.h4, fontFamily: "strasua" };
 
 theme = responsiveFontSizes(theme);

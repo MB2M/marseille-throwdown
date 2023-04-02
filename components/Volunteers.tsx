@@ -104,15 +104,15 @@ const Volunteers = () => {
         if (missingFieds.length > 0) return setMissingFields(missingFieds);
 
         const payload = {
-            Prénom: formFields.firstName,
+            Prenom: formFields.firstName,
             Nom: formFields.lastName,
             Email: formFields.email,
             Tel: formFields.phone,
             Box: formFields.box,
-            Souhait1: formFields.team1,
-            Souhait2: formFields.team2,
+            // Souhait1: formFields.team1,
+            // Souhait2: formFields.team2,
             tshirt: `${formFields.tshirtModel} - ${formFields.tshirtSize}`,
-            ùmessage: formFields.message,
+            message: formFields.message,
         };
 
         try {
@@ -178,6 +178,7 @@ const Volunteers = () => {
                     <Typography color="white" textAlign={"center"}>
                         Merci de remplir ce formulaire:
                     </Typography>
+                    <Typography textAlign={"center"} sx={{color:"white"}} fontStyle={"italic"} fontSize={12}>(Seules les personnes majeures peuvent devenir volontaires pour les Marseille Throwdown)</Typography>
                     <Box>
                         <Typography color={"primary"}>
                             Vos coordonnées:
@@ -234,27 +235,27 @@ const Volunteers = () => {
                             />
                         </Box>
                     </Box>
-                    <Box>
-                        <Typography color={"primary"}>
-                            Souhait d&apos;équipe:
-                        </Typography>
-                        <Box sx={{ display: { lg: "flex" } }}>
-                            <CustomInputField
-                                color="primary"
-                                label={"Choix 1"}
-                                size="small"
-                                variant={"outlined"}
-                                onChange={handleFieldChange("team1")}
-                            />
-                            <CustomInputField
-                                color="primary"
-                                label={"Choix 2"}
-                                size="small"
-                                variant={"outlined"}
-                                onChange={handleFieldChange("team2")}
-                            />
-                        </Box>
-                    </Box>
+                    {/*<Box>*/}
+                    {/*    <Typography color={"primary"}>*/}
+                    {/*        Souhait d&apos;équipe:*/}
+                    {/*    </Typography>*/}
+                    {/*    <Box sx={{ display: { lg: "flex" } }}>*/}
+                    {/*        <CustomInputField*/}
+                    {/*            color="primary"*/}
+                    {/*            label={"Choix 1"}*/}
+                    {/*            size="small"*/}
+                    {/*            variant={"outlined"}*/}
+                    {/*            onChange={handleFieldChange("team1")}*/}
+                    {/*        />*/}
+                    {/*        <CustomInputField*/}
+                    {/*            color="primary"*/}
+                    {/*            label={"Choix 2"}*/}
+                    {/*            size="small"*/}
+                    {/*            variant={"outlined"}*/}
+                    {/*            onChange={handleFieldChange("team2")}*/}
+                    {/*        />*/}
+                    {/*    </Box>*/}
+                    {/*</Box>*/}
                     <Box>
                         <Typography color={"primary"}>T-shirt:</Typography>
                         <Box sx={{ display: { lg: "flex" } }}>
@@ -290,11 +291,11 @@ const Volunteers = () => {
                             />
                         </Box>
                     </Box>
-                    <Box>
-                        <Box sx={{ display: { lg: "flex" } }}>
+                    <Box >
+                        <Box  sx={{ display: { lg: "flex" } }}>
                             <CustomInputField
                                 multiline
-                                
+                                sx={{minWidth:"97%"}}
                                 rows={3}
                                 color="primary"
                                 label={"Message"}
