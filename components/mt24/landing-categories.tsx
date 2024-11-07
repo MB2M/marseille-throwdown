@@ -91,9 +91,6 @@ const categoryTypes: CategoryType[] = ["individual", "team"];
 export function LandingCategories() {
   const [categoryType, setCategoryType] = useState(categoryTypes[0]);
 
-  const isMobile = window.innerWidth < 1024;
-  const isVeryLarge = window.innerWidth > 1920;
-
   const swiperRef = useRef(null);
 
   return (
@@ -119,9 +116,17 @@ export function LandingCategories() {
 
         <Swiper
           loop={true}
-          slidesPerView={isMobile ? 1.3 : isVeryLarge ? 5 : 4}
+          slidesPerView={1.3}
           spaceBetween={16}
           ref={swiperRef}
+          breakpoints={{
+            1024: {
+              slidesPerView: 4,
+            },
+            1921: {
+              slidesPerView: 5,
+            },
+          }}
         >
           {categories[categoryType].map((category) => (
             <SwiperSlide key={category.title}>
