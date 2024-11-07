@@ -1,5 +1,9 @@
 import { Banner } from "@/components/mt24/banner";
-import Animation from "@/components/mt24/animation";
+import dynamic from "next/dynamic";
+
+const Animation = dynamic(() => import("@/components/mt24/animation"), {
+  ssr: false,
+});
 
 const partners = [
   {
