@@ -6,6 +6,15 @@ import { BadgeGradient } from "@/components/mt24/badge-gradient";
 export const LandingTop = () => {
   return (
     <div className={"relative"}>
+      <div
+        className={
+          "hidden lg:block z-10 h-full w-full absolute top-0 left-0 bg-white"
+        }
+        style={{
+          background:
+            "linear-gradient(180deg, rgba(14, 12, 16, 0) 0%, rgba(14, 12, 16, 0.35) 45%, #0E0C10 100%)",
+        }}
+      />
       <Image
         src={"/img/landing3.jpg"}
         alt={"landing"}
@@ -17,7 +26,7 @@ export const LandingTop = () => {
 
       <div
         className={
-          "absolute left-5 lg:left-10 xl:left-20 bottom-14 lg:bottom-10 xl:bottom-20 flex flex-col gap-11"
+          "absolute left-5 lg:left-10 xl:left-20 bottom-14 lg:bottom-10 xl:bottom-20 flex flex-col gap-11 z-20"
         }
       >
         <div className={"flex flex-col"}>
