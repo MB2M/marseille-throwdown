@@ -8,7 +8,7 @@ export const LandingTop = () => {
     <div className={"relative"}>
       <div
         className={
-          "hidden lg:block z-10 h-full w-full absolute top-0 left-0 bg-white"
+          " lg:block z-10 h-full w-full absolute top-0 left-0 bg-white"
         }
         style={{
           background:
