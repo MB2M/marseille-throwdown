@@ -6,6 +6,7 @@ import { LandingFollowCarousel } from "@/components/mt24/landing-follow-carousel
 import { LandingBottom } from "@/components/mt24/landing-bottom";
 import PartnersBanner from "@/components/mt24/partners-banner";
 import CompetitionsBanner from "@/components/mt24/competition-banner";
+import { Footer } from "@/components/mt24/footer";
 
 export default function Page() {
   return (
@@ -18,6 +19,7 @@ export default function Page() {
       <CompetitionsBanner />
       <LandingFollowCarousel />
       <LandingBottom />
+      <Footer />
     </>
   );
 }

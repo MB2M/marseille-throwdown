@@ -224,6 +224,11 @@
     border-image-source: linear-gradient(90deg, #D8518A 3.12%, #756AAD 29.78%, #0478BE 65.83%, #4FBECB 100%);
     border-image-slice: 1;
   }
+  .border-gradient-light {
+    border: 1px solid;
+    border-image-source: linear-gradient(270deg, #D8518A80 3.12%, #756AAD80 29.78%, #0478BE80 65.83%, #4FBECB80 100%);
+    border-image-slice: 1;
+  }
 }
 .border-gradient2 {
   position: relative;
