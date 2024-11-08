@@ -8,6 +8,7 @@ import "swiper/css";
 import Image from "next/image";
 import { useRef } from "react";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export function LandingFollowCarousel() {
   const swiperRef = useRef(null);
@@ -60,30 +61,40 @@ export function LandingFollowCarousel() {
         }
       >
         <div className={"w-full lg:w-auto"}>
-          <Button
-            className={"w-full bg-[#F0F7F7] hover:bg-grayMT text-[#0E1010]"}
+          <Link
+            href={"https://www.facebook.com/marseille.throwdown"}
+            target={"_blank"}
           >
-            <Image
-              src={"/img/facebook.png"}
-              alt={"facebook"}
-              width={18}
-              height={18}
-            />
-            FACEBOOK
-          </Button>
+            <Button
+              className={"w-full bg-[#F0F7F7] hover:bg-grayMT text-[#0E1010]"}
+            >
+              <Image
+                src={"/img/facebook.png"}
+                alt={"facebook"}
+                width={18}
+                height={18}
+              />
+              FACEBOOK
+            </Button>
+          </Link>
         </div>
         <div className={"w-full lg:w-auto"}>
-          <Button
-            className={"w-full bg-[#F0F7F7] hover:bg-grayMT text-[#0E1010]"}
+          <Link
+            href={"https://www.instagram.com/marseille.throwdown/"}
+            target={"_blank"}
           >
-            <Image
-              src={"/img/instagram.png"}
-              alt={"instagram"}
-              width={18}
-              height={18}
-            />
-            INSTAGRAM
-          </Button>
+            <Button
+              className={"w-full bg-[#F0F7F7] hover:bg-grayMT text-[#0E1010]"}
+            >
+              <Image
+                src={"/img/instagram.png"}
+                alt={"instagram"}
+                width={18}
+                height={18}
+              />
+              INSTAGRAM
+            </Button>
+          </Link>
         </div>
       </div>
     </div>
