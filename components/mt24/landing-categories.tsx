@@ -94,8 +94,8 @@ export function LandingCategories() {
   const swiperRef = useRef(null);
 
   return (
-    <div className="py-14 lg:pt-16 xl:pt-20 px-5 lg:px-10 flex  flex-col gap-20 ">
-      <div className="flex flex-col gap-6 lg:flex-row lg:justify-between lg:items-center">
+    <div className="py-14 lg:pt-16 xl:pt-20 px-5 lg:px-10 xl:px-5 flex  flex-col gap-20 ">
+      <div className="flex flex-col gap-6 lg:flex-row lg:justify-between lg:items-center xl:px-[60px]">
         <Title>
           <SubTitle>FIND YOUR</SubTitle>
           <MainTitle>CATEGORIES</MainTitle>
