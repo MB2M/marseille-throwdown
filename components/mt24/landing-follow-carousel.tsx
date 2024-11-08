@@ -3,16 +3,17 @@
 import { MainTitle } from "@/components/mt24/main-title";
 import { SubTitle } from "@/components/mt24/sub-title";
 import { Title } from "@/components/mt24/title";
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import Image from "next/image";
-import { HTMLAttributes, useRef } from "react";
+import { useRef } from "react";
+import { Button } from "@/components/ui/button";
 
 export function LandingFollowCarousel() {
   const swiperRef = useRef(null);
 
   return (
-    <div className="py-14 lg:pt-16 xl:pt-20   flex flex-col gap-20 ">
+    <div className="py-14 lg:pt-16 xl:pt-20   flex flex-col gap-11 ">
       <div className="flex gap-6  justify-center lg:items-center text-center">
         <Title>
           <MainTitle>FOLLOW US</MainTitle>
@@ -53,37 +54,38 @@ export function LandingFollowCarousel() {
           ))}
         </Swiper>
       </div>
+      <div
+        className={
+          "flex flex-col items-center justify-center gap-3.5 lg:flex-row lg:gap-6 px-4"
+        }
+      >
+        <div className={"w-full lg:w-auto"}>
+          <Button
+            className={"w-full bg-[#F0F7F7] hover:bg-grayMT text-[#0E1010]"}
+          >
+            <Image
+              src={"/img/facebook.png"}
+              alt={"facebook"}
+              width={18}
+              height={18}
+            />
+            FACEBOOK
+          </Button>
+        </div>
+        <div className={"w-full lg:w-auto"}>
+          <Button
+            className={"w-full bg-[#F0F7F7] hover:bg-grayMT text-[#0E1010]"}
+          >
+            <Image
+              src={"/img/instagram.png"}
+              alt={"instagram"}
+              width={18}
+              height={18}
+            />
+            INSTAGRAM
+          </Button>
+        </div>
+      </div>
     </div>
-  );
-}
-
-export function SlideButtons() {
-  const swiper = useSwiper();
-
-  return (
-    <div className={"flex gap-21 justify-between"}>
-      <ArrowButton onClick={() => swiper.slidePrev()} />
-
-      <ArrowButton
-        onClick={() => swiper.slideNext()}
-        className={"rotate-180"}
-      />
-    </div>
-  );
-}
-
-export function ArrowButton({
-  className,
-  ...props
-}: HTMLAttributes<HTMLImageElement>) {
-  return (
-    <Image
-      src={"/img/arrow-left-button.png"}
-      alt={"arrow-left"}
-      width={40}
-      height={40}
-      className={`cursor-pointer ${className}`}
-      {...props}
-    />
   );
 }
