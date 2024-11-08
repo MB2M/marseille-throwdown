@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { animated, useSpring } from "@react-spring/web";
 import { useEffect, useState } from "react";
+import { useWindowSize } from "@uidotdev/usehooks";
 
 type Element = { img: string; width: number; widthSmall: number };
 
@@ -12,8 +13,9 @@ interface Props {
 
 const Animation = ({ elements }: Props) => {
   const [_, setMounted] = useState(false);
+  const { width } = useWindowSize();
 
-  const isDesktop = window.innerWidth > 1024;
+  const isDesktop = (width || 0) > 1024;
 
   const GAP = isDesktop ? 80 : 24;
   const tailwindGap = isDesktop ? "gap-20" : "gap-6";

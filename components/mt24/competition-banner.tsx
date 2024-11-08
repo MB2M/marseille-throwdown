@@ -1,11 +1,7 @@
 import { Banner } from "@/components/mt24/banner";
-import dynamic from "next/dynamic";
+import Animation from "@/components/mt24/animation";
 
-const Animation = dynamic(() => import("@/components/mt24/animation"), {
-  ssr: false,
-});
-
-const partners = [
+const competitions = [
   {
     img: "TOULOUSE-THROWDOWN.jpg",
     width: 60,
@@ -24,7 +20,7 @@ const partners = [
   { img: "carolo.jpg", width: 60, widthSmall: 42 },
 ];
 
-export function CompetitionsBanner() {
+export default function CompetitionsBanner() {
   return (
     <Banner>
       <div className={"flex flex-col  lg:flex-row relative items-stretch"}>
@@ -43,7 +39,7 @@ export function CompetitionsBanner() {
         </div>
         <div className={"w-[1px] bg-white hidden lg:block"} />
         <div className={"overflow-hidden lg:ml-1 py-1.5"}>
-          <Animation elements={partners} />
+          <Animation elements={competitions} />
         </div>
       </div>
     </Banner>

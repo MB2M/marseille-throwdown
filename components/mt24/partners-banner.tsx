@@ -1,9 +1,8 @@
 import { Banner } from "@/components/mt24/banner";
 import Image from "next/image";
-import dynamic from "next/dynamic";
-const Animation = dynamic(() => import("@/components/mt24/animation"), {
-  ssr: false,
-});
+
+import Animation from "@/components/mt24/animation";
+
 const partners = [
   {
     img: "cfmassilia.png",
@@ -24,7 +23,7 @@ const partners = [
   { img: "bdr.svg", width: 186, widthSmall: 130 },
 ];
 
-export function PartnersBanner() {
+export default function PartnersBanner() {
   return (
     <Banner>
       <div className={"flex flex-col  lg:flex-row relative items-stretch"}>
