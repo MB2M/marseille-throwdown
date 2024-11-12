@@ -2,6 +2,7 @@ import "@/styles/globals.css";
 import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 import Header from "@/components/mt24/header";
+import { Footer } from "@/components/mt24/footer";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -24,6 +25,7 @@ export default function RootLayout({
       <body className={`${inter.className} ${strasua.variable}`}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

@@ -1,7 +1,15 @@
-import { PropsWithChildren } from "react";
+import React, { PropsWithChildren } from "react";
 
-const Title = ({ children }: PropsWithChildren) => {
-  return <div className="flex flex-col gap-2">{children}</div>;
+const Title = ({
+  children,
+  className,
+  ...props
+}: React.HTMLAttributes<HTMLDivElement>) => {
+  return (
+    <div className={`flex flex-col gap-2 ${className}`} {...props}>
+      {children}
+    </div>
+  );
 };
 
 export function SubTitle({ children }: PropsWithChildren) {
