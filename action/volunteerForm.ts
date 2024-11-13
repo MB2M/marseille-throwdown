@@ -61,7 +61,7 @@ export const volunteerFormAction = actionHandler(
     });
     const mailData = {
       from: "Marseille Throwdown website",
-      to: " aphal.dev@gmail.com",
+      to: "MT25volunteers@gmail.com, aphal.dev@gmail.com",
       subject: `Nouvelle inscription volontaire ${
         data.firstname || ""
       } ${data.lastname || ""} (${data.email || ""})`,

@@ -94,8 +94,8 @@ export function LandingCategories() {
   const swiperRef = useRef(null);
 
   return (
-    <div className="py-14 lg:pt-16 xl:pt-20 px-5 lg:px-10 xl:px-5 flex  flex-col gap-20 ">
-      <div className="flex flex-col gap-6 lg:flex-row lg:justify-between lg:items-center xl:px-[60px]">
+    <div className="py-14 lg:pt-16 xl:pt-20 px-5 lg:px-10 xl:px-5 flex  flex-col gap-11 ">
+      <div className="w-full flex flex-col gap-6 lg:flex-row lg:justify-between lg:items-center xl:px-[60px]">
         <Title>
           <SubTitle>FIND YOUR</SubTitle>
           <MainTitle>CATEGORIES</MainTitle>
@@ -157,7 +157,7 @@ export function SlideButtons() {
   const swiper = useSwiper();
 
   return (
-    <div className={"flex gap-21 justify-between"}>
+    <div className={"flex gap-21 justify-between py-1.5"}>
       <ArrowButton onClick={() => swiper.slidePrev()} />
 
       <ArrowButton

@@ -3,6 +3,7 @@ import { SubTitle } from "@/components/mt24/sub-title";
 import { Title } from "@/components/mt24/title";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 
 export function LandingVolunteers() {
   return (
@@ -28,8 +29,11 @@ export function LandingVolunteers() {
         <p className={"text-grayMT text-sm lg:text-lg"}>
           Together, we can make a difference !
         </p>
-        <div>
-          <Button variant={"gradient"}>LEARN MORE</Button>
+        <div className={"gap-4 hidden lg:flex"}>
+          <Link href={"/volunteers/contact"}>
+            <Button variant={"gradient"}>BECAME VOLUNTEER</Button>
+          </Link>
+          {/*<Button variant={"outline"}>LEARN MORE</Button>*/}
         </div>
       </div>
       <div className="lg:w-1/2  justify-center items-center grid grid-cols-2 gap-4 self-stretch">
@@ -49,6 +53,14 @@ export function LandingVolunteers() {
             className={"border border-[#3E495D] object-cover"}
           />
         </div>
+      </div>
+      <div className={" flex-col gap-4 lg:hidden flex w-full"}>
+        <Link href={"/volunteers/contact"} className={"w-full"}>
+          <Button variant={"gradient"} className={"w-full"}>
+            BECAME VOLUNTEER
+          </Button>
+        </Link>
+        {/*<Button variant={"outline"}>LEARN MORE</Button>*/}
       </div>
     </div>
   );

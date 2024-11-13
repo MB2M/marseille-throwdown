@@ -41,7 +41,12 @@ export const LandingTop = () => {
             WHO WILL BE THE FITTEST ON MARS ?
           </div>
           <div className={"text-accent font-extrabold"}>
-            JULY 25/26/27TH 2025
+            <span className={"text-foreground"}>Qualifications:</span> JANUARY
+            24TH TO FEBRUARY 14TH
+          </div>
+          <div className={"text-accent font-extrabold"}>
+            <span className={"text-foreground"}>Finale:</span> JULY 25/26/27TH
+            2025
           </div>
         </div>
         <div className={"flex items-center gap-3.5 "}>

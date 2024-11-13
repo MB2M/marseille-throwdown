@@ -13,17 +13,17 @@ export function SwitchButton<T extends string>({ labels, onChange }: Props<T>) {
     onChange?.(label);
   };
   return (
-    <div className="flex">
+    <div className="flex ">
       <div
         className={
-          "border border-[#3E495D] flex justify-center items-center p-1.5"
+          "border border-[#3E495D] flex justify-center items-center p-1.5 w-full"
         }
       >
         {labels.map((label) => (
           <Button
             key={label}
             variant={`${selectedButton === label ? "gradient" : "ghost"}`}
-            className={"w-40"}
+            className={"w-full"}
             onClick={handleClick(label)}
           >
             {label.toUpperCase()}

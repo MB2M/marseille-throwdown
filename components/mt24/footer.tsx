@@ -12,12 +12,20 @@ export const Footer = () => {
       <div className={"flex flex-col gap-8 lg:flex-row"}>
         <div className={"flex flex-col gap-3.5 w-[341px]"}>
           <LogoMT showText={true} />
-          <p className={"text-sm text-gray-500 lg:text-base"}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-            imperdiet.
-          </p>
-          <div className={"flex gap-1.5 font-bold"}>
-            <Image src={"/img/mail.png"} alt={"mail"} width={18} height={18} />
+          <div className={"text-sm text-gray-500 lg:text-base"}>
+            <div>Massilia Barbell Club</div>
+            <div>2 impasses Paradou</div>
+            <div>13009 Marseille</div>
+          </div>
+          <div className={"flex gap-1.5 font-bold items-center"}>
+            <div>
+              <Image
+                src={"/img/mail.png"}
+                alt={"mail"}
+                width={18}
+                height={18}
+              />
+            </div>
             marseille.throwdown@gmail.com
           </div>
         </div>
@@ -30,34 +38,54 @@ export const Footer = () => {
           <div className={"flex flex-col gap-3.5"}>
             <div className={"font-bold"}>COMPETITION</div>
             <div className={"text-grayMT"}>
-              <Link href={""}>Qualifications</Link>
+              <Link href={"/"}>Qualifications</Link>
             </div>
             <div className={"text-grayMT"}>
-              <Link href={""}>Volunteers</Link>
+              <Link href={"/volunteers/contact"}>Volunteers</Link>
             </div>
             <div className={"text-grayMT"}>
-              <Link href={""}>Partners</Link>
+              <Link href={"/"}>Partners</Link>
             </div>
           </div>
           <div className={"flex flex-col gap-3.5"}>
             <div className={"font-bold"}>SOCIAL NETWORK</div>
             <div className={"text-grayMT"}>
-              <Link href={""}>Youtube</Link>
+              <Link
+                href={"https://www.youtube.com/@marseillethrowdown1845"}
+                target={"_blank"}
+              >
+                Youtube
+              </Link>
             </div>
             <div className={"text-grayMT"}>
-              <Link href={""}>Instagram</Link>
+              <Link
+                href={"https://www.instagram.com/marseille.throwdown/"}
+                target={"_blank"}
+              >
+                Instagram
+              </Link>
             </div>
             <div className={"text-grayMT"}>
-              <Link href={""}>Facebook</Link>
+              <Link
+                href={"https://www.facebook.com/marseille.throwdown"}
+                target={"_blank"}
+              >
+                Facebook
+              </Link>
             </div>
           </div>
           <div className={"flex flex-col gap-3.5"}>
             <div className={"font-bold"}>HELP</div>
             <div className={"text-grayMT"}>
-              <Link href={""}>Help Center</Link>
+              <Link
+                href={"https://marseille-throwdown.on.spiceworks.com/portal"}
+                target={"_blank"}
+              >
+                Help Center
+              </Link>
             </div>
             <div className={"text-grayMT"}>
-              <Link href={""}>Questions</Link>
+              <Link href={"/contact"}>Questions</Link>
             </div>
             <div className={"text-grayMT"}>
               <Link href={""}>Terms of service</Link>

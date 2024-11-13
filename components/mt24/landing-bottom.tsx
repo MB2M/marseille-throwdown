@@ -4,6 +4,7 @@ import { RegisterButton } from "@/components/mt24/register-button";
 import { Title } from "@/components/mt24/title";
 import { SubTitle } from "@/components/mt24/sub-title";
 import { MainTitle } from "@/components/mt24/main-title";
+import Link from "next/link";
 
 export const LandingBottom = () => {
   return (
@@ -41,7 +42,9 @@ export const LandingBottom = () => {
         </div>
         <div className={"flex items-center gap-3.5"}>
           <RegisterButton />
-          <Button variant={"outline"}>BECAME VOLUNTEER</Button>
+          <Link href={"/volunteers/contact"} className={"w-full"}>
+            <Button variant={"outline"}>BECAME VOLUNTEER</Button>
+          </Link>
         </div>
       </div>
     </div>
