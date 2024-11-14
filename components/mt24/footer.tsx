@@ -38,13 +38,13 @@ export const Footer = () => {
           <div className={"flex flex-col gap-3.5"}>
             <div className={"font-bold"}>COMPETITION</div>
             <div className={"text-grayMT"}>
-              <Link href={"/"}>Qualifications</Link>
+              <Link href={""}>Qualifications</Link>
             </div>
             <div className={"text-grayMT"}>
               <Link href={"/volunteers/contact"}>Volunteers</Link>
             </div>
             <div className={"text-grayMT"}>
-              <Link href={"/"}>Partners</Link>
+              <Link href={"/partners/contact"}>Partners</Link>
             </div>
           </div>
           <div className={"flex flex-col gap-3.5"}>
@@ -87,9 +87,10 @@ export const Footer = () => {
             <div className={"text-grayMT"}>
               <Link href={"/contact"}>Contact</Link>
             </div>
-            <div className={"text-grayMT"}>
-              <Link href={""}>Terms of service</Link>
-            </div>
+            {/*Todo*/}
+            {/*<div className={"text-grayMT"}>*/}
+            {/*  <Link href={""}>Terms of service</Link>*/}
+            {/*</div>*/}
           </div>
         </div>
       </div>
