@@ -15,14 +15,14 @@ const categories = {
     {
       title: "Elite",
       levels: "Male & Female",
-      imgPath: "/img/elsa.jpeg",
+      imgPath: "/img/elite2.jpg",
       badge: "X QUALIFIED",
       description: "All athletes must be over 18 years old",
     },
     {
       title: "Espoir",
       levels: "Male & Female",
-      imgPath: "/img/espoir.jpg",
+      imgPath: "/img/carousel2.jpg",
       badge: "X QUALIFIED",
       description:
         "Athlete must be over 18 years old and under 22 years old on the first day of the final",
@@ -30,7 +30,7 @@ const categories = {
     {
       title: "Master 35",
       levels: "Male & Female",
-      imgPath: "/img/elsa.jpeg",
+      imgPath: "/img/master_35.jpg",
       badge: "X QUALIFIED",
       description:
         "Athlete must be over 35 years old on the first day of the final",
@@ -38,7 +38,7 @@ const categories = {
     {
       title: "Master 40",
       levels: "Male & Female",
-      imgPath: "/img/elsa.jpeg",
+      imgPath: "/img/master_40.jpg",
       badge: "X QUALIFIED",
       description:
         "Athlete must be over 40 years old on the first day of the final",
@@ -46,7 +46,7 @@ const categories = {
     {
       title: "Teen",
       levels: "Boy & Girl",
-      imgPath: "/img/teens.jpg",
+      imgPath: "/img/teen.jpg",
       badge: "X QUALIFIED",
       description:
         "Athlete must be over 15 years old and under 18 years old on the first day of the final",
@@ -56,28 +56,28 @@ const categories = {
     {
       title: "Elite",
       levels: "2 Men + 2 Women",
-      imgPath: "/img/team3.jpeg",
+      imgPath: "/img/team_elite.jpg",
       badge: "X QUALIFIED",
       description: "All athletes must be over 18 years old",
     },
     {
       title: "Inter",
       levels: "4 Men | 2 Men + 2 Women",
-      imgPath: "/img/team3.jpeg",
+      imgPath: "/img/team_inter.jpg",
       badge: "X QUALIFIED",
       description: "All athletes must be over 18 years old",
     },
     {
       title: "Scaled",
       levels: "4 Men | 2 Men + 2 Women",
-      imgPath: "/img/team3.jpeg",
+      imgPath: "/img/team_scaled.jpg",
       badge: "X QUALIFIED",
       description: "All athletes must be over 18 years old",
     },
     {
       title: "Master 165+",
       levels: "2 Men + 2 Women",
-      imgPath: "/img/team_master.jpg",
+      imgPath: "/img/team_master2.jpg",
       badge: "X QUALIFIED",
       description:
         "The total sum of ages must be at least 165 years. Only the age as of the final day will be considered, with no regard for the exact day or month",

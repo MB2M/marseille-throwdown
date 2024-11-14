@@ -9,6 +9,7 @@ import Image from "next/image";
 import { useRef } from "react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { Autoplay } from "swiper/modules";
 
 export function LandingFollowCarousel() {
   const swiperRef = useRef(null);
@@ -28,6 +29,11 @@ export function LandingFollowCarousel() {
           centeredSlides={true}
           ref={swiperRef}
           slidesPerView={2}
+          modules={[Autoplay]}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
           breakpoints={{
             1024: {
               slidesPerView: 4.4,
