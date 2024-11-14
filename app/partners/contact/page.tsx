@@ -5,25 +5,16 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
-import { volunteerFormAction, VolunteerFormType } from "@/action/volunteerForm";
 import { useActionState, useEffect, useState } from "react";
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectLabel,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+import { partnerFormAction, PartnerFormType } from "@/action/partnerForm";
 import toast from "react-hot-toast";
 
 function InputError({
   state,
   label,
 }: {
-  state: Awaited<ReturnType<typeof volunteerFormAction>>;
-  label: keyof VolunteerFormType;
+  state: Awaited<ReturnType<typeof partnerFormAction>>;
+  label: keyof PartnerFormType;
 }) {
   return (
     <div className={"text-xs text-destructive font-bold"}>
@@ -33,7 +24,7 @@ function InputError({
 }
 
 export default function ContactPage() {
-  const [state, formAction, pending] = useActionState(volunteerFormAction, {
+  const [state, formAction, pending] = useActionState(partnerFormAction, {
     success: false,
     message: "",
   });
@@ -68,10 +59,10 @@ export default function ContactPage() {
           <Title className={"gap-5 text-center"}>
             <Title.subTitle>A question ?</Title.subTitle>
 
-            <Title.mainTitle>Became Volunteer</Title.mainTitle>
+            <Title.mainTitle>Became Partner</Title.mainTitle>
             <p>
-              If you want to became a volunteer or for any question, please fill
-              the form below
+              You enjoyed the previous Marseille Throwdown editions and want to
+              become a partner? Fill the form below.
             </p>
           </Title>
           <form
@@ -79,11 +70,25 @@ export default function ContactPage() {
             action={formAction}
           >
             <div className="grid grid-cols-2 gap-x-5 gap-y-4">
+              <div className="w-full col-span-2 lg:col-span-2">
+                <Label>Enterprise*</Label>
+                <Input
+                  name={"enterprise"}
+                  placeholder={"enterprise@example.com"}
+                  required
+                  type={"text"}
+                  defaultValue={
+                    (state.success && state.data?.data.enterprise) || undefined
+                  }
+                  className={`${state.success && state.data?.errors.fieldErrors.enterprise && "border-2 border-red-500"}`}
+                />
+                <InputError state={state} label={"enterprise"} />
+              </div>
               <div className="w-full">
                 <Label>Firstname*</Label>
                 <Input
                   name={"firstname"}
-                  placeholder={"Rich"}
+                  placeholder={"Firstname"}
                   required
                   type={"text"}
                   className={`${state.success && state.data?.errors.fieldErrors.firstname && "border-2 border-red-500"}`}
@@ -97,7 +102,7 @@ export default function ContactPage() {
                 <Label>Lastname*</Label>
                 <Input
                   name={"lastname"}
-                  placeholder={"Froning"}
+                  placeholder={"Lastname"}
                   required
                   defaultValue={
                     (state.success && state.data?.data.lastname) || undefined
@@ -133,43 +138,7 @@ export default function ContactPage() {
                 />
                 <InputError state={state} label={"phoneNumber"} />
               </div>
-              <div className="w-full">
-                <Label>Gender*</Label>
-                <Select name={"gender"}>
-                  <SelectTrigger
-                    className={`${state.success && state.data?.errors.fieldErrors.phoneNumber && "border-2 border-red-500"}`}
-                  >
-                    <SelectValue placeholder="Gender" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectGroup>
-                      <SelectLabel>Gender</SelectLabel>
-                      <SelectItem value="male">Male</SelectItem>
-                      <SelectItem value="female">Female</SelectItem>
-                    </SelectGroup>
-                  </SelectContent>
-                </Select>
-                <InputError state={state} label={"gender"} />
-              </div>
-              <div className="w-full">
-                <Label>Shirt Size</Label>
-                <Select name={"shirtSize"}>
-                  <SelectTrigger>
-                    <SelectValue placeholder="Select size" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectGroup>
-                      <SelectLabel>Shirt Size</SelectLabel>
-                      <SelectItem value="XS">XS</SelectItem>
-                      <SelectItem value="S">S</SelectItem>
-                      <SelectItem value="M">M</SelectItem>
-                      <SelectItem value="L">L</SelectItem>
-                      <SelectItem value="XL">XL</SelectItem>
-                    </SelectGroup>
-                  </SelectContent>
-                </Select>
-                <InputError state={state} label={"shirtSize"} />
-              </div>
+
               <div className="w-full col-span-2">
                 <Label htmlFor={"message"}>Message</Label>
                 <Textarea

@@ -38,19 +38,23 @@ export const LandingFinaleAbout = () => {
         <Title.subTitle>About</Title.subTitle>
         <Title.mainTitle>Final Show</Title.mainTitle>
       </Title>
-      <div>
-        <Items title={"3 days of competition"} description={""} />
-      </div>
+      {/*<div>*/}
+      {/*  <Items title={"3 days of competition"} description={""} />*/}
+      {/*</div>*/}
       <div
         className={
           "grid grid-cols-1 lg:grid-cols-2  justify-center gap-9 lg:gap-20"
         }
       >
         <Items
+          title={"3 days of competition"}
+          description={"To live a unforgettable experience"}
+        />
+        <Items
           title={"2 events places"}
           description={"Palais des sports de Marseille / Plages du Prado "}
         />
-        <Items title={"2 floors"} description={""} />
+        {/*<Items title={"2 floors"} description={""} />*/}
       </div>
       <div
         className={

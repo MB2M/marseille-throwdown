@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 import Header from "@/components/mt24/header";
 import { Footer } from "@/components/mt24/footer";
+import { Toaster } from "react-hot-toast";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -23,6 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} ${strasua.variable}`}>
+        <Toaster />
         <Header />
         {children}
         <Footer />

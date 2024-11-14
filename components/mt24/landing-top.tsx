@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { RegisterButton } from "@/components/mt24/register-button";
 import { BadgeGradient } from "@/components/mt24/badge-gradient";
+import Link from "next/link";
 
 export const LandingTop = () => {
   return (
@@ -41,17 +42,19 @@ export const LandingTop = () => {
             WHO WILL BE THE FITTEST ON MARS ?
           </div>
           <div className={"text-accent font-extrabold"}>
-            <span className={"text-foreground"}>Qualifications:</span> JANUARY
-            24TH TO FEBRUARY 14TH
+            <span className={"text-foreground"}>Qualifications:</span> JAN 24 -
+            FEB 14
           </div>
           <div className={"text-accent font-extrabold"}>
-            <span className={"text-foreground"}>Finale:</span> JULY 25/26/27TH
+            <span className={"text-foreground"}>Finale:</span> JULY 25/26/27
             2025
           </div>
         </div>
         <div className={"flex items-center gap-3.5 "}>
           <RegisterButton />
-          <Button variant={"outline"}>DISCOVER</Button>
+          <Link href={"/volunteers/contact"}>
+            <Button variant={"outline"}>BECAME VOLUNTEER</Button>
+          </Link>
         </div>
       </div>
     </div>
