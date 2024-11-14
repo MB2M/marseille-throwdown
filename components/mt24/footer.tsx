@@ -85,7 +85,7 @@ export const Footer = () => {
               </Link>
             </div>
             <div className={"text-grayMT"}>
-              <Link href={"/contact"}>Questions</Link>
+              <Link href={"/contact"}>Contact</Link>
             </div>
             <div className={"text-grayMT"}>
               <Link href={""}>Terms of service</Link>
