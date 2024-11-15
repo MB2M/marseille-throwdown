@@ -66,7 +66,7 @@ export const LandingFinaleAbout = () => {
           description={"For everyone, from all levels"}
         />
         <Items
-          title={"800 finalists"}
+          title={"850 finalists"}
           description={"For a maximum of spectacle and competition"}
         />
         <Items

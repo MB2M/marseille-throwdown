@@ -16,14 +16,14 @@ const categories = {
       title: "Elite",
       levels: "Male & Female",
       imgPath: "/img/elite2.jpg",
-      badge: "TBA",
+      badge: "24 men | 12 women",
       description: "All athletes must be over 18 years old",
     },
     {
       title: "Espoir",
       levels: "Male & Female",
       imgPath: "/img/carousel2.jpg",
-      badge: "TBA",
+      badge: "16 men | 6 women",
       description:
         "Athlete must be over 18 years old and under 22 years old on the first day of the final",
     },
@@ -31,7 +31,7 @@ const categories = {
       title: "Master 35",
       levels: "Male & Female",
       imgPath: "/img/master_35.jpg",
-      badge: "TBA",
+      badge: "16 men | 6 women",
       description:
         "Athlete must be over 35 years old on the first day of the final",
     },
@@ -39,7 +39,7 @@ const categories = {
       title: "Master 40",
       levels: "Male & Female",
       imgPath: "/img/master_40.jpg",
-      badge: "TBA",
+      badge: "16 men | 6 women",
       description:
         "Athlete must be over 40 years old on the first day of the final",
     },
@@ -47,7 +47,7 @@ const categories = {
       title: "Teen",
       levels: "Boy & Girl",
       imgPath: "/img/teen.jpg",
-      badge: "TBA",
+      badge: "16 men | 6 women",
       description:
         "Athlete must be over 15 years old and under 18 years old on the first day of the final",
     },
@@ -57,30 +57,38 @@ const categories = {
       title: "Elite",
       levels: "2 Men + 2 Women",
       imgPath: "/img/team_elite.jpg",
-      badge: "TBA",
+      badge: "24 teams",
       description: "All athletes must be over 18 years old",
     },
     {
       title: "Inter",
       levels: "4 Men | 2 Men + 2 Women",
       imgPath: "/img/team_inter.jpg",
-      badge: "TBA",
+      badge: "30 teams each",
       description: "All athletes must be over 18 years old",
     },
     {
       title: "Scaled",
       levels: "4 Men | 2 Men + 2 Women",
       imgPath: "/img/team_scaled.jpg",
-      badge: "TBA",
+      badge: "30 teams each",
       description: "All athletes must be over 18 years old",
     },
     {
       title: "Master 165+",
       levels: "2 Men + 2 Women",
       imgPath: "/img/team_master2.jpg",
-      badge: "TBA",
+      badge: "12 teams",
       description:
         "The total sum of ages must be at least 165 years. Only the age as of the final day will be considered, with no regard for the exact day or month",
+    },
+    {
+      title: "Adaptive + Valid",
+      levels: "1 adaptive + 1 valid",
+      imgPath: "/img/adaptive.jpg",
+      badge: "12 teams",
+      description:
+        "An adaptive athlete can compete with a valid athlete. The is NO qualification for this category. Registration is not open right now",
     },
   ],
 };
