@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import Header from "@/components/mt24/header";
 import { Footer } from "@/components/mt24/footer";
 import { Toaster } from "react-hot-toast";
+import { Metadata } from "next";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -15,6 +16,14 @@ const strasua = localFont({
   display: "swap",
   variable: "--font-strasua",
 });
+
+export const metadata: Metadata = {
+  title: "Marseille Throwdown",
+  description: "The Marseille Throwdown competition",
+  openGraph: {
+    title: "Marseille Throwdown",
+  },
+};
 
 export default function RootLayout({
   children,
