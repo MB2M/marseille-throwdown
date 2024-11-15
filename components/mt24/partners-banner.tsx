@@ -12,9 +12,9 @@ const partners = [
     widthSmall: 42,
   },
   {
-    img: "tako-white.png",
-    width: 105,
-    widthSmall: 74,
+    img: "tako-logo-name-hori.png",
+    width: 140,
+    widthSmall: 105,
   },
   {
     img: "crossliftor-white.png",
