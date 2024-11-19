@@ -110,7 +110,7 @@ export default function ContactPage() {
                 <Label>Email*</Label>
                 <Input
                   name={"email"}
-                  placeholder={"rich-froning@crossfit.com"}
+                  placeholder={"rich.froning@marseille-throwdown.com"}
                   required
                   type={"email"}
                   defaultValue={
@@ -120,6 +120,7 @@ export default function ContactPage() {
                 />
                 <InputError state={state} label={"email"} />
               </div>
+
               <div className="w-full col-span-2 lg:col-span-1">
                 <Label>Phone*</Label>
                 <Input
@@ -132,6 +133,20 @@ export default function ContactPage() {
                   className={`${state.success && state.data?.errors.fieldErrors.phoneNumber && "border-2 border-red-500"}`}
                 />
                 <InputError state={state} label={"phoneNumber"} />
+              </div>
+              <div className="w-full col-span-2 lg:col-span-2">
+                <Label>Box*</Label>
+                <Input
+                  name={"box"}
+                  placeholder={"Affiliate"}
+                  required
+                  type={"text"}
+                  defaultValue={
+                    (state.success && state.data?.data.box) || undefined
+                  }
+                  className={`${state.success && state.data?.errors.fieldErrors.box && "border-2 border-red-500"}`}
+                />
+                <InputError state={state} label={"box"} />
               </div>
               <div className="w-full">
                 <Label>Gender*</Label>

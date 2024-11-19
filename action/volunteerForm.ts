@@ -14,6 +14,7 @@ const volunteerFormSchema = z.object({
       /^\+?(\d{1,3})?[-.]?(\d{1,4}[-.]?){1,3}\d{1,4}$/,
       "bad phone number",
     ),
+  box: z.string().min(2, "too short"),
   gender: z.string().min(1, "select an option"),
   shirtSize: z.string(),
   message: z.string().max(900),
@@ -68,7 +69,7 @@ export const volunteerFormAction = actionHandler(
       text: `Nouveau volontaire: ${data.firstname || ""} ${
         data.lastname || ""
       } (${data.email || ""})`,
-      html: `<h4>Nouvelle inscription volontaire:</h4>
+      html: `<h4>Nouvelle inscription volontaire :</h4>
 
                         <ul>
                         ${Object.entries(data)
