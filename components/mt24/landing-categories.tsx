@@ -71,7 +71,7 @@ const categories = {
       title: "Scaled",
       levels: "4 Men | 2 Men + 2 Women",
       imgPath: "/img/team_scaled.jpg",
-      badge: "30 teams each",
+      badge: "36 teams each",
       description: "All athletes must be over 18 years old",
     },
     {

@@ -18,7 +18,12 @@ export const CardCategory = ({
 }: Props) => {
   return (
     <div className={"flex flex-col gap-4"}>
-      <div className={"relative border border-[#3E495D]"}>
+      <div className={"relative border border-[#3E495D] "}>
+        <div
+          className={
+            "absolute w-full h-full bg-gradient-to-t from-black from-0% to-transparent to-50%     "
+          }
+        />
         <Image
           src={imagePath}
           alt={"img"}
