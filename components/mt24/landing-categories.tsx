@@ -23,7 +23,7 @@ const categories = {
       title: "Espoir",
       levels: "Male & Female",
       imgPath: "/img/carousel2.jpg",
-      badge: "16 men | 6 women",
+      badge: "12 men | 6 women",
       description:
         "Athlete must be over 18 years old and under 22 years old on the first day of the final",
     },
@@ -31,7 +31,7 @@ const categories = {
       title: "Master 35",
       levels: "Male & Female",
       imgPath: "/img/master_35.jpg",
-      badge: "16 men | 6 women",
+      badge: "12 men | 6 women",
       description:
         "Athlete must be over 35 years old on the first day of the final",
     },
@@ -39,7 +39,7 @@ const categories = {
       title: "Master 40",
       levels: "Male & Female",
       imgPath: "/img/master_40.jpg",
-      badge: "16 men | 6 women",
+      badge: "12 men | 6 women",
       description:
         "Athlete must be over 40 years old on the first day of the final",
     },
@@ -47,7 +47,7 @@ const categories = {
       title: "Teen",
       levels: "Boy & Girl",
       imgPath: "/img/teen.jpg",
-      badge: "16 men | 6 women",
+      badge: "12 men | 6 women",
       description:
         "Athlete must be over 15 years old and under 18 years old on the first day of the final",
     },
