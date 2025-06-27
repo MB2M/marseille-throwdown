@@ -14,11 +14,8 @@ export default function Page() {
           </MainTitle>
         </Title>
         <p className={"text-grayMT text-sm lg:text-base"}>
-          This premium fitness equipment has been specially selected and used
-          during our recent competitions. Now available for purchase at
-          attractive prices, these machines offer you the unique opportunity to
-          own the same professional-grade equipment used by competitive
-          athletes.
+          This fitness equipment has been used during our recent competitions.
+          Now available for purchase at attractive prices.
         </p>
       </div>
       <HelloAssoShop />
