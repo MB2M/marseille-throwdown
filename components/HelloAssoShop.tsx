@@ -60,13 +60,14 @@ const HelloAssoShop = () => {
     <div className="w-full">
       <iframe
         ref={iframeRef}
-        allowTransparency={true}
+        // allowtransparency={true}
         src="https://www.helloasso.com/associations/massilia-barbell-club/boutiques/marseille-throwdown-2025-1/widget"
         style={{
           width: "100%",
           height: `${iframeHeight}px`,
           border: "none",
           overflow: "hidden",
+          background: "transparent",
         }}
         onLoad={() => {
           // Plusieurs tentatives de redimensionnement avec des délais différents
