@@ -1,6 +1,6 @@
-import { RegisterButton } from "@/components/mt24/register-button";
 import { LogoMT } from "@/components/mt24/logo-MT";
 import Link from "next/link";
+import { ShopButton } from "@/components/mt24/shop-button";
 
 export default function Header() {
   return (
@@ -10,7 +10,8 @@ export default function Header() {
           <LogoMT />
         </Link>
         <div className={"flex items-center gap-5"}>
-          <RegisterButton />
+          {/*<RegisterButton />*/}
+          <ShopButton />
           {/*<div className={"lg:hidden"}>*/}
           {/*  <Image*/}
           {/*    src={"/img/icon-menu.png"}*/}

@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { RegisterButton } from "@/components/mt24/register-button";
 import { Title } from "@/components/mt24/title";
 import { SubTitle } from "@/components/mt24/sub-title";
 import { MainTitle } from "@/components/mt24/main-title";
@@ -41,7 +40,7 @@ export const LandingBottom = () => {
           </Title>
         </div>
         <div className={"flex items-center gap-3.5"}>
-          <RegisterButton />
+          {/*<RegisterButton />*/}
           <Link href={"/volunteers/contact"} className={"w-full"}>
             <Button variant={"outline"}>BECAME VOLUNTEER</Button>
           </Link>

@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { RegisterButton } from "@/components/mt24/register-button";
 import { BadgeGradient } from "@/components/mt24/badge-gradient";
 import Link from "next/link";
+import { ShopButton } from "@/components/mt24/shop-button";
 
 export const LandingTop = () => {
   return (
@@ -51,7 +51,8 @@ export const LandingTop = () => {
           </div>
         </div>
         <div className={"flex items-center gap-3.5 "}>
-          <RegisterButton />
+          {/*<RegisterButton />*/}
+          <ShopButton />
           <Link href={"/volunteers/contact"}>
             <Button variant={"outline"}>BECAME VOLUNTEER</Button>
           </Link>

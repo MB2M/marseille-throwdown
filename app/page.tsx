@@ -22,6 +22,8 @@ export default function Page() {
       <LandingVolunteers />
       <LandingFollowCarousel />
       <LandingBottom />
+      {/*<HelloAssoShop />*/}
+      {/*<Checkout productId={"prod_SNUMtllvDEI6ce"} />*/}
     </>
   );
 }
