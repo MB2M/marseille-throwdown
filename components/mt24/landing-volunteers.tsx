@@ -31,7 +31,7 @@ export function LandingVolunteers() {
         </p>
         <div className={"gap-4 hidden lg:flex"}>
           <Link href={"/volunteers/contact"}>
-            <Button variant={"gradient"}>BECAME VOLUNTEER</Button>
+            <Button variant={"gradient"}>BECOME VOLUNTEER</Button>
           </Link>
           {/*<Button variant={"outline"}>LEARN MORE</Button>*/}
         </div>
@@ -57,7 +57,7 @@ export function LandingVolunteers() {
       <div className={" flex-col gap-4 lg:hidden flex w-full"}>
         <Link href={"/volunteers/contact"} className={"w-full"}>
           <Button variant={"gradient"} className={"w-full"}>
-            BECAME VOLUNTEER
+            BECOME VOLUNTEER
           </Button>
         </Link>
         {/*<Button variant={"outline"}>LEARN MORE</Button>*/}

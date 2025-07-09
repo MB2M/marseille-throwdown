@@ -53,7 +53,7 @@ export default function PartnersBanner() {
               className={"bg-transparent"}
               size={"sm"}
             >
-              Became Partner
+              Become Partner
             </Button>
           </Link>
         </div>

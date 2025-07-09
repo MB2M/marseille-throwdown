@@ -59,7 +59,7 @@ export default function ContactPage() {
           <Title className={"gap-5 text-center"}>
             <Title.subTitle>A question ?</Title.subTitle>
 
-            <Title.mainTitle>Became Partner</Title.mainTitle>
+            <Title.mainTitle>Become Partner</Title.mainTitle>
             <p>
               You enjoyed the previous Marseille Throwdown editions and want to
               become a partner? Fill the form below.

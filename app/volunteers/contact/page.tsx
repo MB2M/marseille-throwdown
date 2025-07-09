@@ -68,9 +68,9 @@ export default function ContactPage() {
           <Title className={"gap-5 text-center"}>
             <Title.subTitle>A question ?</Title.subTitle>
 
-            <Title.mainTitle>Became Volunteer</Title.mainTitle>
+            <Title.mainTitle>Become Volunteer</Title.mainTitle>
             <p>
-              If you want to became a volunteer or for any question, please fill
+              If you want to become a volunteer or for any question, please fill
               the form below
             </p>
           </Title>

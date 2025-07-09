@@ -42,7 +42,7 @@ export const LandingBottom = () => {
         <div className={"flex items-center gap-3.5"}>
           {/*<RegisterButton />*/}
           <Link href={"/volunteers/contact"} className={"w-full"}>
-            <Button variant={"outline"}>BECAME VOLUNTEER</Button>
+            <Button variant={"outline"}>BECOME VOLUNTEER</Button>
           </Link>
         </div>
       </div>

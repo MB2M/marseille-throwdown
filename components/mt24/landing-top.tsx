@@ -56,7 +56,7 @@ export const LandingTop = () => {
           <TicketButton />
           <ShopButton />
           <Link href={"/volunteers/contact"}>
-            <Button variant={"outline"}>BECAME VOLUNTEER</Button>
+            <Button variant={"outline"}>BECOME VOLUNTEER</Button>
           </Link>
         </div>
       </div>
