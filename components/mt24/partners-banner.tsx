@@ -22,8 +22,10 @@ const partners = [
     widthSmall: 102,
   },
   { img: "thorus.png", width: 253, widthSmall: 177 },
-  { img: "bdr.svg", width: 186, widthSmall: 130 },
+  { img: "bdr.png", width: 186, widthSmall: 130 },
   { img: "velites_logo_letras_WHITE.avif", width: 186, widthSmall: 130 },
+  { img: "bleuet.svg", width: 75, widthSmall: 50 },
+  { img: "fitaid.webp", width: 186, widthSmall: 130 },
 ];
 
 export default function PartnersBanner() {
