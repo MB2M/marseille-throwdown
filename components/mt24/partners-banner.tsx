@@ -23,6 +23,7 @@ const partners = [
   },
   { img: "thorus.png", width: 253, widthSmall: 177 },
   { img: "bdr.svg", width: 186, widthSmall: 130 },
+  { img: "velites_logo_letras_WHITE.avif", width: 186, widthSmall: 130 },
 ];
 
 export default function PartnersBanner() {
