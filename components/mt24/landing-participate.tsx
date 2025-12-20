@@ -12,19 +12,29 @@ export function LandingParticipate() {
         <Title>
           <SubTitle>IN FRANCE THIS SUMMER</SubTitle>
           <MainTitle>
-            TAKE PART IN ONE OF THE MOST EXITING COMPETITIONS
+            TAKE PART IN ONE OF THE MOST EXCITING FITNESS SHOWDOWNS IN EUROPE
           </MainTitle>
         </Title>
-        <p className={"text-grayMT text-sm lg:text-base"}>
-          This is the perfect opportunity to put your fitness to the test and
-          measure yourself against other enthusiasts. Strength, cardio and
-          gymnastics exercises await you for a physical and mental challenge
-          that will push you to give the best of yourself.
+        <p className={"text-grayMT text-sm lg:text-base flex flex-col gap-2"}>
+          <p>Push your limits. Test your strength.</p>
+          <p>
+            Over three intense days, athletes from all levels will face
+            demanding workouts combining strength, cardio and gymnastics — both
+            physically and mentally.
+          </p>
+          <p>This is more than a competition.</p>
+          <p className={"font-bold"}>
+            It’s a battle. A show. An unforgettable experience.
+          </p>
+          {/*This is the perfect opportunity to put your fitness to the test and*/}
+          {/*measure yourself against other enthusiasts. Strength, cardio and*/}
+          {/*gymnastics exercises await you for a physical and mental challenge*/}
+          {/*that will push you to give the best of yourself.*/}
         </p>
         <p className={"text-grayMT  text-sm lg:text-base"}>
           Don&#39;t wait any longer and register now to take up this challenge!
         </p>
-        <RegisterButton />
+        <RegisterButton textOverwrite={"JOIN THE BATTLE"} />
       </div>
     </div>
   );

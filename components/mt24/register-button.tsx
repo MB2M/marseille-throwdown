@@ -1,13 +1,17 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
-export const RegisterButton = () => {
+export const RegisterButton = ({
+  textOverwrite,
+}: {
+  textOverwrite?: string;
+}) => {
   return (
     <Link
-      href={"https://competitioncorner.net/events/mt25-qualifs/register"}
+      href={"https://competitioncorner.net/events/mt26-qualifs/register"}
       target={"_blank"}
     >
-      <Button variant={"gradient"}>REGISTER</Button>
+      <Button variant={"gradient"}>{textOverwrite ?? "REGISTER"}</Button>
     </Link>
   );
 };

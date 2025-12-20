@@ -21,12 +21,12 @@ const partners = [
     width: 140,
     widthSmall: 105,
   },
-  { img: "thorus.png", width: 253, widthSmall: 177 },
+  // { img: "thorus.png", width: 253, widthSmall: 177 },
   { img: "bdr.png", width: 186, widthSmall: 130 },
   { img: "bleuet.svg", width: 95, widthSmall: 63 },
-  { img: "velites_logo_letras_WHITE.avif", width: 186, widthSmall: 130 },
+  // { img: "velites_logo_letras_WHITE.avif", width: 186, widthSmall: 130 },
   { img: "mbc.jpeg", width: 75, widthSmall: 50 },
-  { img: "fitaid.webp", width: 186, widthSmall: 130 },
+  // { img: "fitaid.webp", width: 186, widthSmall: 130 },
 ];
 
 export default function PartnersBanner() {

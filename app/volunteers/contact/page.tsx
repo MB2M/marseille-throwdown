@@ -17,6 +17,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import toast from "react-hot-toast";
+import Image from "next/image";
 
 function InputError({
   state,
@@ -59,7 +60,16 @@ export default function ContactPage() {
 
   return (
     <>
-      <div className={" bg-gradient-full-vertical  bg-repeat"}>
+      <div className={"relative"}>
+        <div className={"absolute inset-0"}>
+          <Image
+            src={"/img/mountain.png"}
+            alt={"moutain"}
+            className={"object-cover object-bottom "}
+            fill
+          />
+        </div>
+        <div className={"absolute inset-0 blue-gradient object-cover z-10"} />
         <div
           className={
             "flex flex-col gap-11 relative px-5 lg:px-10 xl:px-20 py-14 lg:py-16 xl:py-20 items-center justify-center z-10"

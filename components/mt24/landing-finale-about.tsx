@@ -48,13 +48,15 @@ export const LandingFinaleAbout = () => {
       >
         <Items
           title={"3 days of competition"}
-          description={"To live a unforgettable experience"}
+          description={"Three days. One goal. Total intensity."}
+          // description={"To live an unforgettable experience"}
         />
         <Items
-          title={"2 events places"}
-          description={"Palais des sports de Marseille / Plages du Prado "}
+          title={"3 venues"}
+          description={"Three venues. One legendary show."}
+          // description={"Palais des sports de Marseille / Plages du Prado "}
         />
-        {/*<Items title={"2 floors"} description={""} />*/}
+        {/*<Items title={"3 floors"} description={""} />*/}
       </div>
       <div
         className={
@@ -62,16 +64,16 @@ export const LandingFinaleAbout = () => {
         }
       >
         <Items
-          title={"16 categories"}
-          description={"For everyone, from all levels"}
+          title={"24 categories"}
+          description={"24 categories. Every level. Every style."}
         />
         <Items
-          title={"850 finalists"}
-          description={"For a maximum of spectacle and competition"}
+          title={"700+ finalists"}
+          description={"700+ finalists. One ultimate showdown."}
         />
         <Items
-          title={"More than 150 volunteers"}
-          description={"Ready to give their best"}
+          title={"A large dedicated team of volunteers"}
+          description={"Powered by passion. Driven by people."}
         />
       </div>
     </div>

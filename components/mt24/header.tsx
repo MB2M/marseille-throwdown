@@ -1,7 +1,8 @@
 import { LogoMT } from "@/components/mt24/logo-MT";
 import Link from "next/link";
-import { ShopButton } from "@/components/mt24/shop-button";
-import { TicketButton } from "@/components/mt24/ticket-button";
+// import { ShopButton } from "@/components/mt24/shop-button";
+// import { TicketButton } from "@/components/mt24/ticket-button";
+import { RegisterButton } from "@/components/mt24/register-button";
 
 export default function Header() {
   return (
@@ -11,9 +12,9 @@ export default function Header() {
           <LogoMT />
         </Link>
         <div className={"flex items-center gap-5"}>
-          {/*<RegisterButton />*/}
-          <TicketButton />
-          <ShopButton />
+          <RegisterButton />
+          {/*<TicketButton />*/}
+          {/*<ShopButton />*/}
           {/*<div className={"lg:hidden"}>*/}
           {/*  <Image*/}
           {/*    src={"/img/icon-menu.png"}*/}

@@ -1,61 +1,87 @@
 import { Title } from "@/components/mt24/title";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import Image from "next/image";
 
 export const SeasonOverview = () => {
   return (
-    <div className={" bg-gradient-full-vertical  bg-repeat"}>
+    <div className={" relative"}>
+      <div className={"absolute inset-0"}>
+        <Image
+          src={"/img/mountain.png"}
+          alt={"moutain"}
+          className={"object-cover object-bottom "}
+          fill
+        />
+      </div>
+      <div className={"absolute inset-0 blue-gradient object-cover z-10"} />
+
       <div
         className={
           "flex flex-col gap-11 relative px-5 lg:px-10 xl:px-20 py-14 lg:py-16 xl:py-20 items-center justify-center z-10"
         }
       >
         <Title className={"text-center"}>
-          <Title.subTitle>2025</Title.subTitle>
+          <Title.subTitle>2026</Title.subTitle>
           <Title.mainTitle>SEASON OVERVIEW</Title.mainTitle>
         </Title>
         <div
           className={
-            "flex flex-col gap-6 lg:gap-8 items-center justify-center lg:flex-row w-full"
+            "flex flex-col gap-6 lg:gap-8 items-center justify-center lg:flex-row w-full "
           }
         >
-          <div className={"w-full max-w-[520px]"}>
-            <div className={"py-3 px-6 bg-primary font-extrabold"}>
+          <div
+            className={"w-full max-w-[520px] rounded-[10px] overflow-hidden"}
+          >
+            <div
+              className={"py-3 px-6 bg-primary font-extrabold text-background"}
+            >
               QUALIFICATIONS
             </div>
             <div className={"flex flex-col bg-background py-4 px-6 gap-5"}>
               <div className="flex flex-col gap-1">
                 <div className={"text-foreground font-extrabold text-lg"}>
-                  ONLINE QUALIFICATION PHASE
+                  ONLINE QUALIFIERS
                 </div>
                 <div className={"text-primary font-bold text-sm"}>
-                  JAN 24 - FEB 14
+                  FEB 14 - MAR 31
                 </div>
               </div>
               <p className={"text-sm lg:text-base text-grayMT"}>
-                From 1 to 3 workouts of we be required depending the category.
-                Workouts will be revealed during the first week. You will be
-                able to submit your scores until the February 14th.
+                3 individual workouts
+                <p>
+                  Workouts will be revealed during the first week of the season.
+                  Submit your scores before March 31 and secure your chance to
+                  reach the Final.
+                </p>
               </p>
             </div>
           </div>
-          <div className={"w-full max-w-[520px] "}>
-            <div className={"py-3 px-6 bg-secondary font-extrabold"}>
+          <div
+            className={"w-full max-w-[520px] rounded-[10px] overflow-hidden"}
+          >
+            <div
+              className={
+                "py-3 px-6 bg-secondary font-extrabold text-background"
+              }
+            >
               FINALE
             </div>
             <div className={"flex flex-col bg-background py-4 px-6 gap-5"}>
               <div className="flex flex-col gap-1">
                 <div className={"text-foreground font-extrabold text-lg"}>
-                  ONSITE FINALE AT MARSEILLE
+                  ONSITE FINAL — MARSEILLE
                 </div>
                 <div className={"text-secondary font-bold text-sm"}>
-                  JULY 25 - JULY 27
+                  JULY 31 - AUG 2
                 </div>
               </div>
               <p className={"text-sm lg:text-base text-grayMT"}>
-                Win your ticket during the qualification phase and experience 3
-                days of competition at the Palais des Sports of Marseille and on
-                the Prado beaches.
+                <p>Earn your ticket during the qualification phase.</p>
+                <p>
+                  Three days of intense competition at the Palais des Sports of
+                  Marseille and on the iconic Prado beaches.
+                </p>
               </p>
             </div>
           </div>
@@ -65,7 +91,7 @@ export const SeasonOverview = () => {
           target={"_blank"}
         >
           <Button variant={"ghost"} className={"bg-foreground text-background"}>
-            REGISTER
+            START THE JOURNEY
           </Button>
         </Link>
       </div>

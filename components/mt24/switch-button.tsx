@@ -16,7 +16,7 @@ export function SwitchButton<T extends string>({ labels, onChange }: Props<T>) {
     <div className="flex ">
       <div
         className={
-          "border border-[#3E495D] flex justify-center items-center p-1.5 w-full"
+          "border border-[#3E495D] flex justify-center items-center p-1.5 w-full rounded-[10px]"
         }
       >
         {labels.map((label) => (

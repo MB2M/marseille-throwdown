@@ -51,12 +51,15 @@ export function LandingFollowCarousel() {
         >
           {Array.from({ length: 11 }).map((_, i) => (
             <SwiperSlide key={i}>
-              <Image
-                src={`/img/carousel${i + 1}.jpg`}
-                alt={`carousel${i + 1}`}
-                width={400}
-                height={400}
-              />
+              <div className={"rounded-[10px] overflow-hidden "}>
+                <Image
+                  src={`/img/carousel${i + 1}.jpg`}
+                  alt={`carousel${i + 1}`}
+                  width={400}
+                  height={400}
+                  className={"border border-[#3E495D] "}
+                />
+              </div>
             </SwiperSlide>
           ))}
         </Swiper>

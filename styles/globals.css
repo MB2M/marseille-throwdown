@@ -135,126 +135,151 @@
 /*}*/
 
 @layer base {
-  :root {
-    --background: 179 10% 6%;
-    --foreground: 179, 30%, 96%;
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
-    --primary: 186, 54%, 55%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 335, 63%, 58%;
-    --secondary-foreground: 240 5.9% 10%;
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
-    --accent: 179 75% 75%;
-    --accent-foreground: 240 5.9% 10%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 240 10% 3.9%;
-    --chart-1: 12 76% 61%;
-    --chart-2: 173 58% 39%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
-    --radius: 0.5rem;
-    --gradient-step1:203, 96%, 38%;
-    --gradient-step2: 250, 29%, 55%;
-    --gradient-foreground: 179 30% 96%;
-  }
-  .dark {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 240 5.9% 10%;
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
-    --accent: 240 3.7% 15.9%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 240 4.9% 83.9%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
-  }
+    :root {
+        --background: 206, 100%, 6%;
+        --foreground: 179, 30%, 96%;
+        --card: 0 0% 100%;
+        --card-foreground: 240 10% 3.9%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 240 10% 3.9%;
+        --primary: 28, 88%, 78%, 1;
+        --primary-foreground: 0 0% 98%;
+        --secondary: 357, 98%, 76%;
+        --secondary-foreground: 240 5.9% 10%;
+        --muted: 240 4.8% 95.9%;
+        --muted-foreground: 240 3.8% 46.1%;
+        --accent: 179 75% 75%;
+        --accent-foreground: 240 5.9% 10%;
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 240 5.9% 90%;
+        --input: 240 5.9% 90%;
+        --ring: 240 10% 3.9%;
+        --chart-1: 12 76% 61%;
+        --chart-2: 173 58% 39%;
+        --chart-3: 197 37% 24%;
+        --chart-4: 43 74% 66%;
+        --chart-5: 27 87% 67%;
+        --radius: 0.5rem;
+        --gradient-step1: 203, 96%, 38%;
+        --gradient-step2: 250, 29%, 55%;
+        --gradient-foreground: 179 30% 96%;
+    }
+
+    .dark {
+        --background: 240 10% 3.9%;
+        --foreground: 0 0% 98%;
+        --card: 240 10% 3.9%;
+        --card-foreground: 0 0% 98%;
+        --popover: 240 10% 3.9%;
+        --popover-foreground: 0 0% 98%;
+        --primary: 0 0% 98%;
+        --primary-foreground: 240 5.9% 10%;
+        --secondary: 240 3.7% 15.9%;
+        --secondary-foreground: 0 0% 98%;
+        --muted: 240 3.7% 15.9%;
+        --muted-foreground: 240 5% 64.9%;
+        --accent: 240 3.7% 15.9%;
+        --accent-foreground: 0 0% 98%;
+        --destructive: 0 62.8% 30.6%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 240 3.7% 15.9%;
+        --input: 240 3.7% 15.9%;
+        --ring: 240 4.9% 83.9%;
+        --chart-1: 220 70% 50%;
+        --chart-2: 160 60% 45%;
+        --chart-3: 30 80% 55%;
+        --chart-4: 280 65% 60%;
+        --chart-5: 340 75% 55%;
+    }
 }
 
 @layer base {
-  * {
-    /*@apply border-border;*/
-  }
+    * {
+        /*@apply border-border;*/
+    }
 
-  body {
-    @apply bg-background text-foreground min-h-full;
-  }
+    body {
+        @apply bg-background text-foreground min-h-full;
+    }
 }
 
 @layer components {
-  .text-gradient{
-   background-image: linear-gradient(270deg, rgba(216, 81, 138) 3.12%, rgba(117, 106, 173) 29.78%, rgba(4, 120, 190) 65.83%, rgba(79, 190, 203) 100%);;
-    background-clip: text;    color: transparent;
+    .text-gradient {
+        background-image: linear-gradient(270deg, rgba(248, 195, 149, 0.7) 0%, rgba(254, 135, 141, 0.7) 50%, rgba(182, 132, 176, 0.7) 100%);;
+        background-clip: text;
+        color: transparent;
 
-  }
+    }
 
-  .bg-gradient {
-    background: linear-gradient(270deg, rgba(216, 81, 138, 0.4) 3.12%, rgba(117, 106, 173, 0.4) 29.78%, rgba(4, 120, 190, 0.4) 65.83%, rgba(79, 190, 203, 0.4) 100%);
-  }
-  .bg-gradient-full {
-    background: linear-gradient(270deg, rgba(216, 81, 138) 3.12%, rgba(117, 106, 173) 29.78%, rgba(4, 120, 190) 65.83%, rgba(79, 190, 203) 100%);
-  }
-  .bg-gradient-full-vertical {
-    background-image: url("/img/bg-fabric-dark.png"), linear-gradient(360deg, #D8518A 3.12%, #756AAD 29.78%, #0478BE 65.83%, #4FBECB 100%);
+    .bg-gradient {
+        background: linear-gradient(90deg, rgba(248, 195, 149, 0.4) 0%, rgba(254, 135, 141, 0.4) 50%, rgba(182, 132, 176, 0.4) 100%);
+    }
 
-  }
-  .bg-gradient-revert {
-    background: linear-gradient(90deg, rgba(216, 81, 138, 0.4) 3.12%, rgba(117, 106, 173, 0.4) 29.78%, rgba(4, 120, 190, 0.4) 65.83%, rgba(79, 190, 203, 0.4) 100%);
-  }
-  .border-gradient {
-    border: 1px solid;
-    border-image-source: linear-gradient(270deg, #D8518A 3.12%, #756AAD 29.78%, #0478BE 65.83%, #4FBECB 100%);
-    border-image-slice: 1;
-  }
+    .bg-gradient-full {
+        background: linear-gradient(270deg, rgba(248, 195, 149, 0.7) 0%, rgba(254, 135, 141, 0.7) 50%, rgba(182, 132, 176, 0.7) 100%);
+    }
 
-  .border-gradient-revert {
-    border: 1px solid;
-    border-image-source: linear-gradient(90deg, #D8518A 3.12%, #756AAD 29.78%, #0478BE 65.83%, #4FBECB 100%);
-    border-image-slice: 1;
-  }
-  .border-gradient-light {
-    border: 1px solid;
-    border-image-source: linear-gradient(270deg, #D8518A80 3.12%, #756AAD80 29.78%, #0478BE80 65.83%, #4FBECB80 100%);
-    border-image-slice: 1;
-  }
+    .bg-gradient-full-vertical {
+        background-image: url("/img/bg-fabric-dark.png"), linear-gradient(360deg, rgba(248, 195, 149, 0.4) 0%, rgba(254, 135, 141, 0.4) 50%, rgba(182, 132, 176, 0.4) 100%);
+
+    }
+
+    .bg-gradient-revert {
+        background: linear-gradient(90deg, rgba(248, 195, 149, 0.4) 0%, rgba(254, 135, 141, 0.4) 50%, rgba(182, 132, 176, 0.4) 100%);
+    }
+
+    .bg-gradient-revert-full {
+        background: linear-gradient(90deg, rgba(248, 195, 149, 1) 0%, rgba(254, 135, 141, 1) 50%, rgba(182, 132, 176, 1) 100%);
+    }
+
+    .blue-gradient {
+        background: linear-gradient(180deg, #00111F 0%, rgba(0, 17, 31, 0) 100%);
+
+    }
+
+    .border-gradient {
+        border: 1px solid;
+        border-image-source: linear-gradient(270deg, rgba(248, 195, 149, 0.7) 0%, rgba(254, 135, 141, 0.7) 50%, rgba(182, 132, 176, 0.7) 100%);
+        border-image-slice: 1;
+    }
+
+    .border-gradient-revert {
+        border: 1px solid;
+        border-image-source: linear-gradient(90deg, rgba(248, 195, 149, 0.7) 0%, rgba(254, 135, 141, 0.7) 50%, rgba(182, 132, 176, 0.7) 100%);
+        border-image-slice: 1;
+    }
+
+    .border-gradient-light {
+        border: 1px solid;
+        border-image-source: linear-gradient(270deg, rgba(248, 195, 149, 0.4) 0%, rgba(254, 135, 141, 0.4) 50%, rgba(182, 132, 176, 0.4) 100%);
+        border-image-slice: 1;
+    }
+
 }
+
 .border-gradient2 {
-  position: relative;
+    position: relative;
+    /*border-radius: 6px;*/
+    overflow: hidden;
 }
 
 .border-gradient2::before {
-  padding: 1px; /* Vous pouvez ajuster cette valeur */
-  border-radius: 50px; /* Ajustez cette valeur selon vos besoins */
-  overflow: hidden;
-  content: "";
-  inset:0;
-  position: absolute;
-  background: linear-gradient(270deg, #D8518A 3.12%, #756AAD 29.78%, #0478BE 65.83%, #4FBECB 100%);
-  -webkit-mask:
-          linear-gradient(#fff 0 0) content-box,
-          linear-gradient(#fff 0 0) ;
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 1px; /* épaisseur du border */
+    border-radius: inherit;
+    background: linear-gradient(90deg, #F8C395, #FE878D, #B684B0);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.border-gradient2 > * {
+    position: relative;
+    z-index: 2;
 }

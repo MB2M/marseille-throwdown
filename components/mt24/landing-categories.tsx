@@ -61,15 +61,29 @@ const categories = {
       description: "All athletes must be over 18 years old",
     },
     {
-      title: "Inter",
+      title: "Inter 4",
       levels: "4 Men | 2 Men + 2 Women",
       imgPath: "/img/team_inter.jpg",
       badge: "30 teams each",
       description: "All athletes must be over 18 years old",
     },
     {
-      title: "Scaled",
+      title: "Inter 2",
+      levels: "2 Men | 1 Man + 1 Woman",
+      imgPath: "/img/team_inter.jpg",
+      badge: "30 teams each",
+      description: "All athletes must be over 18 years old",
+    },
+    {
+      title: "Scaled 4",
       levels: "4 Men | 2 Men + 2 Women",
+      imgPath: "/img/team_scaled.jpg",
+      badge: "36 teams each",
+      description: "All athletes must be over 18 years old",
+    },
+    {
+      title: "Scaled 2",
+      levels: "2 Men | 1 Man + 1 Woman",
       imgPath: "/img/team_scaled.jpg",
       badge: "36 teams each",
       description: "All athletes must be over 18 years old",
@@ -140,7 +154,8 @@ export function LandingCategories() {
             <SwiperSlide key={category.title}>
               <CardCategory
                 imagePath={category.imgPath}
-                badgeText={category.badge}
+                // badgeText={category.badge}
+                badgeText={"TBA"}
                 title={category.title}
                 subTitle={category.levels}
                 description={category.description}

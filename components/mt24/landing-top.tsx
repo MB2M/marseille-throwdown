@@ -1,9 +1,7 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { BadgeGradient } from "@/components/mt24/badge-gradient";
 import Link from "next/link";
-import { ShopButton } from "@/components/mt24/shop-button";
-import { TicketButton } from "@/components/mt24/ticket-button";
+import { RegisterButton } from "@/components/mt24/register-button";
 
 export const LandingTop = () => {
   return (
@@ -32,9 +30,9 @@ export const LandingTop = () => {
         }
       >
         <div className={"flex flex-col"}>
-          <div>
-            <BadgeGradient>CROSSFIT LICENSED EVENT</BadgeGradient>
-          </div>
+          {/*<div>*/}
+          {/*  <BadgeGradient>CROSSFIT LICENSED EVENT</BadgeGradient>*/}
+          {/*</div>*/}
           <div
             className={
               "text-3xl lg:text-4xl xl:text-5xl font-strasua self-stretch w-[350px] xl:w-[550px] mt-8 mb-3.5"
@@ -42,19 +40,18 @@ export const LandingTop = () => {
           >
             WHO WILL BE THE FITTEST ON MARS ?
           </div>
-          <div className={"text-accent font-extrabold"}>
-            <span className={"text-foreground"}>Qualifications:</span> JAN 24 -
-            FEB 14
+          <div className={"text-primary font-extrabold"}>
+            <span className={"text-foreground"}>Qualifications :</span> Feb 14 -
+            Mar 31
           </div>
-          <div className={"text-accent font-extrabold"}>
-            <span className={"text-foreground"}>Finale:</span> JULY 25/26/27
-            2025
+          <div className={"text-primary font-extrabold"}>
+            <span className={"text-foreground"}>Finale:</span> July 31 - Aug 2
           </div>
         </div>
         <div className={"flex items-center gap-3.5 "}>
-          {/*<RegisterButton />*/}
-          <TicketButton />
-          <ShopButton />
+          <RegisterButton />
+          {/*<TicketButton />*/}
+          {/*<ShopButton />*/}
           <Link href={"/volunteers/contact"}>
             <Button variant={"outline"}>BECOME VOLUNTEER</Button>
           </Link>

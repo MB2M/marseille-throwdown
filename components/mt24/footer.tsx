@@ -97,7 +97,7 @@ export const Footer = () => {
       <div className={"w-full border-gradient-light h-[1px]"} />
       <div>
         <p className={"text-grayMT text-xs lg:text-sm"}>
-          © 2024 Marseille Throwdown. All rights reserved.
+          © 2025 Marseille Throwdown. All rights reserved.
         </p>
       </div>
     </div>

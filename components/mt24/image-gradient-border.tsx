@@ -18,18 +18,21 @@ interface Props {
 
 export function ImageGradientBorder({ imagePath }: Props) {
   return (
-    <div className="lg:w-1/2 flex justify-center items-center">
+    <div className="lg:w-1/2 flex justify-center items-center ">
       <div
-        className={`relative ${pictureBorderSizes.sm.picture} ${pictureBorderSizes.lg.picture} ${pictureBorderSizes.xl.picture}`}
+        className={` relative   ${pictureBorderSizes.sm.picture} ${pictureBorderSizes.lg.picture} ${pictureBorderSizes.xl.picture} `}
       >
-        <Image
-          src={imagePath}
-          alt="gradient-image"
-          fill
-          className="relative border-gradient border-2 object-cover"
-        />
+        <div className="relative w-full h-full rounded-[10px] overflow-hidden border-gradient2 p-[1px] before:p-1">
+          <Image
+            src={imagePath}
+            alt="gradient-image"
+            width={1000}
+            height={1000}
+            className="relative object-cover w-full h-full rounded-[10px] "
+          />
+        </div>
         <div
-          className={`absolute ${pictureBorderSizes.sm.border} ${pictureBorderSizes.lg.border} ${pictureBorderSizes.xl.border} -bottom-2 lg:-bottom-3 -right-2 lg:-right-3 bg-gradient-full -z-10`}
+          className={`rounded-[10px]  absolute ${pictureBorderSizes.sm.border} ${pictureBorderSizes.lg.border} ${pictureBorderSizes.xl.border} -bottom-2 lg:-bottom-3 -right-2 lg:-right-3 bg-gradient-revert-full -z-10`}
         />
       </div>
     </div>
