@@ -5,7 +5,7 @@ export const LandingFAQ = () => {
     {
       question: "Who can compete?",
       answer:
-        "Anyone! We have categories for everyone: Elite, RX, Intermediate, Scaled, Masters (35+, 40+, 45+), Teens and Teams (of 2 or 4).",
+        "Anyone! We have categories for everyone: Elite, Intermediate, Scaled, Masters (35+, 40+), Teens: Individuals and Teams (of 2 or 4).",
     },
     {
       question: "How do the Qualifiers work?",
@@ -15,7 +15,7 @@ export const LandingFAQ = () => {
     {
       question: "How are scores validated?",
       answer:
-        "All qualifier scores must be supported by a video recording (following the standards provided) or validated by an official CrossFit Affiliate Manager.",
+        "All qualifier scores must be supported by a video recording (following the standards provided).",
     },
     {
       question: "What is the rule for Masters and Teens?",
