@@ -135,6 +135,9 @@
 /*}*/
 
 @layer base {
+    html {
+        scroll-behavior: smooth;
+    }
     :root {
         --background: 206, 100%, 6%;
         --foreground: 179, 30%, 96%;
@@ -235,7 +238,6 @@
 
     .blue-gradient {
         background: linear-gradient(180deg, #00111F 0%, rgba(0, 17, 31, 0) 100%);
-
     }
 
     .border-gradient {

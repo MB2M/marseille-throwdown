@@ -22,7 +22,7 @@ const categories = {
     {
       title: "Espoir",
       levels: "Male & Female",
-      imgPath: "/img/carousel2.jpg",
+      imgPath: "/img/espoir3.jpg",
       badge: "12 men | 6 women",
       description:
         "Athlete must be over 18 years old and under 22 years old on the first day of the final",
@@ -116,9 +116,16 @@ export function LandingCategories() {
   const swiperRef = useRef(null);
 
   return (
-    <div className="py-14 lg:pt-16 xl:pt-20 px-5 lg:px-10 xl:px-5 flex  flex-col gap-11 ">
-      <div className="w-full flex flex-col gap-6 lg:flex-row lg:justify-between lg:items-center xl:px-[60px]">
-        <Title>
+    <div
+      id={"categories"}
+      className="py-14 lg:pt-16 xl:pt-20 px-5 lg:px-10 xl:px-5 flex  flex-col gap-11 "
+    >
+      <div
+        className={
+          "flex flex-col gap-11 relative px-5 lg:px-10 xl:px-20  items-center justify-center z-10"
+        }
+      >
+        <Title className={"text-center"}>
           <SubTitle>FIND YOUR</SubTitle>
           <MainTitle>CATEGORIES</MainTitle>
         </Title>
@@ -129,11 +136,15 @@ export function LandingCategories() {
           }}
         />
       </div>
-      <div className={"flex items-start gap-5"}>
+      <div
+        className={
+          "flex  gap-5 w-full lg:w-2/3 items-center justify-center mx-auto"
+        }
+      >
         <ArrowButton
           // @ts-ignore
           onClick={() => swiperRef.current?.swiper.slideNext()}
-          className={"hidden xl:block xl:mt-[114px] 2xl:mt-[165px]"}
+          className={"hidden xl:block "}
         />
 
         <Swiper
@@ -143,10 +154,10 @@ export function LandingCategories() {
           ref={swiperRef}
           breakpoints={{
             1024: {
-              slidesPerView: 4,
+              slidesPerView: 3,
             },
             1921: {
-              slidesPerView: 5,
+              slidesPerView: 4,
             },
           }}
         >
@@ -169,7 +180,7 @@ export function LandingCategories() {
         <ArrowButton
           // @ts-ignore
           onClick={() => swiperRef.current?.swiper.slidePrev()}
-          className={"rotate-180 hidden xl:block xl:mt-[114px] 2xl:mt-[165px]"}
+          className={"rotate-180 hidden xl:block "}
         />
       </div>
     </div>

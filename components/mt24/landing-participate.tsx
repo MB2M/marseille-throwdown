@@ -1,41 +1,66 @@
-import { ImageGradientBorder } from "@/components/mt24/image-gradient-border";
 import { RegisterButton } from "@/components/mt24/register-button";
-import { MainTitle } from "@/components/mt24/main-title";
-import { SubTitle } from "@/components/mt24/sub-title";
-import { Title } from "@/components/mt24/title";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 export function LandingParticipate() {
+  const items = [
+    {
+      title: "I'm an Athlete",
+      desc: "Start your journey",
+      highlight: true,
+      cta: <RegisterButton />,
+    },
+    {
+      title: "I'm a Spectator",
+      desc: "Experience the show live",
+      highlight: false,
+      cta: (
+        <Link href="/ticketing">
+          <Button variant="outline" className="rounded-2xl px-8" disabled>
+            MORE TO COME
+          </Button>
+        </Link>
+      ),
+    },
+    {
+      title: "I want to Volunteer",
+      desc: "Join the community",
+      highlight: false,
+      cta: (
+        <Link href="/volunteers/contact">
+          <Button variant="outline" className="rounded-2xl px-8">
+            JOIN THE TEAM
+          </Button>
+        </Link>
+      ),
+    },
+  ];
+
   return (
-    <div className="py-14 lg:pt-16 xl:pt-20 px-5 lg:px-10 flex justify-center items-center flex-col gap-12 lg:flex-row lg:gap-20">
-      <ImageGradientBorder imagePath={"/img/participate.jpg"} />
-      <div className="lg:w-1/2 flex  flex-col gap-6">
-        <Title>
-          <SubTitle>IN FRANCE THIS SUMMER</SubTitle>
-          <MainTitle>
-            TAKE PART IN ONE OF THE MOST EXCITING FITNESS SHOWDOWNS IN EUROPE
-          </MainTitle>
-        </Title>
-        <div className={"text-grayMT text-sm lg:text-base flex flex-col gap-2"}>
-          <p>Push your limits. Test your strength.</p>
-          <p>
-            Over three intense days, athletes from all levels will face
-            demanding workouts combining strength, cardio and gymnastics — both
-            physically and mentally.
-          </p>
-          <p>This is more than a competition.</p>
-          <p className={"font-bold"}>
-            It’s a battle. A show. An unforgettable experience.
-          </p>
-          {/*This is the perfect opportunity to put your fitness to the test and*/}
-          {/*measure yourself against other enthusiasts. Strength, cardio and*/}
-          {/*gymnastics exercises await you for a physical and mental challenge*/}
-          {/*that will push you to give the best of yourself.*/}
+    <section
+      id={"participate"}
+      className="py-24 px-6 grid md:grid-cols-3 gap-8 max-w-7xl mx-auto"
+    >
+      {items.map((item) => (
+        <div
+          key={item.title}
+          className={`p-10 rounded-[2rem] border text-center transition flex flex-col items-center gap-6 group ${
+            item.highlight
+              ? "border-primary/50 bg-primary/10 shadow-[0_0_30px_rgba(var(--primary),0.1)]"
+              : "border-white/10 hover:border-white/30 bg-white/5"
+          }`}
+        >
+          <div className="flex flex-col gap-2">
+            <h3 className="text-3xl font-strasua group-hover:text-primary transition-colors">
+              {item.title}
+            </h3>
+            <p className="text-sm text-gray-400 font-medium tracking-wide">
+              {item.desc}
+            </p>
+          </div>
+          <div className="mt-2 w-full">{item.cta}</div>
         </div>
-        <p className={"text-grayMT  text-sm lg:text-base"}>
-          Don&#39;t wait any longer and register now to take up this challenge!
-        </p>
-        <RegisterButton textOverwrite={"JOIN THE BATTLE"} />
-      </div>
-    </div>
+      ))}
+    </section>
   );
 }

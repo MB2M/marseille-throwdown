@@ -11,7 +11,7 @@ export const RegisterButton = ({
       href={"https://competitioncorner.net/events/mt26-qualifs/register"}
       target={"_blank"}
     >
-      <Button variant={"gradient"}>{textOverwrite ?? "REGISTER"}</Button>
+      <Button variant={"gradient"}>{textOverwrite ?? "REGISTER NOW"}</Button>
     </Link>
   );
 };

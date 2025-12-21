@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export const SeasonOverview = () => {
   return (
-    <div className={" relative"}>
+    <div id={"season"} className={" relative"}>
       <div className={"absolute inset-0"}>
         <Image
           src={"/img/mountain.png"}
@@ -18,7 +18,7 @@ export const SeasonOverview = () => {
 
       <div
         className={
-          "flex flex-col gap-11 relative px-5 lg:px-10 xl:px-20 py-14 lg:py-16 xl:py-20 items-center justify-center z-10"
+          "flex flex-col gap-14 relative px-5 lg:px-10 xl:px-20 py-24 lg:py-32 items-center justify-center z-10 max-w-7xl mx-auto"
         }
       >
         <Title className={"text-center"}>
@@ -27,71 +27,179 @@ export const SeasonOverview = () => {
         </Title>
         <div
           className={
-            "flex flex-col gap-6 lg:gap-8 items-center justify-center lg:flex-row w-full "
+            "grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 w-full"
           }
         >
           <div
-            className={"w-full max-w-[520px] rounded-[10px] overflow-hidden"}
+            className={
+              "w-full rounded-2xl overflow-hidden flex flex-col border border-white/5 hover:border-primary/20 transition-all group"
+            }
           >
             <div
-              className={"py-3 px-6 bg-primary font-extrabold text-background"}
+              className={
+                "py-4 px-6 bg-primary font-extrabold text-background text-center tracking-widest"
+              }
             >
               QUALIFICATIONS
             </div>
-            <div className={"flex flex-col bg-background py-4 px-6 gap-5"}>
-              <div className="flex flex-col gap-1">
-                <div className={"text-foreground font-extrabold text-lg"}>
+            <div
+              className={
+                "flex flex-col bg-background/80 backdrop-blur-sm py-8 px-8 gap-6 flex-grow"
+              }
+            >
+              <div className="flex flex-col gap-2">
+                <div
+                  className={
+                    "text-foreground font-extrabold text-xl group-hover:text-primary transition-colors"
+                  }
+                >
                   ONLINE QUALIFIERS
                 </div>
-                <div className={"text-primary font-bold text-sm"}>
+                <div
+                  className={"text-primary font-bold text-sm tracking-wider"}
+                >
                   FEB 14 - MAR 31
                 </div>
               </div>
-              <div className={"text-sm lg:text-base text-grayMT"}>
+              <div className={"text-base text-grayMT leading-relaxed"}>
                 2 individual workouts
-                <p>
-                  Workouts will be revealed during the first week of the season.
-                  Submit your scores before March 31 and secure your chance to
-                  reach the Final.
+                <p className="mt-2">
+                  Workouts revealed during the first week. Submit scores before
+                  March 31.
                 </p>
               </div>
             </div>
           </div>
+
           <div
-            className={"w-full max-w-[520px] rounded-[10px] overflow-hidden"}
+            className={
+              "w-full rounded-2xl overflow-hidden flex flex-col border border-white/5 hover:border-accent/20 transition-all group"
+            }
           >
             <div
               className={
-                "py-3 px-6 bg-secondary font-extrabold text-background"
+                "py-4 px-6 bg-accent font-extrabold text-background text-center tracking-widest"
+              }
+            >
+              VALIDATION
+            </div>
+            <div
+              className={
+                "flex flex-col bg-background/80 backdrop-blur-sm py-8 px-8 gap-6 flex-grow"
+              }
+            >
+              <div className="flex flex-col gap-2">
+                <div
+                  className={
+                    "text-foreground font-extrabold text-xl group-hover:text-accent transition-colors"
+                  }
+                >
+                  SCORE REVIEW
+                </div>
+                <div className={"text-accent font-bold text-sm tracking-wider"}>
+                  APR 1 - APR 14
+                </div>
+              </div>
+              <div className={"text-base text-grayMT leading-relaxed"}>
+                <p>
+                  The organization reviews all submitted scores and videos to
+                  ensure standards are met.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            className={
+              "w-full rounded-2xl overflow-hidden flex flex-col border border-white/5 hover:border-white/20 transition-all group"
+            }
+          >
+            <div
+              className={
+                "py-4 px-6 bg-white/20 font-extrabold text-white text-center tracking-widest"
+              }
+            >
+              RANKING
+            </div>
+            <div
+              className={
+                "flex flex-col bg-background/80 backdrop-blur-sm py-8 px-8 gap-6 flex-grow"
+              }
+            >
+              <div className="flex flex-col gap-2">
+                <div
+                  className={
+                    "text-foreground font-extrabold text-xl group-hover:text-white transition-colors"
+                  }
+                >
+                  LEADERBOARD
+                </div>
+                <div
+                  className={"text-gray-400 font-bold text-sm tracking-wider"}
+                >
+                  MID-APRIL
+                </div>
+              </div>
+              <div className={"text-base text-grayMT leading-relaxed"}>
+                <p>
+                  Publication of the definitive leaderboard and sending out
+                  invitations for the Final.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            className={
+              "w-full rounded-2xl overflow-hidden flex flex-col border border-white/5 hover:border-secondary/20 transition-all group"
+            }
+          >
+            <div
+              className={
+                "py-4 px-6 bg-secondary font-extrabold text-background text-center tracking-widest"
               }
             >
               FINALE
             </div>
-            <div className={"flex flex-col bg-background py-4 px-6 gap-5"}>
-              <div className="flex flex-col gap-1">
-                <div className={"text-foreground font-extrabold text-lg"}>
-                  ONSITE FINAL — MARSEILLE
+            <div
+              className={
+                "flex flex-col bg-background/80 backdrop-blur-sm py-8 px-8 gap-6 flex-grow"
+              }
+            >
+              <div className="flex flex-col gap-2">
+                <div
+                  className={
+                    "text-foreground font-extrabold text-xl group-hover:text-secondary transition-colors"
+                  }
+                >
+                  ONSITE FINAL
                 </div>
-                <div className={"text-secondary font-bold text-sm"}>
+                <div
+                  className={"text-secondary font-bold text-sm tracking-wider"}
+                >
                   JULY 31 - AUG 2
                 </div>
               </div>
-              <div className={"text-sm lg:text-base text-grayMT"}>
-                <p>Earn your ticket during the qualification phase.</p>
+              <div className={"text-base text-grayMT leading-relaxed"}>
                 <p>
-                  Three days of intense competition at the Palais des Sports of
-                  Marseille and on the iconic Prado beaches.
+                  Three days of competition at the Palais des Sports and Prado
+                  beaches.
                 </p>
               </div>
             </div>
           </div>
         </div>
         <Link
-          href={"https://competitioncorner.net/events/mt25-qualifs/register"}
+          href={"https://competitioncorner.net/events/mt26-qualifs/register"}
           target={"_blank"}
+          className="mt-4"
         >
-          <Button variant={"ghost"} className={"bg-foreground text-background"}>
-            START THE JOURNEY
+          <Button
+            variant={"gradient"}
+            size="lg"
+            className={"px-12 py-7 text-xl"}
+          >
+            REGISTER NOW
           </Button>
         </Link>
       </div>
