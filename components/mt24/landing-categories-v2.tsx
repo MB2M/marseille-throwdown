@@ -32,7 +32,7 @@ const categories = {
       imgPath: "/img/teen.jpg",
       badge: "12 men | 6 women",
       description: "Athlete must be over 15 and under 18 years old",
-      topOffset: 70,
+      topOffset: 90,
       subLevels: [
         { id: "boy", label: "Boy" },
         { id: "girl", label: "Girl" },
@@ -56,12 +56,12 @@ const categories = {
       imgPath: "/img/master_35.jpg",
       badge: "12 men | 6 women",
       description: "Athlete must be over 35 years old",
-      topOffset: 10,
+      topOffset: -30,
       subLevels: [
-        { id: "129906", label: "35+ Men" },
-        { id: "129907", label: "35+ Women" },
-        { id: "129908", label: "40+ Men" },
-        { id: "129909", label: "40+ Women" },
+        { id: "35 men", label: "35+ Men" },
+        { id: "35 women", label: "35+ Women" },
+        { id: "40 men", label: "40+ Men" },
+        { id: "40 women", label: "40+ Women" },
       ],
     },
   ],
@@ -78,7 +78,7 @@ const categories = {
     {
       title: "Intermediate",
       levels: "Multiple Formats",
-      imgPath: "/img/team_inter.jpg",
+      imgPath: "/img/team_inter_2.jpg",
       badge: "30 teams",
       description: "Various formats available (2+2 or 4 men)",
       topOffset: 0,
@@ -111,10 +111,10 @@ const categories = {
       description: "Perfect for a first competition experience",
       topOffset: 0,
       subLevels: [
-        { id: "master-team-2-men", label: "75+ 2 Men" },
-        { id: "master-team-2-mixed", label: "75+ Man + 1 Woman" },
-        { id: "master-team-2-men", label: "85+ 2 Men" },
-        { id: "master-team-2-mixed", label: "85+ Man + 1 Woman" },
+        { id: "master-team-75-2-men", label: "75+ 2 Men" },
+        { id: "master-team-75-mixed", label: "75+ Man + 1 Woman" },
+        { id: "master-team-85-2-men", label: "85+ 2 Men" },
+        { id: "master-team-85-mixed", label: "85+ Man + 1 Woman" },
       ],
     },
   ],
@@ -232,7 +232,6 @@ export function LandingCategoriesV2() {
           "flex flex-col gap-11 relative px-5 lg:px-10 xl:px-20 py-14 lg:py-16 xl:py-20 items-center justify-center z-10"
         }
       >
-        {" "}
         <Title>
           <Title.subTitle>Find your level</Title.subTitle>
           <Title.mainTitle>Categories & Divisions</Title.mainTitle>
@@ -267,11 +266,11 @@ export function LandingCategoriesV2() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 w-full max-w-7xl mx-auto ">
         {categories[activeTab].map((cat) => (
           <div
             key={cat.title}
-            className={`group relative overflow-hidden rounded-3xl border transition-all duration-300 bg-black/40 ${
+            className={` group relative overflow-hidden rounded-3xl border transition-all duration-300 bg-black/40 h-full ${
               selectedFormat &&
               cat.subLevels.some((sub) => sub.id === selectedFormat.id)
                 ? "border-primary shadow-[0_0_20px_rgba(var(--primary),0.2)]"
@@ -284,105 +283,115 @@ export function LandingCategoriesV2() {
             }}
           >
             {/* Image Background with Overlay */}
-            <div className="relative h-48 w-full overflow-hidden">
+            <div className="absolute inset-0 z-0">
               <Image
                 src={cat.imgPath}
                 alt={cat.title}
                 fill
-                className="object-cover transition-transform duration-500 group-hover:scale-110 opacity-60"
+                className="object-cover transition-transform duration-500 group-hover:scale-110 "
                 style={{
-                  objectPosition: cat.topOffset
-                    ? `center ${cat.topOffset}%`
-                    : "center center",
+                  objectPosition: `center ${cat.topOffset ? `${cat.topOffset}%` : "center"}`,
                 }}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
-              {/*<div className="absolute bottom-4 left-6">*/}
-              {/*  <span className="bg-primary/20 backdrop-blur-md text-primary text-[10px] font-bold px-3 py-1 rounded-full border border-primary/30 uppercase tracking-widest">*/}
-              {/*    {cat.badge}*/}
-              {/*  </span>*/}
-              {/*</div>*/}
+              <div className="absolute inset-0 bg-gradient-to-t from-black  to-transparent" />
             </div>
 
-            {/* Content */}
-            <div className="p-6 flex flex-col gap-4 flex-grow">
-              <div>
-                <h3 className="text-2xl font-strasua text-white mb-1 group-hover:text-primary transition-colors">
-                  {cat.title}
-                </h3>
-                <p className="text-accent text-sm font-bold uppercase tracking-wider">
-                  {cat.levels}
-                </p>
-              </div>
-
-              <div className="flex flex-col gap-2 mb-2">
-                {cat.subLevels.length > 1 || activeTab === "team" ? (
-                  <div className="flex flex-wrap gap-2">
-                    {cat.subLevels.map((sub) => (
-                      <button
-                        key={sub.id}
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          setSelectedFormat(sub);
-                        }}
-                        className={`text-[10px] px-2 py-1 rounded-md border transition-all ${
-                          selectedFormat?.id === sub.id
-                            ? "bg-primary text-background border-primary"
-                            : "bg-white/10 text-gray-300 border-white/5 hover:bg-white/20"
-                        }`}
-                      >
-                        {sub.label}
-                      </button>
-                    ))}
-                  </div>
-                ) : (
-                  <p className="text-gray-400 text-sm leading-relaxed min-h-[40px]">
-                    {cat.description}
+            {/* Content Container */}
+            <div className="relative z-10 flex flex-col h-full min-h-[420px]">
+              {/* Top Content (Over Image) */}
+              <div className="p-8 flex flex-col gap-6">
+                <div>
+                  <h3 className="text-3xl font-strasua text-white mb-2 group-hover:text-primary transition-colors drop-shadow-lg">
+                    {cat.title}
+                  </h3>
+                  <p className="text-accent text-sm font-bold uppercase tracking-widest drop-shadow-md">
+                    {cat.levels}
                   </p>
-                )}
+                </div>
               </div>
 
-              <div className="mt-auto pt-2 flex flex-col gap-3">
-                <Button
-                  variant="outline"
-                  className="w-full justify-between group-hover:bg-primary/10 group-hover:text-primary transition-all rounded-xl border-white/10"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    setSelectedCategory(cat.title);
-                  }}
-                >
-                  VIEW STANDARDS
-                  <span className="text-lg">→</span>
-                </Button>
-
-                <Button
-                  variant={
-                    selectedFormat &&
-                    cat.subLevels.some((sub) => sub.id === selectedFormat.id)
-                      ? "gradient"
-                      : "outline"
-                  }
-                  className="w-full rounded-xl transition-transform hover:scale-105"
-                  disabled={
-                    !selectedFormat ||
-                    !cat.subLevels.some((sub) => sub.id === selectedFormat.id)
-                  }
-                  asChild
-                >
-                  {selectedFormat &&
-                  cat.subLevels.some((sub) => sub.id === selectedFormat.id) ? (
-                    <a
-                      href={`https://competitioncorner.net/events/19804/register`}
-                      target="_blank"
-                    >
-                      REGISTER NOW
-                    </a>
+              {/* Bottom Actions and Formats */}
+              <div className="mt-auto p-6 flex flex-col gap-4">
+                <div className="flex flex-col gap-3">
+                  {cat.subLevels.length > 1 || activeTab === "team" ? (
+                    <div className="flex flex-wrap gap-2 max-w-full">
+                      {cat.subLevels.map((sub) => (
+                        <button
+                          key={sub.id}
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setSelectedFormat(sub);
+                          }}
+                          className={`text-[10px] sm:text-xs px-2 sm:px-3 py-1 sm:py-1.5 rounded-lg border backdrop-blur-md transition-all whitespace-nowrap ${
+                            selectedFormat?.id === sub.id
+                              ? "bg-primary text-background border-primary shadow-[0_0_15px_rgba(var(--primary),0.3)]"
+                              : "bg-black/40 text-gray-200 border-white/20 hover:border-primary/50"
+                          }`}
+                        >
+                          {sub.label}
+                        </button>
+                      ))}
+                    </div>
                   ) : (
-                    <span className="text-gray-500 font-medium">
-                      SELECT FORMAT
-                    </span>
+                    <p className="text-gray-200 text-sm leading-relaxed font-medium drop-shadow-md">
+                      {cat.description}
+                    </p>
                   )}
-                </Button>
+                </div>
+
+                <div className="flex flex-col gap-3">
+                  <Button
+                    variant="outline"
+                    className="w-full justify-between hover:bg-primary/10 hover:text-primary transition-all rounded-xl border-white/20 bg-black/20 backdrop-blur-sm"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setSelectedCategory(cat.title);
+                    }}
+                  >
+                    VIEW STANDARDS
+                    <span className="text-lg">→</span>
+                  </Button>
+
+                  <Button
+                    variant={
+                      selectedFormat &&
+                      cat.subLevels.some((sub) => sub.id === selectedFormat.id)
+                        ? "gradient"
+                        : "outline"
+                    }
+                    className={`w-full rounded-xl transition-transform hover:scale-[1.02] ${
+                      !(
+                        selectedFormat &&
+                        cat.subLevels.some(
+                          (sub) => sub.id === selectedFormat.id,
+                        )
+                      )
+                        ? "bg-black/20 backdrop-blur-sm"
+                        : ""
+                    }`}
+                    disabled={
+                      !selectedFormat ||
+                      !cat.subLevels.some((sub) => sub.id === selectedFormat.id)
+                    }
+                    asChild
+                  >
+                    {selectedFormat &&
+                    cat.subLevels.some(
+                      (sub) => sub.id === selectedFormat.id,
+                    ) ? (
+                      <a
+                        href={`https://competitioncorner.net/events/19804/register`}
+                        target="_blank"
+                      >
+                        REGISTER NOW
+                      </a>
+                    ) : (
+                      <span className="text-gray-500 font-bold tracking-wider">
+                        SELECT FORMAT
+                      </span>
+                    )}
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
