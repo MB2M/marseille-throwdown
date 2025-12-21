@@ -14,7 +14,7 @@ export function LandingVolunteers() {
           <MainTitle>VOLUNTEERS</MainTitle>
         </Title>
         <p className={"italic text-grayMT text-sm lg:text-base"}>
-          Be part of theteam
+          Be part of the team
         </p>
         <p className={"text-grayMT text-sm lg:text-base"}>
           We need{" "}
