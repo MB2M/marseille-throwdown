@@ -7,9 +7,7 @@ export const LandingFinalCTA = () => {
       <div className="max-w-4xl mx-auto flex flex-col items-center gap-12">
         <Title>
           <Title.subTitle>The Battle Awaits</Title.subTitle>
-          <Title.mainTitle className="text-4xl md:text-6xl lg:text-7xl">
-            Your season starts now
-          </Title.mainTitle>
+          <Title.mainTitle>Your season starts now</Title.mainTitle>
         </Title>
         <div className="scale-150 mt-4">
           <RegisterButton textOverwrite="REGISTER NOW" />
