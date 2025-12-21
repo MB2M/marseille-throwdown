@@ -27,7 +27,7 @@ export function LandingParticipate() {
       desc: "Join the community",
       highlight: false,
       cta: (
-        <Link href="/volunteers/contact">
+        <Link href="/volunteers">
           <Button variant="outline" className="rounded-2xl px-8">
             JOIN THE TEAM
           </Button>
