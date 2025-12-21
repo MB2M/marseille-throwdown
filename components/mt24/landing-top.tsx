@@ -1,11 +1,49 @@
+"use client";
+
+import { useState, useEffect } from "react";
+
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { RegisterButton } from "@/components/mt24/register-button";
 
+const IMGS = ["/img/MT_25_BG_1.jpg", "/img/MT_25_BG_2.jpg"];
+
 export const LandingTop = () => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [opacity, setOpacity] = useState(1);
+
+  useEffect(() => {
+    let syncTimeout: NodeJS.Timeout;
+
+    const interval = setInterval(() => {
+      setOpacity(0);
+
+      syncTimeout = setTimeout(() => {
+        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % IMGS.length);
+        setOpacity(1);
+      }, 1000);
+    }, 15000);
+
+    return () => {
+      clearInterval(interval);
+      clearTimeout(syncTimeout);
+    };
+  }, []);
+
   return (
     <div className={"relative"}>
+      <Image
+        src={IMGS[currentImageIndex]}
+        alt={"landing"}
+        width={1920}
+        height={1280}
+        className={
+          "h-[600px] xl:h-[782px] min-w-full w-auto object-cover transition-opacity duration-1000"
+        }
+        style={{ opacity }}
+        priority
+      />
       <div
         className={
           " lg:block z-10 h-full w-full absolute top-0 left-0 bg-white"
@@ -15,15 +53,6 @@ export const LandingTop = () => {
             "linear-gradient(180deg, rgba(14, 12, 16, 0) 0%, rgba(14, 12, 16, 0.35) 45%, #0E0C10 100%)",
         }}
       />
-      <Image
-        src={"/img/landing3.jpg"}
-        alt={"landing"}
-        width={3840}
-        height={2160}
-        className={"h-[600px] xl:h-[782px] min-w-full w-auto object-cover"}
-        priority
-      />
-
       <div
         className={
           "absolute left-5 lg:left-10 xl:left-20 bottom-14 lg:bottom-10 xl:bottom-20 flex flex-col gap-11 z-20"

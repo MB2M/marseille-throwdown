@@ -15,7 +15,7 @@ export function LandingParticipate() {
             TAKE PART IN ONE OF THE MOST EXCITING FITNESS SHOWDOWNS IN EUROPE
           </MainTitle>
         </Title>
-        <p className={"text-grayMT text-sm lg:text-base flex flex-col gap-2"}>
+        <div className={"text-grayMT text-sm lg:text-base flex flex-col gap-2"}>
           <p>Push your limits. Test your strength.</p>
           <p>
             Over three intense days, athletes from all levels will face
@@ -30,7 +30,7 @@ export function LandingParticipate() {
           {/*measure yourself against other enthusiasts. Strength, cardio and*/}
           {/*gymnastics exercises await you for a physical and mental challenge*/}
           {/*that will push you to give the best of yourself.*/}
-        </p>
+        </div>
         <p className={"text-grayMT  text-sm lg:text-base"}>
           Don&#39;t wait any longer and register now to take up this challenge!
         </p>

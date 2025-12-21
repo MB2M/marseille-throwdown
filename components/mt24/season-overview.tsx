@@ -47,14 +47,14 @@ export const SeasonOverview = () => {
                   FEB 14 - MAR 31
                 </div>
               </div>
-              <p className={"text-sm lg:text-base text-grayMT"}>
-                3 individual workouts
+              <div className={"text-sm lg:text-base text-grayMT"}>
+                2 individual workouts
                 <p>
                   Workouts will be revealed during the first week of the season.
                   Submit your scores before March 31 and secure your chance to
                   reach the Final.
                 </p>
-              </p>
+              </div>
             </div>
           </div>
           <div
@@ -76,13 +76,13 @@ export const SeasonOverview = () => {
                   JULY 31 - AUG 2
                 </div>
               </div>
-              <p className={"text-sm lg:text-base text-grayMT"}>
+              <div className={"text-sm lg:text-base text-grayMT"}>
                 <p>Earn your ticket during the qualification phase.</p>
                 <p>
                   Three days of intense competition at the Palais des Sports of
                   Marseille and on the iconic Prado beaches.
                 </p>
-              </p>
+              </div>
             </div>
           </div>
         </div>
