@@ -11,12 +11,14 @@ import { LandingSocialProof } from "@/components/mt24/landing-social-proof";
 import { LandingFAQ } from "@/components/mt24/landing-faq";
 import { LandingFinalCTA } from "@/components/mt24/landing-final-cta";
 import { LandingPracticalInfo } from "@/components/mt24/landing-practical-info";
+import PromoVideo from "@/components/mt24/promo-video";
 
 export default function Page() {
   return (
     <main className="flex flex-col">
       <LandingTop />
       <PartnersBanner />
+      <PromoVideo />
       <div className="flex flex-col gap-12 lg:gap-24">
         <LandingParticipate />
         <LandingFinaleAbout />
