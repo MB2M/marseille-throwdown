@@ -21,7 +21,7 @@ export const LandingVenue = () => {
       <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto">
         <div className="relative h-80 md:h-[500px] rounded-[2.5rem] overflow-hidden border-gradient2 group">
           <Image
-            src="/img/MT_25_BG_1.jpg"
+            src="/img/MT_25_BG_4.jpg"
             alt="Marseille Palais des Sports"
             fill
             className="object-cover transition-transform duration-700 group-hover:scale-110"
@@ -39,7 +39,7 @@ export const LandingVenue = () => {
         </div>
         <div className="relative h-80 md:h-[500px] rounded-[2.5rem] overflow-hidden border-gradient2 group">
           <Image
-            src="/img/MT_25_BG_2.jpg"
+            src="/img/beach.jpg"
             alt="Prado Beaches"
             fill
             className="object-cover transition-transform duration-700 group-hover:scale-110"

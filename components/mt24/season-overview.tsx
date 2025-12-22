@@ -62,11 +62,20 @@ export const SeasonOverview = () => {
                 </div>
               </div>
               <div className={"text-base text-grayMT leading-relaxed"}>
-                2 individual workouts
-                <p className="mt-2">
-                  Workouts revealed during the first week. Submit scores before
-                  March 31.
-                </p>
+                <ul className="space-y-2">
+                  <li className="flex gap-2">
+                    <span className="text-primary font-bold">14/02:</span>
+                    WOD 1 Announcement
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="text-primary font-bold">21/02:</span>
+                    WOD 2 Announcement
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="text-primary font-bold">31/03:</span>
+                    Deadline for scores & registration
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -97,13 +106,13 @@ export const SeasonOverview = () => {
                   SCORE REVIEW
                 </div>
                 <div className={"text-accent font-bold text-sm tracking-wider"}>
-                  APR 1 - APR 14
+                  MAR 31 - APR 15
                 </div>
               </div>
               <div className={"text-base text-grayMT leading-relaxed"}>
                 <p>
-                  The organization reviews all submitted scores and videos to
-                  ensure standards are met.
+                  Organization reviews all submitted scores and videos from
+                  March 31 to April 15 to ensure standards are met.
                 </p>
               </div>
             </div>
@@ -119,7 +128,7 @@ export const SeasonOverview = () => {
                 "py-4 px-6 bg-white/20 font-extrabold text-white text-center tracking-widest"
               }
             >
-              RANKING
+              RESULTS
             </div>
             <div
               className={
@@ -137,14 +146,24 @@ export const SeasonOverview = () => {
                 <div
                   className={"text-gray-400 font-bold text-sm tracking-wider"}
                 >
-                  MID-APRIL
+                  MAR 22 - APR 19
                 </div>
               </div>
               <div className={"text-base text-grayMT leading-relaxed"}>
-                <p>
-                  Publication of the definitive leaderboard and sending out
-                  invitations for the Final.
-                </p>
+                <ul className="space-y-2">
+                  <li className="flex gap-2">
+                    <span className="text-white font-bold">22/03:</span>
+                    Unofficial Leaderboard Publication
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="text-white font-bold">17/04:</span>
+                    Official Leaderboard
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="text-white font-bold">19/04:</span>
+                    Invitations Sent
+                  </li>
+                </ul>
               </div>
             </div>
           </div>

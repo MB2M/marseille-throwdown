@@ -161,9 +161,9 @@ export default function VolunteersPage() {
             </p>
             <div className="grid grid-cols-2 gap-6">
               {[
-                { label: "Staff Gear", value: "T-Shirt & Cap" },
-                { label: "Meals", value: "Included" },
-                { label: "Drinks", value: "Unlimited" },
+                { label: "Staff Gear", value: "T-Shirt & More" },
+                { label: "Meals & Drinks", value: "Included" },
+                // { label: "Drinks", value: "Unlimited" },
                 { label: "Experience", value: "100% Unique" },
               ].map((stat) => (
                 <div

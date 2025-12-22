@@ -67,7 +67,7 @@ const categories = {
   ],
   team: [
     {
-      title: "Elite",
+      title: "Elite Team",
       levels: "Formats",
       imgPath: "/img/team_elite.jpg",
       badge: "24 teams",
@@ -76,12 +76,12 @@ const categories = {
       subLevels: [{ id: "elite-team-4", label: "2 Men + 2 Women" }],
     },
     {
-      title: "Intermediate",
+      title: "Intermediate Team",
       levels: "Multiple Formats",
-      imgPath: "/img/team_inter_2.jpg",
+      imgPath: "/img/team_inter.jpg",
       badge: "30 teams",
-      description: "Various formats available (2+2 or 4 men)",
-      topOffset: 0,
+      description: "Various formats available (1+1, 2 men, 2+2 or 4 men)",
+      topOffset: 290,
       subLevels: [
         { id: "inter-team-4-mixed", label: "2 Men + 2 Women" },
         { id: "inter-team-4-men", label: "4 Men" },
@@ -90,7 +90,7 @@ const categories = {
       ],
     },
     {
-      title: "Scaled",
+      title: "Scaled Team",
       levels: "Multiple Formats",
       imgPath: "/img/team_scaled.jpg",
       badge: "36 teams",
@@ -104,9 +104,9 @@ const categories = {
       ],
     },
     {
-      title: "Master",
+      title: "Master Team",
       levels: "Multiple Formats",
-      imgPath: "/img/team_scaled.jpg",
+      imgPath: "/img/team_master.jpg",
       badge: "36 teams",
       description: "Perfect for a first competition experience",
       topOffset: 0,
@@ -136,25 +136,21 @@ export function LandingCategoriesV2() {
   > = {
     Elite: {
       requirements: [
-        "Snatch: 100kg+ (Men) / 60kg+ (Women)",
-        "Clean & Jerk: 130kg+ (Men) / 80kg+ (Women)",
-        "Back Squat: 160kg+ (Men) / 100kg+ (Women)",
-        "Strict Pull-ups: 15+ consecutive (Men) / 8+ consecutive (Women)",
-        'Box Jump: 30" (Men) / 24" (Women)',
+        "All gym movements",
+        "Clean & Jerk: 100kg+ ♂️ / 65kg+ ♀️",
+        "Snatch: 80kg+ ♂️ / 50kg+ ♀️",
       ],
       notes: [
-        "Available formats: Individual, Teams (2M+2W or 4 Men)",
         "All athletes must be over 18 years old",
         "Competition experience recommended",
       ],
     },
     Teen: {
       requirements: [
-        "Snatch: 60kg+ (Boys) / 40kg+ (Girls)",
-        "Clean & Jerk: 80kg+ (Boys) / 50kg+ (Girls)",
-        "Back Squat: 100kg+ (Boys) / 60kg+ (Girls)",
-        "Strict Pull-ups: 10+ consecutive (Boys) / 5+ consecutive (Girls)",
-        'Box Jump: 24" (Boys) / 20" (Girls)',
+        "Chest to bar ♂",
+        "Pull-ups ♀",
+        "Clean & Jerk: 60kg+ ♂️ / 35kg+ ♀️",
+        "Snatch: 40kg+ ♂️ / 25kg+ ♀️",
       ],
       notes: [
         "Athletes must be between 15 and 17 years old",
@@ -163,11 +159,9 @@ export function LandingCategoriesV2() {
     },
     Espoir: {
       requirements: [
-        "Snatch: 80kg+ (Men) / 50kg+ (Women)",
-        "Clean & Jerk: 100kg+ (Men) / 65kg+ (Women)",
-        "Back Squat: 130kg+ (Men) / 80kg+ (Women)",
-        "Strict Pull-ups: 12+ consecutive (Men) / 6+ consecutive (Women)",
-        'Box Jump: 30" (Men) / 24" (Women)',
+        "All gym movements",
+        "Clean & Jerk (40+): 80kg+ ♂️ / 55kg+ ♀️",
+        "Snatch (40+): 60kg+ ♂️ / 40kg+ ♀️",
       ],
       notes: [
         "Athletes must be between 18 and 21 years old",
@@ -176,51 +170,60 @@ export function LandingCategoriesV2() {
     },
     Master: {
       requirements: [
-        "Snatch: 70kg+ (Men) / 45kg+ (Women)",
-        "Clean & Jerk: 90kg+ (Men) / 60kg+ (Women)",
-        "Back Squat: 120kg+ (Men) / 75kg+ (Women)",
-        "Strict Pull-ups: 10+ consecutive (Men) / 5+ consecutive (Women)",
-        'Box Jump: 24" (Men) / 20" (Women)',
+        "All gym movements",
+        `Clean & Jerk (35+): 100kg+ ♂️ / 65kg+ ♀️`,
+        "Snatch (35+): 80kg+ ♂️ / 50kg+ ♀️",
+        "Clean & Jerk (40+): 80kg+ ♂️ / 55kg+ ♀️",
+        "Snatch (40+): 60kg+ ♂️ / 40kg+ ♀️",
       ],
       notes: [
-        "Athletes must be over 35 years old",
+        "Athletes must be over 35 (respectively 40) years old",
         "Scaled movements available",
       ],
     },
     "Elite Team": {
       requirements: [
-        "Combined snatch capacity: 300kg+",
-        "Synchronized movements required",
-        "Strong communication and teamwork",
-        "Experience in team competitions recommended",
+        "All gym movements",
+        "Clean & Jerk: 100kg+ ♂️ / 65kg+ ♀️",
+        "Snatch: 80kg+ ♂️ / 50kg+ ♀️",
       ],
       notes: [
         "All athletes must be over 18 years old",
-        "Teams: 2 Men + 2 Women or 4 Men",
+        "Competition experience recommended",
       ],
     },
-    Intermediate: {
+    "Intermediate Team": {
       requirements: [
-        "Combined snatch capacity: 250kg+",
-        "Basic Olympic lifting technique",
-        "Comfortable with high-intensity workouts",
-        "Good gymnastics fundamentals",
+        "All gym movements",
+        "Clean & Jerk (40+): 80kg+ ♂️ / 55kg+ ♀️",
+        "Snatch (40+): 60kg+ ♂️ / 40kg+ ♀️",
       ],
       notes: [
-        "Various formats: 2+2 or 4 men",
+        "All athletes must be over 18 years old",
         "Suitable for experienced athletes",
       ],
     },
-    Scaled: {
+    "Scaled Team": {
       requirements: [
-        "Functional fitness basics",
-        "Scaled movements allowed",
-        "Focus on movement quality over weight",
-        "Perfect for beginners",
+        "Pull-ups ♂️ ♀️",
+        "Clean & Jerk: 40kg+ ♂️ / 30kg+ ♀️",
+        "Snatch: 30kg+ ♂️ / 20kg+ ♀️",
       ],
       notes: [
-        "Available formats: 2 Men, 2 Women, 1M+1W, 4 Men, 2M+2W",
+        "All athletes must be over 18 years old",
         "Great first competition experience",
+      ],
+    },
+    "Master Team": {
+      requirements: [
+        "Chest to bar ♂️",
+        "Pull-ups ♀️",
+        "Clean & Jerk: 60kg+ ♂️ / 35kg+ ♀️",
+        "Snatch: 40kg+ ♂️ / 25kg+ ♀️",
+      ],
+      notes: [
+        "75+ Teams: Sum of athlete ages (July 31,2026) must be over 75 years old",
+        "85+ Teams: Sum of athlete ages (July 31,2026) must be over 85 years old",
       ],
     },
   };

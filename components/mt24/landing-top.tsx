@@ -5,7 +5,12 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { RegisterButton } from "@/components/mt24/register-button";
 
-const IMGS = ["/img/MT_25_BG_1.jpg", "/img/MT_25_BG_2.jpg"];
+const IMGS = [
+  "/img/MT_25_BG_1.jpg",
+  "/img/MT_25_BG_2.jpg",
+  "/img/MT_25_BG_3.jpg",
+  "/img/MT_25_BG_4.jpg",
+];
 
 export const LandingTop = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
