@@ -60,7 +60,7 @@ export const partnerFormAction = actionHandler(
     });
     const mailData = {
       from: "Marseille Throwdown website",
-      to: "mt26volunteers@gmail.com, aphal.dev@gmail.com",
+      to: "aphal.dev@gmail.com",
       subject: `Nouvelle demande partenaire ${
         data.enterprise
       } (${data.email || ""})`,
