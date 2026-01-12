@@ -73,7 +73,7 @@ export const volunteerFormAction = actionHandler(
       } (${data.email || ""})`,
       html: `
         <!DOCTYPE html>
-        <html lang="en-EN">
+        <html lang="fr">
         <head>
           <meta charset="UTF-8">
           <style>
