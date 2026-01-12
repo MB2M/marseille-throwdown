@@ -5,7 +5,11 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
-import { volunteerFormAction, VolunteerFormType } from "@/action/volunteerForm";
+import { Checkbox } from "@/components/ui/checkbox";
+import {
+  volunteerFormAction,
+  VolunteerFormTypeIn,
+} from "@/action/volunteerForm";
 import { useActionState, useEffect, useState } from "react";
 import {
   Select,
@@ -24,19 +28,21 @@ function InputError({
   label,
 }: {
   state: Awaited<ReturnType<typeof volunteerFormAction>>;
-  label: keyof VolunteerFormType;
+  label: keyof VolunteerFormTypeIn;
 }) {
   return (
     <div className={"text-xs text-destructive font-bold"}>
-      {state.success ? state.data?.errors.fieldErrors[label] : null}
+      {state.success && state.data && "errors" in state.data
+        ? state.data.errors.fieldErrors[label]
+        : null}
     </div>
   );
 }
 
 export default function ContactPage() {
   const [state, formAction, pending] = useActionState(volunteerFormAction, {
-    success: false,
-    message: "",
+    success: true,
+    data: undefined,
   });
   const [hasChanged, setHasChanged] = useState(false);
 
@@ -96,9 +102,13 @@ export default function ContactPage() {
                   placeholder={"Rich"}
                   required
                   type={"text"}
-                  className={`${state.success && state.data?.errors.fieldErrors.firstname && "border-2 border-red-500"}`}
+                  className={`${state.success && state.data && "errors" in state.data && state.data.errors.fieldErrors.firstname && "border-2 border-red-500"}`}
                   defaultValue={
-                    (state.success && state.data?.data.firstname) || undefined
+                    (state.success &&
+                      state.data &&
+                      "data" in state.data &&
+                      (state.data.data.firstname as string)) ||
+                    undefined
                   }
                 />
                 <InputError state={state} label={"firstname"} />
@@ -110,9 +120,13 @@ export default function ContactPage() {
                   placeholder={"Froning"}
                   required
                   defaultValue={
-                    (state.success && state.data?.data.lastname) || undefined
+                    (state.success &&
+                      state.data &&
+                      "data" in state.data &&
+                      (state.data.data.lastname as string)) ||
+                    undefined
                   }
-                  className={`${state.success && state.data?.errors.fieldErrors.lastname && "border-2 border-red-500"}`}
+                  className={`${state.success && state.data && "errors" in state.data && state.data.errors.fieldErrors.lastname && "border-2 border-red-500"}`}
                 />
                 <InputError state={state} label={"lastname"} />
               </div>
@@ -124,9 +138,13 @@ export default function ContactPage() {
                   required
                   type={"email"}
                   defaultValue={
-                    (state.success && state.data?.data.email) || undefined
+                    (state.success &&
+                      state.data &&
+                      "data" in state.data &&
+                      (state.data.data.email as string)) ||
+                    undefined
                   }
-                  className={`${state.success && state.data?.errors.fieldErrors.email && "border-2 border-red-500"}`}
+                  className={`${state.success && state.data && "errors" in state.data && state.data.errors.fieldErrors.email && "border-2 border-red-500"}`}
                 />
                 <InputError state={state} label={"email"} />
               </div>
@@ -138,9 +156,13 @@ export default function ContactPage() {
                   placeholder={"0612345678"}
                   type={"tel"}
                   defaultValue={
-                    (state.success && state.data?.data.phoneNumber) || undefined
+                    (state.success &&
+                      state.data &&
+                      "data" in state.data &&
+                      (state.data.data.phoneNumber as string)) ||
+                    undefined
                   }
-                  className={`${state.success && state.data?.errors.fieldErrors.phoneNumber && "border-2 border-red-500"}`}
+                  className={`${state.success && state.data && "errors" in state.data && state.data.errors.fieldErrors.phoneNumber && "border-2 border-red-500"}`}
                 />
                 <InputError state={state} label={"phoneNumber"} />
               </div>
@@ -152,9 +174,13 @@ export default function ContactPage() {
                   required
                   type={"text"}
                   defaultValue={
-                    (state.success && state.data?.data.box) || undefined
+                    (state.success &&
+                      state.data &&
+                      "data" in state.data &&
+                      (state.data.data.box as string)) ||
+                    undefined
                   }
-                  className={`${state.success && state.data?.errors.fieldErrors.box && "border-2 border-red-500"}`}
+                  className={`${state.success && state.data && "errors" in state.data && state.data.errors.fieldErrors.box && "border-2 border-red-500"}`}
                 />
                 <InputError state={state} label={"box"} />
               </div>
@@ -162,7 +188,7 @@ export default function ContactPage() {
                 <Label>Gender*</Label>
                 <Select name={"gender"}>
                   <SelectTrigger
-                    className={`${state.success && state.data?.errors.fieldErrors.phoneNumber && "border-2 border-red-500"}`}
+                    className={`${state.success && state.data && "errors" in state.data && state.data.errors.fieldErrors.gender && "border-2 border-red-500"}`}
                   >
                     <SelectValue placeholder="Gender" />
                   </SelectTrigger>
@@ -176,6 +202,7 @@ export default function ContactPage() {
                 </Select>
                 <InputError state={state} label={"gender"} />
               </div>
+
               <div className="w-full">
                 <Label>Shirt Size</Label>
                 <Select name={"shirtSize"}>
@@ -196,7 +223,51 @@ export default function ContactPage() {
                 <InputError state={state} label={"shirtSize"} />
               </div>
               <div className="w-full col-span-2">
-                <Label htmlFor={"message"}>Message</Label>
+                <Label>Availability*</Label>
+                <div className="flex flex-row gap-6 mt-2">
+                  <div className="flex items-center space-x-2">
+                    <Checkbox id="friday" name="friday" />
+                    <label
+                      htmlFor="friday"
+                      className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                    >
+                      Friday
+                    </label>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <Checkbox id="saturday" name="saturday" />
+                    <label
+                      htmlFor="saturday"
+                      className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                    >
+                      Saturday
+                    </label>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <Checkbox id="sunday" name="sunday" />
+                    <label
+                      htmlFor="sunday"
+                      className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                    >
+                      Sunday
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div className="w-full col-span-2">
+                <Label htmlFor={"experience"} className={"mb-2"}>
+                  Tell us about your volunteer experience (in and outside
+                  fitness competitions)
+                </Label>
+                <Textarea
+                  placeholder="Type your message here."
+                  id="experience"
+                  name={"experience"}
+                  maxLength={900}
+                />
+              </div>
+              <div className="w-full col-span-2">
+                <Label htmlFor={"message"}>Additional information</Label>
                 <Textarea
                   placeholder="Type your message here."
                   id="message"
