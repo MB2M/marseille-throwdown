@@ -5,7 +5,13 @@ import { animated, useSpring } from "@react-spring/web";
 import { useEffect, useState } from "react";
 import { useWindowSize } from "@uidotdev/usehooks";
 
-type Element = { img: string; width: number; widthSmall: number };
+type Element = {
+  img?: string;
+  width: number;
+  widthSmall: number;
+  className?: string;
+  component?: React.ReactNode;
+};
 
 interface Props {
   elements: Element[];
@@ -56,13 +62,18 @@ const Animation = ({ elements }: Props) => {
         ...elements,
         ...elements,
       ].map((partner, index) => (
-        <div key={`O-${partner.img}-${index}`} className="relative">
-          <Image
-            alt={partner.img}
-            width={isDesktop ? partner.width : partner.widthSmall}
-            height={height}
-            src={`/img/${partner.img}`}
-          />
+        <div key={`O-${partner.img || index}-${index}`} className="relative h-full flex items-center justify-center">
+          {partner.component ? (
+            partner.component
+          ) : (
+            <Image
+              alt={partner.img || ""}
+              width={isDesktop ? partner.width : partner.widthSmall}
+              height={height}
+              src={`/img/${partner.img}`}
+              className={partner.className}
+            />
+          )}
         </div>
       ))}
     </animated.div>

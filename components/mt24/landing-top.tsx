@@ -62,6 +62,27 @@ export const LandingTop = () => {
         }
       >
         <div className={"flex flex-col items-center"}>
+          <div className="flex flex-col items-center gap-2 mb-6">
+            <p className="text-white/80 text-sm md:text-base font-semibold tracking-[0.2em] uppercase">
+              Presented by
+            </p>
+            <div className="flex items-center gap-4">
+              <Image
+                src="/img/nocco/NOCCO_swoosh_CMYK_negativ.png"
+                alt="NOCCO Logo"
+                width={60}
+                height={40}
+                className="object-contain drop-shadow-lg"
+              />
+              <Image
+                src="/img/nocco/NOCO_BLACK.png"
+                alt="NOCCO Text Name"
+                width={140}
+                height={40}
+                className="object-contain drop-shadow-lg brightness-0 invert"
+              />
+            </div>
+          </div>
           <p
             className={
               "text-accent font-extrabold mb-2 tracking-widest uppercase"

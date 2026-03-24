@@ -17,6 +17,28 @@ const partners = [
     widthSmall: 102,
   },
   {
+    width: 220,
+    widthSmall: 150,
+    component: (
+      <div className="flex items-center gap-2 lg:gap-3 h-[31.5px] lg:h-[45px]">
+        <Image
+          src="/img/nocco/NOCCO_swoosh_CMYK_negativ.png"
+          alt="NOCCO Logo"
+          width={50}
+          height={45}
+          className="object-contain h-full w-auto"
+        />
+        <Image
+          src="/img/nocco/NOCO_BLACK.png"
+          alt="NOCCO Text Name"
+          width={120}
+          height={45}
+          className="object-contain brightness-0 invert h-full w-auto"
+        />
+      </div>
+    ),
+  },
+  {
     img: "tako-logo-name-hori.png",
     width: 140,
     widthSmall: 105,
