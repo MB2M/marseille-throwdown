@@ -382,12 +382,9 @@ export function LandingCategoriesV2() {
                     cat.subLevels.some(
                       (sub) => sub.id === selectedFormat.id,
                     ) ? (
-                      <a
-                        href={`https://competitioncorner.net/events/19804/register`}
-                        target="_blank"
-                      >
-                        REGISTER NOW
-                      </a>
+                      <span className="font-bold tracking-wider">
+                        REGISTRATIONS CLOSED
+                      </span>
                     ) : (
                       <span className="text-gray-500 font-bold tracking-wider">
                         SELECT FORMAT

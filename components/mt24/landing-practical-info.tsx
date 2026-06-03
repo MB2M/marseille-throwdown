@@ -31,7 +31,7 @@ export const LandingPracticalInfo = () => {
       icon: <Info className="text-primary" />,
       title: "Spectators",
       items: [
-        "Ticketing opens soon",
+        "Tickets available now",
         "Free access to the beach events",
         "Food & drink village onsite",
       ],

@@ -13,8 +13,8 @@ const partners = [
   },
   {
     img: "crossliftor-white.png",
-    width: 145,
-    widthSmall: 102,
+    width: 145*1.2,
+    widthSmall: 102*1.2,
   },
   {
     width: 220,
@@ -43,8 +43,13 @@ const partners = [
     width: 140,
     widthSmall: 105,
   },
+   {
+    img: "nutrimuscle.png",
+    width: 140*0.85,
+    widthSmall: 105*0.85,
+  },
   // { img: "thorus.png", width: 253, widthSmall: 177 },
-  { img: "bdr.png", width: 186, widthSmall: 130 },
+  // { img: "bdr.png", width: 186, widthSmall: 130 },
   { img: "bleuet.svg", width: 95, widthSmall: 63 },
   // { img: "velites_logo_letras_WHITE.avif", width: 186, widthSmall: 130 },
   { img: "mbc.jpeg", width: 75, widthSmall: 50 },

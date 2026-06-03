@@ -1,6 +1,5 @@
 import { Title } from "@/components/mt24/title";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
 import Image from "next/image";
 
 export const SeasonOverview = () => {
@@ -208,19 +207,14 @@ export const SeasonOverview = () => {
             </div>
           </div>
         </div>
-        <Link
-          href={"https://competitioncorner.net/events/mt26-qualifs/register"}
-          target={"_blank"}
-          className="mt-4"
+        <Button
+          variant={"gradient"}
+          size="lg"
+          disabled
+          className={"px-12 py-7 text-xl mt-4 cursor-not-allowed"}
         >
-          <Button
-            variant={"gradient"}
-            size="lg"
-            className={"px-12 py-7 text-xl"}
-          >
-            REGISTER NOW
-          </Button>
-        </Link>
+          REGISTRATIONS CLOSED
+        </Button>
       </div>
     </div>
   );

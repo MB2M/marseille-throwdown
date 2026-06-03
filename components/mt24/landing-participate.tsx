@@ -16,8 +16,8 @@ export function LandingParticipate() {
       highlight: false,
       cta: (
         <Link href="/ticketing">
-          <Button variant="outline" className="rounded-2xl px-8" disabled>
-            MORE TO COME
+          <Button variant="outline" className="rounded-2xl px-8">
+            GET TICKETS
           </Button>
         </Link>
       ),

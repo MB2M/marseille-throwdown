@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 
 import Image from "next/image";
 import { RegisterButton } from "@/components/mt24/register-button";
+import { TicketButton } from "@/components/mt24/ticket-button";
 
 const IMGS = [
   "/img/MT_25_BG_1.jpg",
@@ -113,9 +114,12 @@ export const LandingTop = () => {
           </p>
         </div>
         <div className={"flex flex-col items-center gap-4 mt-8"}>
-          <RegisterButton />
-          <p className="text-xs text-primary font-bold uppercase tracking-[0.2em] animate-pulse">
-            Registration Now Open
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <RegisterButton />
+            <TicketButton />
+          </div>
+          <p className="text-xs text-primary font-bold uppercase tracking-[0.2em]">
+            Registrations Closed — Tickets Available
           </p>
           {/*<p className="text-[10px] text-gray-500 uppercase tracking-widest mt-1">*/}
           {/*  Divisions Adaptive comming soon*/}

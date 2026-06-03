@@ -3,6 +3,7 @@
 import { LogoMT } from "@/components/mt24/logo-MT";
 import Link from "next/link";
 import { RegisterButton } from "@/components/mt24/register-button";
+import { TicketButton } from "@/components/mt24/ticket-button";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
@@ -50,7 +51,8 @@ export default function Header() {
               </Link>
             ))}
           </div>
-          <div className="hidden sm:block">
+          <div className="hidden sm:flex items-center gap-3">
+            <TicketButton />
             <RegisterButton />
           </div>
 
@@ -77,7 +79,8 @@ export default function Header() {
               {link.name}
             </Link>
           ))}
-          <div className="pt-4 border-t border-white/10">
+          <div className="pt-4 border-t border-white/10 flex flex-col gap-3">
+            <TicketButton />
             <RegisterButton />
           </div>
         </div>
