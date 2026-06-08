@@ -9,7 +9,7 @@ export default function Page() {
       <div className={"p-8"}>
         <Title>
           <SubTitle>Marseille Throwdown 2026</SubTitle>
-          <MainTitle>Get your official gear</MainTitle>
+          <MainTitle>Official store</MainTitle>
         </Title>
       </div>
       <HelloAssoShop />
